@@ -5,17 +5,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const nodemailer = require('nodemailer');
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
+    service: 'Gmail',
     auth: {
-      type: "OAuth2",
+      //type: "OAuth2",
       user: process.env.MAIL_USER,
-      clientId: process.env.MAIL_CLIENTID,
-      clientSecret: process.env.MAIL_CLIENTSECRET,
-      refreshToken: process.env.MAIL_REFRESHTOKEN,
-      accessToken: process.env.MAIL_ACCESSTOKEN,
-      expires: process.env.MAIL_EXPIRESIN
+      pass: process.env.MAIL_PASS
     },
   });
 
@@ -23,16 +17,50 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   await transporter.sendMail({
     from: process.env.MAIL_USER,
     to: data.email,
-    subject: '以下の内容でお問い合わせを受け付けました',
+    subject: '以下の内容でお問い合わせを受け付けました / Recieved your inquiries',
     text: `
-    名前
+    名前/Name: 
     ${data.name}
-    
-    メールアドレス
+
+    メールアドレス/Email: 
     ${data.email}
-    
-    お問い合わせ内容
+
+    お問い合わせ内容/Inquiry: 
+    ---------------------------------------------
     ${data.msg}
+    ---------------------------------------------
+    
+    #############################################
+    Yuichiro Iwashita, B4 (undergraduate)
+    Intelligent Media Processing Group,
+    College of Engineering, Osaka Prefecture University
+
+    E-mail (Personal): yiwashita.cu@gmail.com
+    E-mail (University): sdb01167@st.osakafu-u.ac.jp
+    #############################################
+    `,
+    html: `
+    <p>
+    名前/Name: <br>
+    ${data.name}<br>
+    <br>
+    メールアドレス/Email: <br>
+    ${data.email}<br>
+    <br>
+    お問い合わせ内容/Inquiry: <br>
+    ---------------------------------------------<br>
+    ${data.msg}<br>
+    ---------------------------------------------<br>
+    <br>
+    #############################################<br>
+    <b>Yuichiro Iwashita</b><br>
+    Intelligent Media Processing Group,<br>
+    College of Engineering, Osaka Prefecture University<br>
+    <br>
+    E-mail (Personal): yiwashita.cu@gmail.com <br>
+    E-mail (University): sdb01167@st.osakafu-u.ac.jp <br>
+    #############################################
+    </p>
     `,
   });
 
