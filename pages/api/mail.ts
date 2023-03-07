@@ -7,7 +7,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      //type: "OAuth2",
       user: process.env.MAIL_USER,
       pass: process.env.MAIL_PASS
     },
@@ -15,7 +14,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   const data = JSON.parse(req.body);
   await transporter.sendMail({
-    from: process.env.MAIL_USER,
+    from: 'Yuichiro Iwashita <yiwashita.cu@gmail.com>',
     to: data.email,
     subject: '以下の内容でお問い合わせを受け付けました / Recieved your inquiries',
     text: `
