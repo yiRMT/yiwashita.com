@@ -1,8 +1,8 @@
 ---
 title: "Discordツイ速Botの作り方（2023年Ver）"
-date: '2023-04-02'
-image: {path: '/posts/profile.png', height: 100, width: 100}
-tags: ["Discord", "Twitter", "Zapier"]
+date: '2023-04-01'
+image: {}
+tags: ["Discord", "Twitter", "Zapier", "Tech"]
 ---
 *本記事はZennに投稿した[記事](https://zenn.dev/rmt_drums/articles/discord-twitter-bot)と同じ内容です．*
 
