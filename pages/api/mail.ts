@@ -30,12 +30,15 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     ---------------------------------------------
     
     #############################################
-    Yuichiro Iwashita, B4 (undergraduate)
+    Yuichiro Iwashita
+    
+    Master's student (M1)
     Intelligent Media Processing Group,
-    College of Engineering, Osaka Prefecture University
+    Graduate School of Informatics, 
+    Osaka Metropolitan University
 
     E-mail (Personal): yiwashita.cu@gmail.com
-    E-mail (University): sdb01167@st.osakafu-u.ac.jp
+    E-mail (University): sc23370s@st.omu.ac.jp
     #############################################
     `,
     html: `
@@ -53,11 +56,14 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     <br>
     #############################################<br>
     <b>Yuichiro Iwashita</b><br>
+    <br>
+    Master's student (M1)<br>
     Intelligent Media Processing Group,<br>
-    College of Engineering, Osaka Prefecture University<br>
+    Graduate School of Engineering, <br>
+    Osaka Metropolitan University<br>
     <br>
     E-mail (Personal): yiwashita.cu@gmail.com <br>
-    E-mail (University): sdb01167@st.osakafu-u.ac.jp <br>
+    E-mail (University): sc23370s@st.omu.ac.jp <br>
     #############################################
     </p>
     `,
