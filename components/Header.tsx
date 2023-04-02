@@ -46,7 +46,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href={'/blog/'}>
+              <Link href={'/posts/'}>
                 <a className="
                   block py-2 pr-4 pl-3
                   text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white

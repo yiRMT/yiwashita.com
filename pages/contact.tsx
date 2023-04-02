@@ -27,6 +27,8 @@ export default function Contact () {
       console.log('Response recieved');
       if (res.status === 200) {
         console.log('Response succeeded!');
+        alert('Succeeded to send a message.')
+        setForm({name: '', email: '', msg: ''})
       } else {
         console.log(`Error: Status Code ${res.status}`);
       }
@@ -41,17 +43,18 @@ export default function Contact () {
       <Head>
         <title>{contactTitle}</title>
       </Head>
-      <div className="h-screen">
-        <form className="w-full max-w-sm py-20">
-          <div className="md:flex md:items-center mb-6">
-            <div className="md:w-1/3">
-              <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                Full Name
+      <div className="h-full">
+        <div className="flex flex-col items-center max-w-2xl mx-auto md:px-0 px-6 py-20 gap-5">
+          <h1 className="font-semibold md:text-4xl text-3xl">
+            {t.CONTACT}
+          </h1>
+          <form className="py-10 w-full">
+            <div className="flex flex-col mb-6 gap-2">
+              <label className="text-gray-500 font-bold text-left">
+                {t.FULLNAME}
               </label>
-            </div>
-            <div className="md:w-2/3">
               <input
-                className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                className=" bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                 onChange={(e) => {
                   const val = e.currentTarget.value;
                   setForm((props) => ({
@@ -62,17 +65,13 @@ export default function Contact () {
                 value={form.name}
                 name="name"
                 type="text"
-                placeholder="Name"
+                placeholder={t.FULLNAME}
               />
             </div>
-          </div>
-          <div className="md:flex md:items-center mb-6">
-            <div className="md:w-1/3">
-              <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                Email
+            <div className="flex flex-col mb-6 gap-2">
+              <label className="text-gray-500 font-bold text-left">
+                {t.EMAIL}
               </label>
-            </div>
-            <div className="md:w-2/3">
               <input
                 onChange={(e) => {
                   const val = e.currentTarget.value;
@@ -81,20 +80,17 @@ export default function Contact () {
                     email: val !== null ? val : '',
                   }));
                 }}
+                value={form.email}
                 name="email"
                 type="text"
                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                placeholder="Email"
+                placeholder={t.EMAIL}
               />
             </div>
-          </div>
-          <div className="md:flex md:items-center mb-6">
-            <div className="md:w-1/3">
-              <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                Comment
+            <div className="flex flex-col mb-6 gap-2">
+              <label className="text-gray-500 font-bold text-left">
+                {t.COMMENT}
               </label>
-            </div>
-            <div className="md:w-2/3">
               <textarea
                 onChange={(e) => {
                   const val = e.currentTarget.value;
@@ -103,27 +99,23 @@ export default function Contact () {
                     msg: val !== null ? val : '',
                   }));
                 }}
+                value={form.msg}
                 name="text"
                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                placeholder="Comment"
+                placeholder={t.COMMENT}
               />
             </div>
-          </div>
-          <div className="md:flex md:items-center">
-            <div className="md:w-1/3"></div>
-            <div className="md:w-2/3">
-              <button
-                className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" 
-                onClick={async (e) => {
-                  await handleSubmit(e);
-                }}
-                type="submit"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </form>
+            <button
+              className="w-full shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" 
+              onClick={async (e) => {
+                handleSubmit(e);
+              }}
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     </>
   )

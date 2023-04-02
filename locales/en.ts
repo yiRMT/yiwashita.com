@@ -1,5 +1,7 @@
 export default {
   NAME: "Yuichiro Iwashita",
+
+  // Page Title
   HOME: "Home",
   BLOG: "Blog",
   CONTACT: "Contact",
@@ -7,6 +9,21 @@ export default {
   // Home
   AFFILIATION: "Affiliation",
   PUBLICATION: "Publication",
+  BACHELOR_AFFILIATION: "College of Engineering, Osaka Prefecture University",
+  MASTER_AFFILIATION: "Graduate School of Informatics, Osaka Metropolitan University",
+  BACHELOR_AND_MASTER_LAB: "Intelligence Media Processing (IMP) Lab",
+  EXPERIENCES: "Experiences",
+  PROJECTS: "Projects",
+  LINKS: "Links",
+
+  FULLNAME: "Full Name",
+  EMAIL: "Email",
+  COMMENT: "Comment",
+
+  // Experiences
+  INTERNSHIP: "Internship",
+  SERVERADMIN: "Server Administrator",
+  DFKI: "German Research Center for Artificial Intelligence (DFKI)",
 
   // Blog
   LIST_OF_ARTICLES: "List of Articles",

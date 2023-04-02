@@ -1,26 +1,17 @@
-// src/types/blog.ts
-
-export type Blog = {
-  id: string;
-  body: string;
-  title: string;
+export type PostMetadata = {
+  id: string,
+  title: string,
   image: {
-    url: string,
+    path: string,
     height: number,
     width: number,
-  };
-  tags: Tag[];
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-};
+  },
+  date: string,
+  tags: string[],
+}
 
-export type Tag = {
-  id: string;
-  tag: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-};
+export type Post = {
+  id: string,
+  meta: PostMetadata,
+  body: string,
+}

@@ -1,5 +1,7 @@
 export default {
   NAME: "岩下 雄一郎",
+
+  // Page Title
   HOME: "ホーム",
   BLOG: "ブログ",
   CONTACT: "連絡",
@@ -7,6 +9,21 @@ export default {
   // Home
   AFFILIATION: "所属",
   PUBLICATION: "論文",
+  BACHELOR_AFFILIATION: "大阪府立大学 工学域",
+  MASTER_AFFILIATION: "大阪公立大学 大学院情報学研究科",
+  BACHELOR_AND_MASTER_LAB: "知能メディア処理研究室",
+  EXPERIENCES: "職歴",
+  PROJECTS: "参加プロジェクト",
+  LINKS: "外部サイト",
+
+  FULLNAME: "氏名",
+  EMAIL: "メールアドレス",
+  COMMENT: "本文",
+
+  // Experiences
+  INTERNSHIP: "インターン",
+  SERVERADMIN: "サーバー管理者",
+  DFKI: "ドイツ人工知能研究センター (DFKI)",
 
   // Blog
   LIST_OF_ARTICLES: "記事一覧",
