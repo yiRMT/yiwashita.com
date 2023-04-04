@@ -12,32 +12,32 @@ export default function Home () {
         <title>{topTitle}</title>
       </Head>
       <div className='h-full'>
-        <div className="flex flex-col max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16 py-20 ">
-          <div className='items-center flex justify-center sm:flex-row flex-col py-5'>
-            <div className=''>
+        <div className="flex flex-col max-w-2xl border-gray-200 dark:border-gray-700 mx-auto md:px-0 px-6 pb-16 py-20 ">
+          <div className='flex sm:flex-row flex-col items-center py-5 gap-5'>
+            <div className='flex flex-col sm:items-start items-center'>
               <h1 className="font-bold md:text-5xl sm:text-4xl text-3xl tracking-tight mb-1 text-black dark:text-white">
                 {t.NAME}
               </h1>
               
-              <p className="text-gray-700 dark:text-gray-200 mb-4 py-4">
-                Master{"'"}s student at{" "}
+              <p className="py-6 text-justify text-gray-700 dark:text-gray-200">
+                {"Master's student at "}
                 <Link href="https://www.omu.ac.jp/" passHref>
                   <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
                     Osaka Metropolitan University
                   </a>
                 </Link>
-                . Recieved Bachelor of Engineering (BE) at{" "}
+                {". Recieved Bachelor of Engineering (BE) at "}
                 <Link href="https://www.osakafu-u.ac.jp/" passHref>
                   <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
                     Osaka Prefecture University
                   </a>
                 </Link>
-                {" "}in 03/2023.
-                Interests: human computer interaction, edtech, nudging strategies, learning augumentation, medical x ai ...
+                {" in 03/2023. "}
+                {"Interests: human computer interaction, edtech, nudging strategies, learning augumentation, medical x ai ..."}
               </p>
             </div>
 
-            <div className="flex-none w-[176px] relative mb-8 sm:mb-0 mr-auto">
+            <div className="flex-none sm:w-[176px] w-[200px] relative mb-8 sm:mb-0">
               <Image
                 alt="Yuichiro Iwashita"
                 height={176}
@@ -45,7 +45,7 @@ export default function Home () {
                 src="/profile.png"
                 sizes="30vw"
                 priority
-                className="rounded-full"
+                className="rounded-full "
               />
             </div>
           </div>
