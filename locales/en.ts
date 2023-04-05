@@ -5,6 +5,7 @@ export default {
   HOME: "Home",
   BLOG: "Blog",
   CONTACT: "Contact",
+  PRIVACY_POLICY: "Privacy Policy",
   
   // Home
   AFFILIATION: "Affiliation",
@@ -32,5 +33,7 @@ export default {
   SEE_ALL_BLOGGERS: "See all bloggers",
 
   iwashita2023ieicegeneral: "Yuichiro Iwashita, Motoi Iwata, Andrew W. Vargo, Koichi Kise. Developing an adaptive learning system for long-term English vocabulary learning. In Proceedings of the 2023 IEICE General Conference, IEICE, 2023.",
-  iwashita2023ieicegeneral_bibpath: "/bib/iwashita2023ieicegeneral_en.bib"
+  iwashita2023ieicegeneral_bibpath: "/bib/iwashita2023ieicegeneral_en.bib",
+
+  PRIVACY_POLICY_FULLTEXT: "This website is using Google Analytics, an access analysis tool provided by Google. Google Analytics uses cookies to collect data. This data is collected anonymously and does not personally identify you. This feature can be disabled by disabling cookies, so please check your browser settings. For more information about this agreement, please see the Google Analytics Terms of Service page and the Google Policies and Terms page."
 }
