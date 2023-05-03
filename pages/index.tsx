@@ -12,28 +12,18 @@ export default function Home () {
         <title>{topTitle}</title>
       </Head>
       <div className='h-full'>
-        <div className="flex flex-col max-w-2xl border-gray-200 dark:border-gray-700 mx-auto md:px-0 px-6 pb-16 py-20 ">
+        <div className="flex flex-col max-w-4xl border-gray-200 dark:border-gray-700 mx-auto px-6 pb-16 py-20 ">
           <div className='flex sm:flex-row flex-col items-center py-5 gap-5'>
             <div className='flex flex-col sm:items-start items-center'>
               <h1 className="font-bold md:text-5xl sm:text-4xl text-3xl tracking-tight mb-1 text-black dark:text-white">
                 {t.NAME}
               </h1>
               
-              <p className="py-6 text-justify text-gray-700 dark:text-gray-200">
-                {"Master's student at "}
-                <Link href="https://www.omu.ac.jp/" passHref>
-                  <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
-                    Osaka Metropolitan University
-                  </a>
-                </Link>
-                {". Recieved Bachelor of Engineering (BE) at "}
-                <Link href="https://www.osakafu-u.ac.jp/" passHref>
-                  <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
-                    Osaka Prefecture University
-                  </a>
-                </Link>
-                {" in 03/2023. "}
-                {"Interests: human computer interaction, edtech, nudging strategies, learning augumentation, medical x ai ..."}
+              <p className="py-6 text-justify text-gray-700 dark:text-gray-200 px-1">
+                {t.INTRODUCTION}
+              </p>
+              <p className='py-6 text-justyfy text-gray-700 dark:text-gray-200 px-1'>
+                {t.KEYWORDS}
               </p>
             </div>
 
@@ -138,8 +128,8 @@ export default function Home () {
             </h2>
             <ul className='mb-4 px-1'>
               <li>
-                <Link href={t.iwashita2023ieicegeneral_bibpath}>
-                  <a className='hover:underline'>
+                <Link href="https://imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1906&search_year_b=2023&search_year_e=2023&lang=en" passHref>
+                  <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
                     {t.iwashita2023ieicegeneral}
                   </a>
                 </Link>
