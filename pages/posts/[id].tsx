@@ -21,33 +21,27 @@ export default function Blog({ post }: Props) {
       <Head>
         <title>{blogDetailTitle}</title>
       </Head>
-      <div className='h-full'>
-        <div className="px-80 py-20 mx-auto">
-          <div className="px-10 py-6 mx-auto  rounded-lg">
-            <article className='py-4 flex flex-col'>
-              <h1 className="sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold">
-                {post.meta.title}
-              </h1>
-              <div className='text-gray-400 py-2'>
-                {post.meta.date}
-              </div>
-              <div className="flex items-center justify-start mt-4 mb-4">
-                {post.meta.tags.map(tag => (
-                  <div className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" key={tag}>
-                    #{tag}
-                  </div>
-                ))}
-              </div>
-              <div className='self-center bg-gray-100 dark:bg-slate-900 p-10 rounded'>
-                <div 
-                  className="prose dark:prose-invert"
-                  dangerouslySetInnerHTML={{ __html: post.body }}
-                />
-              </div>
-            </article>
-          </div>
+      <article className='mx-auto my-32 px-10 max-w-4xl flex flex-col'>
+        <h1 className="text-xl sm:text-2xl md:text-4xl font-bold">
+          {post.meta.title}
+        </h1>
+        <div className='text-gray-400 py-2'>
+          {post.meta.date}
         </div>
-      </div>
+        <div className="flex my-4 gap-2">
+          {post.meta.tags.map(tag => (
+            <div className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700" key={tag}>
+              #{tag}
+            </div>
+          ))}
+        </div>
+        <div className='my-4 p-10 bg-gray-100 dark:bg-slate-900 rounded-lg'>
+          <div 
+            className="markdown"
+            dangerouslySetInnerHTML={{ __html: post.body }}
+          />
+        </div>
+      </article>
     </>
   );
 }
