@@ -31,6 +31,7 @@ export default function Contact () {
         setForm({name: '', email: '', msg: ''})
       } else {
         console.log(`Error: Status Code ${res.status}`);
+        alert('Failed to send a message.')
       }
     })
     .catch((e) => {
@@ -43,79 +44,77 @@ export default function Contact () {
       <Head>
         <title>{contactTitle}</title>
       </Head>
-      <div className="h-full">
-        <div className="flex flex-col items-center max-w-2xl mx-auto md:px-0 px-6 py-20 gap-5">
-          <h1 className="font-semibold md:text-4xl text-3xl">
-            {t.CONTACT}
-          </h1>
-          <form className="py-10 w-full">
-            <div className="flex flex-col mb-6 gap-2">
-              <label className="text-gray-500 font-bold text-left">
-                {t.FULLNAME}
-              </label>
-              <input
-                className=" bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                onChange={(e) => {
-                  const val = e.currentTarget.value;
-                  setForm((props) => ({
-                    ...props,
-                    name: val !== null ? val : '',
-                  }));
-                }}
-                value={form.name}
-                name="name"
-                type="text"
-                placeholder={t.FULLNAME}
-              />
-            </div>
-            <div className="flex flex-col mb-6 gap-2">
-              <label className="text-gray-500 font-bold text-left">
-                {t.EMAIL}
-              </label>
-              <input
-                onChange={(e) => {
-                  const val = e.currentTarget.value;
-                  setForm((props) => ({
-                    ...props,
-                    email: val !== null ? val : '',
-                  }));
-                }}
-                value={form.email}
-                name="email"
-                type="text"
-                className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                placeholder={t.EMAIL}
-              />
-            </div>
-            <div className="flex flex-col mb-6 gap-2">
-              <label className="text-gray-500 font-bold text-left">
-                {t.COMMENT}
-              </label>
-              <textarea
-                onChange={(e) => {
-                  const val = e.currentTarget.value;
-                  setForm((props) => ({
-                    ...props,
-                    msg: val !== null ? val : '',
-                  }));
-                }}
-                value={form.msg}
-                name="text"
-                className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                placeholder={t.COMMENT}
-              />
-            </div>
-            <button
-              className="w-full shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" 
-              onClick={async (e) => {
-                handleSubmit(e);
+      <div className="mx-5 sm:mx-10 md:mx-16 lg:mx-auto my-32 sm:my-24 md:my-28 md:mb-96 max-w-4xl flex flex-col gap-5">
+        <h1 className="mx-auto font-semibold md:text-4xl text-3xl">
+          {t.CONTACT}
+        </h1>
+        <form className="my-10">
+          <div className="flex flex-col my-6 gap-2">
+            <label className="font-bold">
+              {t.FULLNAME}
+            </label>
+            <input
+              className=" bg-gray-200 dark:bg-slate-200 rounded p-4 text-gray-70 dark:text-slate-800 focus:bg-white transition"
+              onChange={(e) => {
+                const val = e.currentTarget.value;
+                setForm((props) => ({
+                  ...props,
+                  name: val !== null ? val : '',
+                }));
               }}
-              type="submit"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
+              value={form.name}
+              name="name"
+              type="text"
+              placeholder={t.FULLNAME}
+            />
+          </div>
+          <div className="flex flex-col my-6 gap-2">
+            <label className="font-bold">
+              {t.EMAIL}
+            </label>
+            <input
+              onChange={(e) => {
+                const val = e.currentTarget.value;
+                setForm((props) => ({
+                  ...props,
+                  email: val !== null ? val : '',
+                }));
+              }}
+              value={form.email}
+              name="email"
+              type="email"
+              className="bg-gray-200 dark:bg-slate-200 rounded p-4 text-gray-70 dark:text-slate-800 focus:bg-white transition"
+              placeholder={t.EMAIL}
+            />
+          </div>
+          <div className="flex flex-col my-6 gap-2">
+            <label className="font-bold">
+              {t.COMMENT}
+            </label>
+            <textarea
+              onChange={(e) => {
+                const val = e.currentTarget.value;
+                setForm((props) => ({
+                  ...props,
+                  msg: val !== null ? val : '',
+                }));
+              }}
+              value={form.msg}
+              name="text"
+              className="bg-gray-200 dark:bg-slate-200 rounded p-4 text-gray-70 dark:text-slate-800 focus:bg-white transition"
+              placeholder={t.COMMENT}
+            />
+          </div>
+          <button
+            className="w-full shadow bg-gray-700 hover:bg-gray-600 dark:bg-slate-900 hover:dark:bg-slate-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded transition" 
+            onClick={async (e) => {
+              handleSubmit(e);
+            }}
+            type="submit"
+          >
+            {t.SUBMIT}
+          </button>
+        </form>
       </div>
     </>
   )

@@ -2,18 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply text-gray-900;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: rgb(30, 41, 59);
+    @apply bg-slate-800 text-slate-100;
   }
 }
 
 .markdown {
-  @apply leading-relaxed sm:leading-loose font-sans;
+  @apply leading-relaxed sm:leading-loose font-sans break-all;
 }
 
 .markdown p {
@@ -21,7 +24,7 @@
 }
 
 .markdown a {
-  @apply mx-1 text-gray-500 dark:text-slate-400 underline;
+  @apply mx-1 text-gray-500 dark:text-slate-400 hover:underline;
 }
 
 .markdown h1 {
@@ -57,6 +60,18 @@
 
 .markdown sup {
   @apply font-bold text-gray-500;
+}
+
+.markdown table {
+  @apply table-auto overflow-auto border border-collapse border-solid;
+}
+
+.markdown th {
+  @apply p-1 border border-gray-300 dark:border-slate-400 border-solid bg-gray-200 dark:bg-slate-800;
+}
+
+.markdown td {
+  @apply p-1 border border-gray-300 dark:border-slate-400 border-solid;
 }
 
 .markdown a[id^="user-content-user-content-fnref"] {

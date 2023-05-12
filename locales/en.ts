@@ -22,6 +22,7 @@ export default {
   FULLNAME: "Full Name",
   EMAIL: "Email",
   COMMENT: "Comment",
+  SUBMIT: "Submit",
 
   // Experiences
   INTERNSHIP: "Internship",

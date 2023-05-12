@@ -22,6 +22,7 @@ export default {
   FULLNAME: "氏名",
   EMAIL: "メールアドレス",
   COMMENT: "本文",
+  SUBMIT: "送信",
 
   // Experiences
   INTERNSHIP: "インターン",

@@ -21,7 +21,7 @@ export default function Blog({ post }: Props) {
       <Head>
         <title>{blogDetailTitle}</title>
       </Head>
-      <article className='mx-auto my-32 px-10 max-w-4xl flex flex-col'>
+      <article className='mx-5 sm:mx-10 md:mx-16 lg:mx-auto my-32 sm:my-24 md:my-32 max-w-4xl flex flex-col'>
         <h1 className="text-xl sm:text-2xl md:text-4xl font-bold">
           {post.meta.title}
         </h1>
@@ -35,7 +35,7 @@ export default function Blog({ post }: Props) {
             </div>
           ))}
         </div>
-        <div className='my-4 p-10 bg-gray-100 dark:bg-slate-900 rounded-lg'>
+        <div className='my-4 px-4 sm:px-6 md:px-8 lg:px-10 py-2 bg-gray-100 dark:bg-slate-900 rounded-lg'>
           <div 
             className="markdown"
             dangerouslySetInnerHTML={{ __html: post.body }}

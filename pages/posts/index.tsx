@@ -34,36 +34,34 @@ export default function Blog ({ posts }: Props) {
       <Head>
         <title>{blogTitle}</title>
       </Head>
-      <div className='h-full'>
-        <div className='flex flex-col items-center max-w-2xl mx-auto md:px-0 px-6 py-20 gap-5'>
-          <h1 className="font-semibold md:text-4xl text-3xl">
-            {t.BLOG}
-          </h1>
-          <ul className='gap-4 flex flex-col w-full'>
-            {posts.map((post) => (
-              <li className="" key={post.id}>
-                <Link href={`/posts/${post.id}`} passHref>
-                  <a>
-                    <div className='flex flex-col gap-2 rounded-xl shadow-lg px-6 py-3 transition hover:bg-gray-300 dark:hover:bg-slate-900'>
-                      <div className='font-bold sm:text-lg text-base'>{post.title}</div>
-                      <div className='flex sm:gap-5 gap-2 sm:flex-row flex-col'>
-                        <div className='py-1 font-semibold sm:text-base text-sm'>{date(post.date)}</div>
-                        <div className='flex'>
-                          {post.tags.map(tag => (
-                            <span className="px-3 py-1 mr-2 mb-2 rounded-full font-semibold sm:text-sm text-xs text-gray-700 bg-gray-200 " key={tag}>
-                              #{tag}
-                            </span>
-                          ))}
-                        </div>
+      <div className='mx-5 sm:mx-10 md:mx-16 lg:mx-auto my-32 sm:my-24 md:my-32 max-w-4xl flex flex-col'>
+        <h1 className="mx-auto mb-5 font-semibold md:text-4xl text-3xl">
+          {t.BLOG}
+        </h1>
+        <ul className='gap-4 flex flex-col'>
+          {posts.map((post) => (
+            <li className="" key={post.id}>
+              <Link href={`/posts/${post.id}`} passHref>
+                <a>
+                  <div className='flex flex-col gap-2 rounded-xl shadow-lg px-6 py-4 transition bg-gray-100 hover:bg-gray-300 dark:bg-slate-900 dark:hover:bg-slate-700'>
+                    <div className='font-bold sm:text-lg text-base'>{post.title}</div>
+                    <div className='flex sm:gap-5 gap-2 sm:flex-row flex-col'>
+                      <div className='font-semibold sm:text-base text-sm'>{date(post.date)}</div>
+                      <div className='flex gap-2'>
+                        {post.tags.map(tag => (
+                          <span className="px-3 py-1 rounded-full font-semibold sm:text-sm text-xs text-gray-700 dark:text-slate-700 bg-gray-200 " key={tag}>
+                            #{tag}
+                          </span>
+                        ))}
                       </div>
-
                     </div>
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+
+                  </div>
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   )
