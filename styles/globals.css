@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth
+}
+
 body {
   @apply text-gray-900;
 }
@@ -60,6 +64,10 @@ body {
 
 .markdown sup {
   @apply font-bold text-gray-500;
+}
+
+.markdown blockquote {
+  @apply border-l-4 border-gray-400 dark:border-slate-400 bg-gray-200 dark:bg-slate-800 rounded border-solid pl-4 my-4;
 }
 
 .markdown table {

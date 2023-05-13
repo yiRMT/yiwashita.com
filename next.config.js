@@ -4,7 +4,7 @@ module.exports = {
     locales: ['ja', 'en'],
     defaultLocale: 'ja',
     ignoreRoutes: [
-      '/public'
+      '/public',
     ],
   },
   reactStrictMode: true,

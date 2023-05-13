@@ -79,8 +79,6 @@ export function getSortedPostsData() {
   });
 }
 
-
-
 export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf-8');
@@ -91,11 +89,9 @@ export async function getPostData(id: string) {
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(remarkHtml)
-    .use(remarkGfm, {singleTilde: false})
+    .use(remarkGfm)
     .process(content)
   const contentHtml = processedContent.toString();
-
-  console.log(processedContent)
 
   const postData: Post = {
     id: id,

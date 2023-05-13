@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import { client } from '../../libs/client';
 import { useLocale } from '../../hooks/useLocale';
 import type { PostMetadata } from '../../types/blog';
 import { getSortedPostsData } from '../../libs/posts';
@@ -41,7 +40,7 @@ export default function Blog ({ posts }: Props) {
         <ul className='gap-4 flex flex-col'>
           {posts.map((post) => (
             <li className="" key={post.id}>
-              <Link href={`/posts/${post.id}`} passHref>
+              <Link href={`/posts/${post.id}`} passHref locale='ja'>
                 <a>
                   <div className='flex flex-col gap-2 rounded-xl shadow-lg px-6 py-4 transition bg-gray-100 hover:bg-gray-300 dark:bg-slate-900 dark:hover:bg-slate-700'>
                     <div className='font-bold sm:text-lg text-base'>{post.title}</div>
