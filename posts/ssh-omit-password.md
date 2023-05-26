@@ -4,7 +4,7 @@ date: '2022-11-20'
 image: {}
 tags: ["Linux", "SSH", "Tech"]
 ---
-*本記事はZennに投稿した[記事](https://zenn.dev/rmt_drums/articles/173b4536f1c6e6)と同じ内容です．*
+> 本記事はZennに投稿した[記事](https://zenn.dev/rmt_drums/articles/173b4536f1c6e6)と同じ内容です．
 
 私はよく研究室のサーバにSSH接続するのですが，毎回パスワードを入力するのが面倒になってきました．特にVSCodeでリモート接続するとき，GUIでディレクトリにアクセスするたびにパスワードが聞かれて鬱陶しいです笑．
 

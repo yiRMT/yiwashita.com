@@ -4,7 +4,7 @@ date: '2023-04-01'
 image: {}
 tags: ["Discord", "Twitter", "Zapier", "Tech"]
 ---
-*本記事はZennに投稿した[記事](https://zenn.dev/rmt_drums/articles/discord-twitter-bot)と同じ内容です．*
+> 本記事はZennに投稿した[記事](https://zenn.dev/rmt_drums/articles/discord-twitter-bot)と同じ内容です．
 
 みなさんはあるユーザの最新ツイートをDiscordやSlackに自動投稿したいと思ったことはありませんか？例えばニュースツイートを自動投稿して〇〇タイムズを用意したら便利ですよね。
 これまで、タスク自動化サービスの[IFTTT](https://ifttt.com/)がそれを実現し、多くのユーザに使われてきました。しかし、TwitterがAPIの規約を改正したことでIFTTTなどのタスク自動化サービスがTwitterをサポートしなくなってきています。
