@@ -4,6 +4,7 @@ export default {
   // Page Title
   HOME: "ホーム",
   BLOG: "ブログ",
+  PROJECTS: "プロジェクト",
   CONTACT: "連絡",
   PRIVACY_POLICY: "プライバシーポリシー",
   
@@ -16,7 +17,7 @@ export default {
   KEYWORDS: "キーワード：人間中心のAI，ヒューマン・コンピュータ・インタラクション，教育工学，認知科学，ナッジ戦略，知能増強，大規模言語モデル，医療×AI，生存分析，etc．",
   BACHELOR_AND_MASTER_LAB: "知能メディア処理研究室",
   EXPERIENCES: "職歴",
-  PROJECTS: "参加プロジェクト",
+  RESEARCH_PROJECTS: "研究プロジェクト",
   LINKS: "外部サイト",
 
   FULLNAME: "氏名",

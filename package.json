@@ -10,6 +10,9 @@
     "deploy": "next build && next export"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.3",
     "@types/nodemailer": "^6.4.7",
     "gray-matter": "^4.0.3",
     "microcms-js-sdk": "^2.2.1",

@@ -4,6 +4,7 @@ export default {
   // Page Title
   HOME: "Home",
   BLOG: "Blog",
+  PROJECTS: "Projects",
   CONTACT: "Contact",
   PRIVACY_POLICY: "Privacy Policy",
   
@@ -16,7 +17,7 @@ export default {
   KEYWORDS: "Keywords: Human-Centered AI, Human-Computer Interaction, EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, Medical x AI, Survival Analysis, etc.",
   BACHELOR_AND_MASTER_LAB: "Intelligence Media Processing (IMP) Lab",
   EXPERIENCES: "Experiences",
-  PROJECTS: "Projects",
+  RESEACH_PROJECTS: "Research Projects",
   LINKS: "Links",
 
   FULLNAME: "Full Name",

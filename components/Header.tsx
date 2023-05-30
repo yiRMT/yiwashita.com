@@ -1,15 +1,13 @@
 import Link from 'next/link';
 import { useLocale } from '../hooks/useLocale';
 import React, {useState} from 'react';
+import { useRouter } from 'next/router'
+import { Switch } from '@mui/material';
 
 export default function Header() {
-  const { t } = useLocale();
-
-  const [openMenu, setOpenMenu] = useState(false);
-
-  function toggleMenu() {
-    setOpenMenu(!openMenu);
-  }
+  const { locale, t } = useLocale();
+  const router = useRouter()
+  const anotherLocale = locale === 'ja' ? 'en' : 'ja';
 
   return (
     <header className='sticky flex flex-wrap sm:justify-start z-50'>
@@ -31,6 +29,13 @@ export default function Header() {
               </Link>
             </li>
             <li>
+              <Link href={'/projects/'}>
+                <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
+                  {t.PROJECTS}
+                </a>
+              </Link>
+            </li>
+            <li>
               <Link href={'/posts/'}>
                 <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
                   {t.BLOG}
@@ -45,19 +50,21 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href={'/ja'} locale="ja">
-                <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
-                  JA
-                </a>
-              </Link>
-            </li>
-            <li>
-              <div>
-                <Link href={'/en'} locale="en">
-                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
-                    EN
-                  </a>
-                </Link>
+              <div className='flex place-items-center'>
+                <span className='text-gray-700 dark:text-gray-400'>EN</span>
+                <Switch
+                  checked={locale === 'ja'}
+                  onChange={() => {}}
+                  onClick={() => {
+                    if (router.asPath === '/') {
+                      router.push('/', '/', { locale: anotherLocale })
+                    } else {
+                      router.push(router.asPath, router.asPath, { locale: anotherLocale })
+                    }
+                  }}
+                  color="default" 
+                />
+                <span className='text-gray-700 dark:text-gray-400'>JA</span>
               </div>
             </li>
           </ul>

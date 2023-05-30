@@ -21,7 +21,7 @@ export default function Blog({ post }: Props) {
       <Head>
         <title>{blogDetailTitle}</title>
       </Head>
-      <article className='mx-5 sm:mx-10 md:mx-16 lg:mx-auto my-32 sm:my-24 md:my-32 max-w-4xl flex flex-col'>
+      <article className='mx-5 sm:mx-10 md:mx-16 lg:mx-auto my-32 sm:my-24 md:my-28 md:mb-96 max-w-4xl flex flex-col'>
         <h1 className="text-xl sm:text-2xl md:text-4xl font-bold">
           {post.meta.title}
         </h1>
