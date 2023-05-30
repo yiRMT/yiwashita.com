@@ -137,7 +137,7 @@ export default function Home () {
 
         <div className='my-10'>
           <h2 className='font-semibold sm:text-3xl text-2xl my-3'>
-            {t.RESEARCH_PROJECTS}
+            {t.RESEACHPROJECTS}
           </h2>
           <table>
             <tbody>
