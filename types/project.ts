@@ -8,7 +8,10 @@ export type PostMetadata = {
   },
   date: string,
   tags: string[],
-  description: string,
+  description: {
+    en: string,
+    ja: string,
+  }
   links: {
     website: string,
     github: string,

@@ -20,7 +20,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="basis-full grow block" >
-          <ul className='flex gap-5 mt-5 sm:items-center sm:justify-end sm:mt-0 sm:pl-5'>
+          <ul className='flex flex-wrap gap-3 sm:gap-5 mt-5 items-center sm:justify-end sm:mt-0 sm:pl-5'>
             <li>
               <Link href={'/'}>
                 <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">

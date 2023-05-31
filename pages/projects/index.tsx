@@ -21,7 +21,7 @@ type Props = {
 };
 
 export default function Projects ({ posts }: Props) {
-  const { t } = useLocale()
+  const { locale, t } = useLocale()
   const projectsTitle = `${t.PROJECTS} - ${t.NAME}`
   const date = (oldDateString: string) => {
     let dateObject = new Date(oldDateString)
@@ -41,17 +41,32 @@ export default function Projects ({ posts }: Props) {
         <ul className='gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
           {posts.map((post) => (
             <li className="" key={post.id}>
-                  <div className='flex flex-col gap-2 pb-4 rounded-xl shadow-lg transition bg-gray-100 dark:bg-slate-900'>
-                    <div className='object-cover'>
-                      <Image
-                        src={post.image.path}
-                        alt={post.title}
-                        width={640}
-                        height={360}
-                        objectFit='cover'
-                        className='rounded-t-xl'
-                      />
-                    </div>
+                  <div className='flex flex-col gap-2 pb-4 rounded-xl shadow-lg hover:shadow-gray-300 dark:hover:shadow-slate-700 transition bg-gray-100 dark:bg-slate-900'>
+                    { post.links.website !== '' ? (
+                      <Link href={post.links.website} passHref>
+                        <a target='_blank' className='object-cover'>
+                          <Image
+                            src={post.image.path}
+                            alt={post.title}
+                            width={640}
+                            height={360}
+                            objectFit='cover'
+                            className='rounded-t-xl'
+                          />
+                        </a>
+                      </Link>
+                    ) : (
+                      <div className='object-cover'>
+                            <Image
+                              src={post.image.path}
+                              alt={post.title}
+                              width={640}
+                              height={360}
+                              objectFit='cover'
+                              className='rounded-t-xl'
+                            />
+                          </div>
+                    )}
                     { post.links.website !== '' ? (
                       <Link href={post.links.website} passHref>
                         <a target='_blank' className='font-bold sm:text-lg text-base mx-5 hover:underline'>
@@ -83,7 +98,11 @@ export default function Projects ({ posts }: Props) {
                         <></> 
                       )}
                     </div>
-                    <div className='mx-5'>{post.description}</div>
+                    { locale === 'en' ? (
+                      <div className='mx-5'>{post.description.en}</div>
+                    ) : (
+                      <div className='mx-5'>{post.description.ja}</div>
+                    )}
                     <div className='flex flex-wrap gap-2 mx-5'>
                       {post.tags.map(tag => (
                         <span className="px-3 py-1 rounded-full font-semibold sm:text-sm text-xs text-gray-700 dark:text-slate-700 bg-gray-200 " key={tag}>
