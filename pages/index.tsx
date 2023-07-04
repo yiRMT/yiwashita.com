@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useLocale } from '../hooks/useLocale';
 
 export default function Home () {
-  const { t } = useLocale()
+  const { locale, t } = useLocale()
   const topTitle = t.NAME
   return (
     <>
@@ -49,7 +49,7 @@ export default function Home () {
                 <td className='px-1'>-</td>
                 <td className='px-1'>2023.3</td>
                 <td >
-                  <Link href="https://www.osakafu-u.ac.jp/academics/college/ce/" passHref>
+                  <Link href={ locale === "ja" ? "https://www.osakafu-u.ac.jp/academics/college/ce/" : "https://www.osakafu-u.ac.jp/en/academics/colleges/ce/"} passHref>
                     <a target="_blank" rel="noopener noreferrer" className='pl-4 hover:underline'>
                       {t.BACHELOR_AFFILIATION}
                     </a>
@@ -61,7 +61,7 @@ export default function Home () {
                 <td className='px-1'>-</td>
                 <td className='px-1'></td>
                 <td>
-                  <Link href="https://imlab.jp" passHref>
+                  <Link href={ locale === "ja" ? "https://imlab.jp" : "https://imlab.jp/index-e.html"} passHref>
                     <a target="_blank" rel="noopener noreferrer" className='pl-4 hover:underline'>
                       {t.BACHELOR_AND_MASTER_LAB}
                     </a>
@@ -73,7 +73,7 @@ export default function Home () {
                 <td className='px-1'>-</td>
                 <td className='px-1'>(2025.3)</td>
                 <td>
-                  <Link href="https://www.omu.ac.jp/i/" passHref>
+                  <Link href={ locale === "ja" ? "https://www.omu.ac.jp/i/" : "https://www.omu.ac.jp/i/en/"} passHref>
                     <a target="_blank" rel="noopener noreferrer" className='pl-4 hover:underline'>
                       {t.MASTER_AFFILIATION}
                     </a>
@@ -96,7 +96,7 @@ export default function Home () {
                 <td className='px-1'>2023.3</td>
                 <td className='pl-4'>
                   {t.INTERNSHIP}{", "}
-                  <Link href="https://www.dfki.de/" passHref>
+                  <Link href="https://www.dfki.de/en/web" passHref>
                     <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
                       {t.DFKI}
                     </a>
@@ -109,7 +109,7 @@ export default function Home () {
                 <td className='px-1'></td>
                 <td className='pl-4'>
                   {t.SERVERADMIN}{", "}
-                  <Link href="https://imlab.jp" passHref>
+                  <Link href={ locale === "ja" ? "https://imlab.jp" : "https://imlab.jp/index-e.html"} passHref>
                     <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
                       {t.BACHELOR_AND_MASTER_LAB}
                     </a>
@@ -126,7 +126,7 @@ export default function Home () {
           </h2>
           <ul className='mb-4 px-1'>
             <li>
-              <Link href="https://imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1906&search_year_b=2023&search_year_e=2023&lang=en" passHref>
+              <Link href={ locale === 'ja' ? "https://imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1906&search_year_b=2023&search_year_e=2023&lang=ja" : "https://imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1906&search_year_b=2023&search_year_e=2023&lang=en"} passHref>
                 <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
                   {t.iwashita2023ieicegeneral}
                 </a>
@@ -142,11 +142,23 @@ export default function Home () {
           <table>
             <tbody>
               <tr>
+                <td className='px-1'>2022.6</td>
+                <td className='px-1'>-</td>
+                <td className='px-1'>2024.3</td>
+                <td >
+                  <Link href="https://www.omu.ac.jp/info/news/entry-06252.html" passHref>
+                    <a target="_blank" rel="noopener noreferrer" className='pl-4 hover:underline'>
+                      {t.MEDxAI}
+                    </a>
+                  </Link>
+                </td>
+              </tr>
+              <tr>
                 <td className='px-1'>2021.9</td>
                 <td className='px-1'>-</td>
                 <td className='px-1'>2024.3</td>
                 <td >
-                  <Link href="https://lecycl.imlab.jp/" passHref>
+                  <Link href="https://www.lecycl.org" passHref>
                     <a target="_blank" rel="noopener noreferrer" className='pl-4 hover:underline'>
                       Learning Cyclotron (LeCycl)
                     </a>

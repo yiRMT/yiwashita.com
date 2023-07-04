@@ -19,6 +19,7 @@ export default {
   EXPERIENCES: "Experiences",
   RESEACHPROJECTS: "Research Projects",
   LINKS: "Links",
+  MEDxAI: "Medical x AI",
 
   FULLNAME: "Full Name",
   EMAIL: "Email",

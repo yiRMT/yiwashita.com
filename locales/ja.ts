@@ -19,6 +19,7 @@ export default {
   EXPERIENCES: "職歴",
   RESEACHPROJECTS: "研究プロジェクト",
   LINKS: "外部サイト",
+  MEDxAI: "医療×AI",
 
   FULLNAME: "氏名",
   EMAIL: "メールアドレス",
