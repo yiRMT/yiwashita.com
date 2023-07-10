@@ -189,6 +189,13 @@ export default function Home () {
               </Link>
             </li>
             <li>
+              <Link href="https://speakerdeck.com/yirmt" passHref>
+                <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
+                  Speaker Deck
+                </a>
+              </Link>
+            </li>
+            <li>
               <Link href="https://github.com/yiRMT" passHref>
                 <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
                   GitHub
