@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import * as gtag from '../libs/gtag';
 import { GaScript } from '../components/GaScripts';
+import NextTopLoader from 'nextjs-toploader';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -24,6 +25,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GaScript />
+      <NextTopLoader 
+        color="#334155"
+        showSpinner={false}
+      />
       <Header />
       <Component {...pageProps} />
       <Footer />
