@@ -30,6 +30,8 @@ export default {
   INTERNSHIP: "Internship",
   SERVERADMIN: "Server Administrator",
   DFKI: "German Research Center for Artificial Intelligence (DFKI)",
+  FREEE: "freee K.K.",
+  RAKUTEN: "Rakuten Group, Inc.",
 
   // Blog
   LIST_OF_ARTICLES: "List of Articles",
