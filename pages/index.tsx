@@ -45,13 +45,13 @@ export default function Home () {
           <table>
             <tbody>
               <tr>
-                <td className='px-1'>2021.4</td>
+                <td className='px-1'>2023.4</td>
                 <td className='px-1'>-</td>
-                <td className='px-1'>2023.3</td>
-                <td >
-                  <Link href={ locale === "ja" ? "https://www.osakafu-u.ac.jp/academics/college/ce/" : "https://www.osakafu-u.ac.jp/en/academics/colleges/ce/"} passHref>
+                <td className='px-1'></td>
+                <td>
+                  <Link href={ locale === "ja" ? "https://www.omu.ac.jp/i/" : "https://www.omu.ac.jp/i/en/"} passHref>
                     <a target="_blank" rel="noopener noreferrer" className='pl-4 hover:underline'>
-                      {t.BACHELOR_AFFILIATION}
+                      {t.MASTER_AFFILIATION}
                     </a>
                   </Link>
                 </td>
@@ -69,13 +69,13 @@ export default function Home () {
                 </td>
               </tr>
               <tr>
-                <td className='px-1'>2023.4</td>
+                <td className='px-1'>2021.4</td>
                 <td className='px-1'>-</td>
-                <td className='px-1'>(2025.3)</td>
-                <td>
-                  <Link href={ locale === "ja" ? "https://www.omu.ac.jp/i/" : "https://www.omu.ac.jp/i/en/"} passHref>
+                <td className='px-1'>2023.3</td>
+                <td >
+                  <Link href={ locale === "ja" ? "https://www.osakafu-u.ac.jp/academics/college/ce/" : "https://www.osakafu-u.ac.jp/en/academics/colleges/ce/"} passHref>
                     <a target="_blank" rel="noopener noreferrer" className='pl-4 hover:underline'>
-                      {t.MASTER_AFFILIATION}
+                      {t.BACHELOR_AFFILIATION}
                     </a>
                   </Link>
                 </td>
