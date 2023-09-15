@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useLocale } from '../hooks/useLocale';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useRouter } from 'next/router'
 import { Switch } from '@mui/material';
 
@@ -8,6 +8,11 @@ export default function Header() {
   const { locale, t } = useLocale();
   const router = useRouter()
   const anotherLocale = locale === 'ja' ? 'en' : 'ja';
+  const currentPath = router.asPath;
+  const regexList = [
+    /\/projects*/,
+    /\/posts*/
+  ];
 
   return (
     <header className='sticky flex flex-wrap sm:justify-start z-50'>
@@ -23,30 +28,54 @@ export default function Header() {
           <ul className='flex flex-wrap gap-3 sm:gap-5 mt-5 items-center sm:justify-end sm:mt-0 sm:pl-5'>
             <li>
               <Link href={'/'}>
-                <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
-                  {t.HOME}
-                </a>
+                {currentPath === '/' ? (
+                  <a className="text-gray-400 dark:text-white hover:text-gray-400 dark:hover:text-white">
+                    {t.HOME}
+                  </a>
+                ) : (
+                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
+                    {t.HOME}
+                  </a>
+                )}
               </Link>
             </li>
             <li>
               <Link href={'/projects/'}>
-                <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
-                  {t.PROJECTS}
-                </a>
+                {regexList[0].test(currentPath) ? (
+                  <a className="text-gray-400 dark:text-white hover:text-gray-400 dark:hover:text-white">
+                    {t.PROJECTS}
+                  </a>
+                ) : (
+                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
+                    {t.PROJECTS}
+                  </a>
+                )}
               </Link>
             </li>
             <li>
               <Link href={'/posts/'}>
-                <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
-                  {t.BLOG}
-                </a>
+                {regexList[1].test(currentPath) ? (
+                  <a className="text-gray-400 dark:text-white hover:text-gray-400 dark:hover:text-white">
+                    {t.BLOG}
+                  </a>
+                ) : (
+                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
+                    {t.BLOG}
+                  </a>
+                )}
               </Link>
             </li>
             <li>
               <Link href={'/contact'}>
-                <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
-                  {t.CONTACT}
-                </a>
+                {currentPath === '/contact' ? (
+                  <a className="text-gray-400 dark:text-white hover:text-gray-400 dark:hover:text-white">
+                    {t.CONTACT}
+                  </a>
+                ) : (
+                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
+                    {t.CONTACT}
+                  </a>
+                )}
               </Link>
             </li>
             <li>
