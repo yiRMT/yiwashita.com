@@ -124,7 +124,28 @@ export default function Home () {
           <h2 className='font-semibold sm:text-3xl text-2xl my-3'>
             {t.PUBLICATION}
           </h2>
-          <ul className='mb-4 px-1'>
+          <ul className='mb-4 px-1 flex flex-col gap-3'>
+            <li>
+              <Link href="https://jcmi43.org" passHref>
+                <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
+                  {t.liu2023jcmi43survivalanalysis}
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://jcmi43.org" passHref>
+                <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
+                  {t.nonomiya2023jcmi43dynamicprediction}
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://jcmi43.org" passHref>
+                <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
+                  {t.kotoura2023jcmi43clinicalplusimage}
+                </a>
+              </Link>
+            </li>
             <li>
               <Link href={ locale === 'ja' ? "https://imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1906&search_year_b=2023&search_year_e=2023&lang=ja" : "https://imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1906&search_year_b=2023&search_year_e=2023&lang=en"} passHref>
                 <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
