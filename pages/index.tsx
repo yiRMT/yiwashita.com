@@ -91,6 +91,32 @@ export default function Home () {
           <table>
             <tbody>
               <tr>
+                <td className='px-1'>2023.9</td>
+                <td className='px-1'>-</td>
+                <td className='px-1'>2023.9</td>
+                <td className='pl-4'>
+                  {t.INTERNSHIP}{", "}
+                  <Link href={ locale === "ja" ? "https://corp.rakuten.co.jp" : "https://global.rakuten.com/corp"} passHref>
+                    <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
+                      {t.RAKUTEN}
+                    </a>
+                  </Link>
+                </td>
+              </tr>
+              <tr>
+                <td className='px-1'>2023.8</td>
+                <td className='px-1'>-</td>
+                <td className='px-1'>2023.9</td>
+                <td className='pl-4'>
+                  {t.INTERNSHIP}{", "}
+                  <Link href={ locale === "ja" ? "https://corp.freee.co.jp" : "https://corp.freee.co.jp/en"} passHref>
+                    <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
+                      {t.FREEE}
+                    </a>
+                  </Link>
+                </td>
+              </tr>
+              <tr>
                 <td className='px-1'>2023.3</td>
                 <td className='px-1'>-</td>
                 <td className='px-1'>2023.3</td>

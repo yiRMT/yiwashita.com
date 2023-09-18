@@ -30,6 +30,8 @@ export default {
   INTERNSHIP: "インターン",
   SERVERADMIN: "サーバー管理者",
   DFKI: "ドイツ人工知能研究センター (DFKI)",
+  FREEE: "freee株式会社",
+  RAKUTEN: "楽天グループ株式会社",
 
   // Blog
   LIST_OF_ARTICLES: "記事一覧",
