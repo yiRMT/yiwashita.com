@@ -45,6 +45,18 @@ export default function Home () {
           <table>
             <tbody>
               <tr>
+                <td className='px-1'>2023.10</td>
+                <td className='px-1'>-</td>
+                <td className='px-1'></td>
+                <td>
+                  <Link href='https://rptu.de/en' passHref>
+                    <a target="_blank" rel="noopener noreferrer" className='pl-4 hover:underline'>
+                      {t.RPTU}
+                    </a>
+                  </Link>
+                </td>
+              </tr>
+              <tr>
                 <td className='px-1'>2023.4</td>
                 <td className='px-1'>-</td>
                 <td className='px-1'></td>
@@ -90,6 +102,19 @@ export default function Home () {
           </h2>
           <table>
             <tbody>
+              <tr>
+                <td className='px-1'>2023.9</td>
+                <td className='px-1'>-</td>
+                <td className='px-1'></td>
+                <td className='pl-4'>
+                  {t.INTERNSHIP}{", "}
+                  <Link href="https://www.dfki.de/en/web" passHref>
+                    <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
+                      {t.DFKI}
+                    </a>
+                  </Link>
+                </td>
+              </tr>
               <tr>
                 <td className='px-1'>2023.9</td>
                 <td className='px-1'>-</td>
