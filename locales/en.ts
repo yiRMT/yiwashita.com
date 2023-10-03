@@ -13,6 +13,7 @@ export default {
   PUBLICATION: "Publication",
   BACHELOR_AFFILIATION: "College of Engineering, Osaka Prefecture University",
   MASTER_AFFILIATION: "Graduate School of Informatics, Osaka Metropolitan University",
+  RPTU: 'Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau (RPTU)',
   INTRODUCTION: "Master's student at Osaka Metropolitan University. Recieved Bachelor of Engineering (BEng) at Osaka Prefecture University in 03/2023. I have been researching how to augument our intelligence by using technologies such as AI. From 2022, I have been also working on research about solving problems in medical field by using AI.",
   KEYWORDS: "Keywords: Human-Centered AI, Human-Computer Interaction, EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, Medical x AI, Survival Analysis, etc.",
   BACHELOR_AND_MASTER_LAB: "Intelligence Media Processing Lab",
