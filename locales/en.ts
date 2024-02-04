@@ -9,15 +9,15 @@ export default {
   PRIVACY_POLICY: "Privacy Policy",
   
   // Home
-  AFFILIATION: "Affiliation",
+  AFFILIATION: "Academic Affiliation",
   PUBLICATION: "Publication",
   BACHELOR_AFFILIATION: "College of Engineering, Osaka Prefecture University",
   MASTER_AFFILIATION: "Graduate School of Informatics, Osaka Metropolitan University",
   RPTU: 'Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau (RPTU)',
-  INTRODUCTION: "Master's student at Osaka Metropolitan University. Recieved Bachelor of Engineering (BEng) at Osaka Prefecture University in 03/2023. I have been researching how to augument our intelligence by using technologies such as AI. From 2022, I have been also working on research about solving problems in medical field by using AI.",
+  INTRODUCTION: "Master's student at Graduate School of Informatics, Osaka Metropolitan University. Recieved Bachelor of Engineering (B.Eng.) at Osaka Prefecture University in 03/2023. I have been researching how to augument our intelligence by using technologies such as AI. From 2022, I have been also working on research about solving problems in medical field by using AI.",
   KEYWORDS: "Keywords: Human-Centered AI, Human-Computer Interaction, EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, Medical x AI, Survival Analysis, etc.",
-  BACHELOR_AND_MASTER_LAB: "Intelligence Media Processing Lab",
-  EXPERIENCES: "Experiences",
+  BACHELOR_AND_MASTER_LAB: "Intelligence Media Processing Research Group",
+  EXPERIENCES: "Work Experiences",
   RESEACHPROJECTS: "Research Projects",
   LINKS: "Links",
   MEDxAI: "Medical x AI",
@@ -29,10 +29,12 @@ export default {
 
   // Experiences
   INTERNSHIP: "Internship",
+  SOFTWARE_ENGINEER: "Software Engineer",
   SERVERADMIN: "Server Administrator",
   DFKI: "German Research Center for Artificial Intelligence (DFKI)",
   FREEE: "freee K.K.",
   RAKUTEN: "Rakuten Group, Inc.",
+  AFFECTIFY: "Affectify Inc.",
 
   // Blog
   LIST_OF_ARTICLES: "List of Articles",
