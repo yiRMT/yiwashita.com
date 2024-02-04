@@ -103,6 +103,19 @@ export default function Home () {
           <table>
             <tbody>
               <tr>
+                <td className='px-1'>2024.2</td>
+                <td className='px-1'>-</td>
+                <td className='px-1'></td>
+                <td className='pl-4'>
+                  {t.SOFTWARE_ENGINEER}{", "}
+                  <Link href="https://affectify.jp" passHref>
+                    <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
+                      {t.AFFECTIFY}
+                    </a>
+                  </Link>
+                </td>
+              </tr>
+              <tr>
                 <td className='px-1'>2023.9</td>
                 <td className='px-1'>-</td>
                 <td className='px-1'></td>
