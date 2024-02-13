@@ -192,7 +192,7 @@ export default function Home () {
             <li>
               <Link href={`https://arxiv.org/abs/2402.07770`} passHref>
                 <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
-                  David Selby*, Kai Spriestersbach*, Yuichiro Iwashita*, Dennis Bappert, Archana Warrier, Sumantrak Mukherjee, Sergey Redyuk, Muhammad Nabeel Asim, Koichi Kise, Sebastian Vollmer. Had Enough of Experts? Quantitative Knowledge Retrieval from Large Language Models. arXiv preprint arXiv:2402.07770, 2024. (* equal contributions)
+                  David Selby*, Kai Spriestersbach*, Yuichiro Iwashita*, Dennis Bappert, Archana Warrier, Sumantrak Mukherjee, Sergey Redyuk, Muhammad Nabeel Asim, Koichi Kise, Sebastian Vollmer. Quantitative Knowledge Retrieval from Large Language Models. arXiv preprint arXiv:2402.07770v1 [cs.IR], 2024. (* equal contributions)
                 </a>
               </Link>
             </li>
