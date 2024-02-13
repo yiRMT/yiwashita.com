@@ -190,6 +190,13 @@ export default function Home () {
           </h2>
           <ul className='mb-4 px-1 flex flex-col gap-3'>
             <li>
+              <Link href={`https://arxiv.org/abs/2402.07770`} passHref>
+                <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
+                  David Selby*, Kai Spriestersbach*, Yuichiro Iwashita*, Dennis Bappert, Archana Warrier, Sumantrak Mukherjee, Sergey Redyuk, Muhammad Nabeel Asim, Koichi Kise, Sebastian Vollmer. Quantitative Knowledge Retrieval from Large Language Models. arXiv preprint arXiv:2402.07770v1 [cs.IR], 2024. (* equal contributions)
+                </a>
+              </Link>
+            </li>
+            <li>
               <Link href={`https://publication.imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1940&prev_func=search_result&search_year_b=2023&search_year_e=2023&lang=${locale}`} passHref>
                 <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
                   {t.liu2023jcmi43survivalanalysis}
