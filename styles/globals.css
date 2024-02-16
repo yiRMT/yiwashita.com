@@ -48,10 +48,10 @@ body {
 }
 
 .markdown ol {
-  @apply list-decimal ml-10 my-6;
+  @apply list-decimal ml-10;
 }
 .markdown ul {
-  @apply list-disc ml-10 my-6;
+  @apply list-disc ml-10;
 }
 
 .markdown pre {

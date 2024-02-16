@@ -103,6 +103,19 @@ export default function Home () {
           <table>
             <tbody>
               <tr>
+                <td className='px-1'>2024.2</td>
+                <td className='px-1'>-</td>
+                <td className='px-1'></td>
+                <td className='pl-4'>
+                  {t.SOFTWARE_ENGINEER}{", "}
+                  <Link href="https://affectify.jp" passHref>
+                    <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
+                      {t.AFFECTIFY}
+                    </a>
+                  </Link>
+                </td>
+              </tr>
+              <tr>
                 <td className='px-1'>2023.9</td>
                 <td className='px-1'>-</td>
                 <td className='px-1'></td>
@@ -177,28 +190,35 @@ export default function Home () {
           </h2>
           <ul className='mb-4 px-1 flex flex-col gap-3'>
             <li>
-              <Link href="https://jcmi43.org" passHref>
+              <Link href={`https://arxiv.org/abs/2402.07770`} passHref>
+                <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
+                  David Selby*, Kai Spriestersbach*, Yuichiro Iwashita*, Dennis Bappert, Archana Warrier, Sumantrak Mukherjee, Sergey Redyuk, Muhammad Nabeel Asim, Koichi Kise, Sebastian Vollmer. Quantitative Knowledge Retrieval from Large Language Models. arXiv preprint arXiv:2402.07770v1 [cs.IR], 2024. (* equal contributions)
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href={`https://publication.imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1940&prev_func=search_result&search_year_b=2023&search_year_e=2023&lang=${locale}`} passHref>
                 <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
                   {t.liu2023jcmi43survivalanalysis}
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="https://jcmi43.org" passHref>
+              <Link href={`https://publication.imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1941&prev_func=search_result&search_year_b=2023&search_year_e=2023&lang=${locale}`} passHref>
                 <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
                   {t.nonomiya2023jcmi43dynamicprediction}
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="https://jcmi43.org" passHref>
+              <Link href={`https://publication.imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1942&prev_func=search_result&search_year_b=2023&search_year_e=2023&lang=${locale}`} passHref>
                 <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
                   {t.kotoura2023jcmi43clinicalplusimage}
                 </a>
               </Link>
             </li>
             <li>
-              <Link href={ locale === 'ja' ? "https://imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1906&search_year_b=2023&search_year_e=2023&lang=ja" : "https://imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1906&search_year_b=2023&search_year_e=2023&lang=en"} passHref>
+              <Link href={`https://publication.imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1906&prev_func=search_result&search_year_b=2023&search_year_e=2023&lang=${locale}`} passHref>
                 <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
                   {t.iwashita2023ieicegeneral}
                 </a>
