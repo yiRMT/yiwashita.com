@@ -190,6 +190,13 @@ export default function Home () {
           </h2>
           <ul className='mb-4 px-1 flex flex-col gap-3'>
             <li>
+              <Link href={`https://doi.org/10.1145/3652920.3653045`} passHref>
+                <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
+                  Yuichiro Iwashita, Andrew Vargo, Motoi Iwata, Koichi Kise. Personalizing Augmented Flashcards Towards Long-Term Vocabulary Learning. In Proceedings of The Augmented Humans International Conference (AHs 2024), ACM, 2024. (to be published)
+                </a>
+              </Link>
+            </li>
+            <li>
               <Link href={`https://arxiv.org/abs/2402.07770`} passHref>
                 <a target='_blank' rel="noopener noreferrer" className='hover:underline'>
                   David Selby*, Kai Spriestersbach*, Yuichiro Iwashita*, Dennis Bappert, Archana Warrier, Sumantrak Mukherjee, Sergey Redyuk, Muhammad Nabeel Asim, Koichi Kise, Sebastian Vollmer. Quantitative Knowledge Retrieval from Large Language Models. arXiv preprint arXiv:2402.07770v1 [cs.IR], 2024. (* equal contributions)
