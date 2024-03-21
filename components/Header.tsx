@@ -15,25 +15,32 @@ export default function Header() {
   ];
 
   return (
-    <header className='sticky flex flex-wrap sm:justify-start z-50'>
-      <nav className="w-full sm:flex sm:items-center fixed top-0 left-0 right-0 bg-gray-300/70 border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-slate-900/70 backdrop-blur">
-        <div className="flex items-center justify-between">
-          <Link href={'/'} className=''>
-            <a className="flex-none text-xl font-semibold text-gray-700 dark:text-white">
+    <header className='site-header'>
+      <div className='wrapper'>
+        <div className='logo-container'>
+          <Link href={'/'}>
+            <a 
+              className={
+                'nav-link ' +
+                  (router.asPath === '/' || router.asPath === ''
+                    ? 'nav-active'
+                    : '')
+              }
+            >
               {t.NAME}
             </a>
           </Link>
         </div>
-        <div className="basis-full grow block" >
-          <ul className='flex flex-wrap gap-3 sm:gap-5 mt-5 items-center sm:justify-end sm:mt-0 sm:pl-5'>
+        <nav className="nav-container">
+          <ul>
             <li>
               <Link href={'/'}>
                 {currentPath === '/' ? (
-                  <a className="text-gray-400 dark:text-white hover:text-gray-400 dark:hover:text-white">
+                  <a className=''>
                     {t.HOME}
                   </a>
                 ) : (
-                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
+                  <a>
                     {t.HOME}
                   </a>
                 )}
@@ -42,11 +49,11 @@ export default function Header() {
             <li>
               <Link href={'/projects/'}>
                 {regexList[0].test(currentPath) ? (
-                  <a className="text-gray-400 dark:text-white hover:text-gray-400 dark:hover:text-white">
+                  <a>
                     {t.PROJECTS}
                   </a>
                 ) : (
-                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
+                  <a>
                     {t.PROJECTS}
                   </a>
                 )}
@@ -55,11 +62,11 @@ export default function Header() {
             <li>
               <Link href={'/posts/'}>
                 {regexList[1].test(currentPath) ? (
-                  <a className="text-gray-400 dark:text-white hover:text-gray-400 dark:hover:text-white">
+                  <a>
                     {t.BLOG}
                   </a>
                 ) : (
-                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
+                  <a>
                     {t.BLOG}
                   </a>
                 )}
@@ -68,19 +75,19 @@ export default function Header() {
             <li>
               <Link href={'/contact'}>
                 {currentPath === '/contact' ? (
-                  <a className="text-gray-400 dark:text-white hover:text-gray-400 dark:hover:text-white">
+                  <a>
                     {t.CONTACT}
                   </a>
                 ) : (
-                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
+                  <a>
                     {t.CONTACT}
                   </a>
                 )}
               </Link>
             </li>
             <li>
-              <div className='flex place-items-center'>
-                <span className='text-gray-700 dark:text-gray-400'>EN</span>
+              <div className='lang-container'>
+                <span className=''>EN</span>
                 <Switch
                   checked={locale === 'ja'}
                   onChange={() => {}}
@@ -93,12 +100,12 @@ export default function Header() {
                   }}
                   color="default" 
                 />
-                <span className='text-gray-700 dark:text-gray-400'>JA</span>
+                <span className=''>JA</span>
               </div>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }

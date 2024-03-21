@@ -11,43 +11,34 @@ export default function Home () {
       <Head>
         <title>{topTitle}</title>
       </Head>
-      <div className="mx-5 sm:mx-10 md:mx-16 lg:mx-auto my-32 sm:my-24 md:my-28 max-w-4xl">
-        <div className='flex flex-col sm:flex-row items-center my-5 gap-5'>
-          <div className='flex flex-col sm:items-start items-center'>
-            <h1 className="font-bold md:text-5xl sm:text-4xl text-3xl tracking-tight mb-1">
-              {t.NAME}
-            </h1>
-            <p className="my-6 px-1">
-              {t.INTRODUCTION}
-            </p>
-            <p className='my-6 px-1'>
-              {t.KEYWORDS}
-            </p>
+      <div className='wrapper'>
+        <div className='bio'>
+          <div className='bio-text-container'>
+            <h1>{t.NAME}</h1>
+            <p>{t.INTRODUCTION}</p>
+            <p>{t.KEYWORDS}</p>
           </div>
 
-          <div className="flex-none sm:w-[176px] w-[200px] relative">
+          <div className='bio-image-container'>
             <Image
-              alt="Yuichiro Iwashita"
+              alt='Yuichiro Iwashita'
               height={176}
               width={176}
-              src="/profile.jpg"
-              sizes="30vw"
+              src='/profile.jpg'
               priority
-              className="rounded-full"
+              className='bio-image'
             />
           </div>
         </div>
 
-        <div className='my-10'>
-          <h2 className='font-semibold sm:text-3xl text-2xl my-3'>
-            {t.AFFILIATION}
-          </h2>
+        <div>
+          <h2>{t.AFFILIATION}</h2>
           <table>
             <tbody>
               <tr>
-                <td className='px-1'>2023.10</td>
-                <td className='px-1'>-</td>
-                <td className='px-1'></td>
+                <td>2023.10</td>
+                <td>-</td>
+                <td></td>
                 <td>
                   <Link href='https://rptu.de/en' passHref>
                     <a target="_blank" rel="noopener noreferrer" className='pl-4 hover:underline'>
@@ -57,9 +48,9 @@ export default function Home () {
                 </td>
               </tr>
               <tr>
-                <td className='px-1'>2023.4</td>
-                <td className='px-1'>-</td>
-                <td className='px-1'></td>
+                <td>2023.4</td>
+                <td>-</td>
+                <td></td>
                 <td>
                   <Link href={ locale === "ja" ? "https://www.omu.ac.jp/i/" : "https://www.omu.ac.jp/i/en/"} passHref>
                     <a target="_blank" rel="noopener noreferrer" className='pl-4 hover:underline'>
@@ -69,9 +60,9 @@ export default function Home () {
                 </td>
               </tr>
               <tr>
-                <td className='px-1'>2021.9</td>
-                <td className='px-1'>-</td>
-                <td className='px-1'></td>
+                <td>2021.9</td>
+                <td>-</td>
+                <td></td>
                 <td>
                   <Link href={ locale === "ja" ? "https://imlab.jp" : "https://imlab.jp/index-e.html"} passHref>
                     <a target="_blank" rel="noopener noreferrer" className='pl-4 hover:underline'>
@@ -81,10 +72,10 @@ export default function Home () {
                 </td>
               </tr>
               <tr>
-                <td className='px-1'>2021.4</td>
-                <td className='px-1'>-</td>
-                <td className='px-1'>2023.3</td>
-                <td >
+                <td>2021.4</td>
+                <td>-</td>
+                <td>2023.3</td>
+                <td>
                   <Link href={ locale === "ja" ? "https://www.osakafu-u.ac.jp/academics/college/ce/" : "https://www.osakafu-u.ac.jp/en/academics/colleges/ce/"} passHref>
                     <a target="_blank" rel="noopener noreferrer" className='pl-4 hover:underline'>
                       {t.BACHELOR_AFFILIATION}
@@ -96,17 +87,15 @@ export default function Home () {
           </table>
         </div>
 
-        <div className='my-10'>
-          <h2 className='font-semibold sm:text-3xl text-2xl my-3'>
-            {t.EXPERIENCES}
-          </h2>
+        <div>
+          <h2>{t.EXPERIENCES}</h2>
           <table>
             <tbody>
               <tr>
-                <td className='px-1'>2024.2</td>
-                <td className='px-1'>-</td>
-                <td className='px-1'></td>
-                <td className='pl-4'>
+                <td>2024.2</td>
+                <td>-</td>
+                <td></td>
+                <td>
                   {t.SOFTWARE_ENGINEER}{", "}
                   <Link href="https://affectify.jp" passHref>
                     <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
@@ -116,10 +105,10 @@ export default function Home () {
                 </td>
               </tr>
               <tr>
-                <td className='px-1'>2023.9</td>
-                <td className='px-1'>-</td>
-                <td className='px-1'></td>
-                <td className='pl-4'>
+                <td>2023.9</td>
+                <td>-</td>
+                <td></td>
+                <td>
                   {t.INTERNSHIP}{", "}
                   <Link href="https://www.dfki.de/en/web" passHref>
                     <a target="_blank" rel="noopener noreferrer" className='hover:underline'>
