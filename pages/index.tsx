@@ -190,7 +190,7 @@ export default function Home () {
           </h2>
           <ul className='mb-4 px-1 flex flex-col gap-3 list-decimal'>
             <li>
-              <b>Yuichiro Iwashita</b>, Andrew Vargo, Motoi Iwata, Koichi Kise. Personalizing Augmented Flashcards Towards Long-Term Vocabulary Learning. In Proceedings of the 15th Augmented Humans International Conference (AHs 2024), ACM, 2024. (to be published)
+              <b>Yuichiro Iwashita</b>, Andrew Vargo, Motoi Iwata, Koichi Kise. Personalizing Augmented Flashcards Towards Long-Term Vocabulary Learning. In Proceedings of the Augmented Humans International Conference (AHs 2024), ACM, 2024. (to be published)
             </li>
             <li>
               <Link href={`https://arxiv.org/abs/2402.07770`} passHref>
