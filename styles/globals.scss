@@ -1,6 +1,8 @@
+// Modified from https://github.com/shoya140/shoya.io
+
 @use 'sass:math';
 
-$font-family: 'Source Sans Pro', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+$font-family: 'Inter', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 
 $h1-font-size: 1rem * math.div(8, 5);
 $h2-font-size: 1rem * math.div(8, 6);
@@ -12,17 +14,19 @@ $large-line-height: 1.8;
 $base-line-height: 1.5;
 $small-line-height: 1.3;
 
-$content-width: 700px;
+$content-width: 900px;
 $on-palm: 530px;
 $nav-height: 64px;
 $wrapper-padding: 14px;
 
+// グローバル
 :root {
   --surface: 255, 255, 255; // #ffffff
   --background: 244, 247, 247; // #d7e1e1
-  --text: 30, 37, 41; // #1e2529
+  --text: 17, 24, 39; // #111827
   --brand: 119, 141, 156; // #778d9c
 
+  // ダークモード
   @media (prefers-color-scheme: dark) {
     --surface: 35, 40, 52; // #232834
     --background: 25, 30, 42; // #191e2a
@@ -222,15 +226,20 @@ td {
   }
 }
 
-td:nth-child(1) {
-  width: 95px;
+td:nth-child(1),
+td:nth-child(2),
+td:nth-child(3) {
+  width: 20px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  text-align: center;
 }
 
-td:nth-child(2) {
-  padding-right: #{$wrapper-padding};
+td:nth-child(4) {
+  padding-left: 1rem;
 }
 
-.bio {
+.bio-container {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -248,16 +257,14 @@ td:nth-child(2) {
     }
   }
 
-  .bio-image-container {
+  .bio-image {
     flex: 1;
     align-items: center;
 
-    .bio-image {
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-    }
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
   }
 }
 
