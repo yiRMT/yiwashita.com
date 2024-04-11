@@ -21,15 +21,13 @@ export default function Home() {
             <p className="my-6 px-1">{t.KEYWORDS}</p>
           </div>
 
-          <div className="flex-none sm:w-[176px] w-[200px] relative">
+          <div className="profile-image">
             <Image
-              alt="Yuichiro Iwashita"
-              height={176}
-              width={176}
               src="/profile.jpg"
+              alt="Yuichiro Iwashita"
+              height={176} width={176}
               sizes="30vw"
               priority
-              className="rounded-full"
             />
           </div>
         </div>
@@ -41,17 +39,17 @@ export default function Home() {
           <table>
             <tbody>
               <tr>
-                <td className="px-1">2023.10</td>
-                <td className="px-1">-</td>
-                <td className="px-1"></td>
+                <td>2023.10</td>
+                <td>-</td>
+                <td></td>
                 <td>
                   <Link href="https://rptu.de/en">{t.RPTU}</Link>
                 </td>
               </tr>
               <tr>
-                <td className="px-1">2023.4</td>
-                <td className="px-1">-</td>
-                <td className="px-1"></td>
+                <td>2023.04</td>
+                <td>-</td>
+                <td></td>
                 <td>
                   <Link
                     href={
@@ -65,9 +63,9 @@ export default function Home() {
                 </td>
               </tr>
               <tr>
-                <td className="px-1">2021.9</td>
-                <td className="px-1">-</td>
-                <td className="px-1"></td>
+                <td>2021.09</td>
+                <td>-</td>
+                <td></td>
                 <td>
                   <Link
                     href={
@@ -81,9 +79,9 @@ export default function Home() {
                 </td>
               </tr>
               <tr>
-                <td className="px-1">2021.4</td>
-                <td className="px-1">-</td>
-                <td className="px-1">2023.3</td>
+                <td>2021.04</td>
+                <td>-</td>
+                <td>2023.03</td>
                 <td>
                   <Link
                     href={
@@ -107,30 +105,30 @@ export default function Home() {
           <table>
             <tbody>
               <tr>
-                <td className="px-1">2024.2</td>
-                <td className="px-1">-</td>
-                <td className="px-1"></td>
-                <td className="pl-4">
+                <td>2024.02</td>
+                <td>-</td>
+                <td></td>
+                <td>
                   {t.SOFTWARE_ENGINEER}
                   {', '}
                   <Link href="https://affectify.jp">{t.AFFECTIFY}</Link>
                 </td>
               </tr>
               <tr>
-                <td className="px-1">2023.9</td>
-                <td className="px-1">-</td>
-                <td className="px-1"></td>
-                <td className="pl-4">
+                <td>2023.09</td>
+                <td>-</td>
+                <td></td>
+                <td>
                   {t.INTERNSHIP}
                   {', '}
                   <Link href="https://www.dfki.de/en/web">{t.DFKI}</Link>
                 </td>
               </tr>
               <tr>
-                <td className="px-1">2023.9</td>
-                <td className="px-1">-</td>
-                <td className="px-1">2023.9</td>
-                <td className="pl-4">
+                <td>2023.09</td>
+                <td>-</td>
+                <td>2023.09</td>
+                <td>
                   {t.INTERNSHIP}
                   {', '}
                   <Link
@@ -145,10 +143,10 @@ export default function Home() {
                 </td>
               </tr>
               <tr>
-                <td className="px-1">2023.8</td>
-                <td className="px-1">-</td>
-                <td className="px-1">2023.9</td>
-                <td className="pl-4">
+                <td>2023.08</td>
+                <td>-</td>
+                <td>2023.09</td>
+                <td>
                   {t.INTERNSHIP}
                   {', '}
                   <Link
@@ -163,22 +161,20 @@ export default function Home() {
                 </td>
               </tr>
               <tr>
-                <td className="px-1">2023.3</td>
-                <td className="px-1">-</td>
-                <td className="px-1">2023.3</td>
-                <td className="pl-4">
+                <td>2023.03</td>
+                <td>-</td>
+                <td>2023.03</td>
+                <td>
                   {t.INTERNSHIP}
                   {', '}
-                  <Link href="https://www.dfki.de/en/web" passHref>
-                    {t.DFKI}
-                  </Link>
+                  <Link href="https://www.dfki.de/en/web">{t.DFKI}</Link>
                 </td>
               </tr>
               <tr>
-                <td className="px-1">2021.9</td>
-                <td className="px-1">-</td>
-                <td className="px-1"></td>
-                <td className="pl-4">
+                <td>2021.09</td>
+                <td>-</td>
+                <td></td>
+                <td>
                   {t.SERVERADMIN}
                   {', '}
                   <Link
