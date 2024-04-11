@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  @apply text-gray-900;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-slate-800 text-slate-100;
+  }
+}
+
+.markdown {
+  @apply leading-relaxed sm:leading-loose font-sans break-all;
+}
+
+.markdown p {
+  @apply my-4;
+}
+
+.markdown a {
+  @apply mx-1 text-gray-500 dark:text-slate-400 hover:underline;
+}
+
+.markdown h1 {
+  @apply mt-8 mb-4 text-3xl font-bold;
+}
+
+.markdown h2 {
+  @apply mt-8 mb-4 text-2xl font-bold;
+}
+
+.markdown h3 {
+  @apply mt-4 mb-4 text-xl font-bold;
+}
+
+.markdown h4 {
+  @apply text-lg border-b border-black my-5;
+}
+
+.markdown ol {
+  @apply list-decimal ml-10;
+}
+.markdown ul {
+  @apply list-disc ml-10;
+}
+
+.markdown pre {
+  @apply p-4 bg-gray-800 dark:bg-slate-800 rounded overflow-auto text-white font-mono;
+}
+
+.markdown p code, li code, h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, td code {
+  @apply bg-gray-300 dark:bg-slate-700 font-mono mx-1 px-0.5 py-0.5 rounded;
+}
+
+.markdown sup {
+  @apply font-bold text-gray-500;
+}
+
+.markdown blockquote {
+  @apply border-l-4 border-gray-400 dark:border-slate-400 bg-gray-200 dark:bg-slate-800 rounded border-solid pl-4 my-4;
+}
+
+.markdown table {
+  @apply table-auto overflow-auto border border-collapse border-solid;
+}
+
+.markdown th {
+  @apply p-1 border border-gray-300 dark:border-slate-400 border-solid bg-gray-200 dark:bg-slate-800;
+}
+
+.markdown td {
+  @apply p-1 border border-gray-300 dark:border-slate-400 border-solid;
+}
+
+.markdown a[id^="user-content-user-content-fnref"] {
+  @apply mx-0.5;
+}
+
+.markdown a[id^="user-content-user-content-fnref"]:before {
+  content: "[";
+}
+
+.markdown a[id^="user-content-user-content-fnref"]:after {
+  content: "]";
+}
+
+.markdown h2[id="user-content-footnote-label"] {
+  @apply mt-2 mb-0 text-sm;
+}
+
+.markdown li[id^="user-content-user-content"] {
+  @apply text-sm;
+}
