@@ -4,7 +4,7 @@ on:
     branches:
       - main
 env:
-  FILE_PATTERN: "{src,__tests__}/**/*.{ts,tsx,js,jsx}"
+  FILE_PATTERN: "{src,pages,__tests__}/**/*.{ts,tsx,js,jsx}"
 jobs:
   prettier:
     runs-on: ubuntu-latest
