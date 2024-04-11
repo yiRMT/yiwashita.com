@@ -19,6 +19,10 @@ body {
   }
 }
 
+a {
+  @apply hover:underline;
+}
+
 .markdown {
   @apply leading-relaxed sm:leading-loose font-sans break-all;
 }
