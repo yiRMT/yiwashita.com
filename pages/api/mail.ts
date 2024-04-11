@@ -1,22 +1,23 @@
 /* eslint-disable import/no-anonymous-default-export */
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const nodemailer = require('nodemailer');
+  const nodemailer = require('nodemailer')
 
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
       user: process.env.MAIL_USER,
-      pass: process.env.MAIL_PASS
+      pass: process.env.MAIL_PASS,
     },
-  });
+  })
 
-  const data = JSON.parse(req.body);
+  const data = JSON.parse(req.body)
   await transporter.sendMail({
     from: 'Yuichiro Iwashita <yiwashita.cu@gmail.com>',
     to: data.email,
-    subject: '以下の内容でお問い合わせを受け付けました / Recieved your inquiries',
+    subject:
+      '以下の内容でお問い合わせを受け付けました / Recieved your inquiries',
     text: `
     名前/Name: 
     ${data.name}
@@ -67,9 +68,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     #############################################
     </p>
     `,
-  });
+  })
 
   res.status(200).json({
     success: true,
-  });
-};
+  })
+}

@@ -1,8 +1,8 @@
-import Head from "next/head";
-import React, { useState } from "react";
-import { useLocale } from '../hooks/useLocale';
+import Head from 'next/head'
+import React, { useState } from 'react'
+import { useLocale } from '../hooks/useLocale'
 
-export default function Contact () {
+export default function Contact() {
   const { t } = useLocale()
   const contactTitle = `${t.CONTACT} - ${t.NAME}`
 
@@ -10,10 +10,10 @@ export default function Contact () {
     name: '',
     email: '',
     msg: '',
-  });
+  })
 
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+    e.preventDefault()
 
     fetch('/api/mail', {
       method: 'POST',
@@ -23,21 +23,21 @@ export default function Contact () {
         msg: form.msg,
       }),
     })
-    .then((res) => {
-      console.log('Response recieved');
-      if (res.status === 200) {
-        console.log('Response succeeded!');
-        alert('Succeeded to send a message.')
-        setForm({name: '', email: '', msg: ''})
-      } else {
-        console.log(`Error: Status Code ${res.status}`);
-        alert('Failed to send a message.')
-      }
-    })
-    .catch((e) => {
-      console.log(`Error: ${e}`);
-    });
-  };
+      .then((res) => {
+        console.log('Response recieved')
+        if (res.status === 200) {
+          console.log('Response succeeded!')
+          alert('Succeeded to send a message.')
+          setForm({ name: '', email: '', msg: '' })
+        } else {
+          console.log(`Error: Status Code ${res.status}`)
+          alert('Failed to send a message.')
+        }
+      })
+      .catch((e) => {
+        console.log(`Error: ${e}`)
+      })
+  }
 
   return (
     <>
@@ -50,17 +50,15 @@ export default function Contact () {
         </h1>
         <form className="my-10">
           <div className="flex flex-col my-6 gap-2">
-            <label className="font-bold">
-              {t.FULLNAME}
-            </label>
+            <label className="font-bold">{t.FULLNAME}</label>
             <input
               className=" bg-gray-200 dark:bg-slate-200 rounded p-4 text-gray-70 dark:text-slate-800 focus:bg-white transition"
               onChange={(e) => {
-                const val = e.currentTarget.value;
+                const val = e.currentTarget.value
                 setForm((props) => ({
                   ...props,
                   name: val !== null ? val : '',
-                }));
+                }))
               }}
               value={form.name}
               name="name"
@@ -69,16 +67,14 @@ export default function Contact () {
             />
           </div>
           <div className="flex flex-col my-6 gap-2">
-            <label className="font-bold">
-              {t.EMAIL}
-            </label>
+            <label className="font-bold">{t.EMAIL}</label>
             <input
               onChange={(e) => {
-                const val = e.currentTarget.value;
+                const val = e.currentTarget.value
                 setForm((props) => ({
                   ...props,
                   email: val !== null ? val : '',
-                }));
+                }))
               }}
               value={form.email}
               name="email"
@@ -88,16 +84,14 @@ export default function Contact () {
             />
           </div>
           <div className="flex flex-col my-6 gap-2">
-            <label className="font-bold">
-              {t.COMMENT}
-            </label>
+            <label className="font-bold">{t.COMMENT}</label>
             <textarea
               onChange={(e) => {
-                const val = e.currentTarget.value;
+                const val = e.currentTarget.value
                 setForm((props) => ({
                   ...props,
                   msg: val !== null ? val : '',
-                }));
+                }))
               }}
               value={form.msg}
               name="text"
@@ -106,9 +100,9 @@ export default function Contact () {
             />
           </div>
           <button
-            className="w-full shadow bg-gray-700 hover:bg-gray-600 dark:bg-slate-900 hover:dark:bg-slate-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded transition" 
+            className="w-full shadow bg-gray-700 hover:bg-gray-600 dark:bg-slate-900 hover:dark:bg-slate-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded transition"
             onClick={async (e) => {
-              handleSubmit(e);
+              handleSubmit(e)
             }}
             type="submit"
           >
@@ -118,4 +112,4 @@ export default function Contact () {
       </div>
     </>
   )
-};
+}

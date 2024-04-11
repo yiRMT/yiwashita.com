@@ -1,8 +1,8 @@
-import Head from "next/head";
-import { useLocale } from "../hooks/useLocale";
+import Head from 'next/head'
+import { useLocale } from '../hooks/useLocale'
 
-export default function PrivacyPolicy () {
-  const { t } = useLocale();
+export default function PrivacyPolicy() {
+  const { t } = useLocale()
   const pageTitle = `${t.PRIVACY_POLICY} - ${t.NAME}`
 
   return (
@@ -14,9 +14,7 @@ export default function PrivacyPolicy () {
         <h1 className="font-semibold md:text-4xl text-3xl mx-auto mb-4">
           {t.PRIVACY_POLICY}
         </h1>
-        <p className="">
-          {t.PRIVACY_POLICY_FULLTEXT}
-        </p>
+        <p className="">{t.PRIVACY_POLICY_FULLTEXT}</p>
       </div>
     </>
   )
