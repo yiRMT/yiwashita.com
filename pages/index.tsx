@@ -25,7 +25,8 @@ export default function Home() {
             <Image
               src="/profile.jpg"
               alt="Yuichiro Iwashita"
-              height={176} width={176}
+              height={176}
+              width={176}
               sizes="30vw"
               priority
             />
