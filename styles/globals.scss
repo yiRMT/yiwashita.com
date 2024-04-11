@@ -23,6 +23,25 @@ a {
   @apply hover:underline;
 }
 
+td:nth-child(1),
+td:nth-child(2),
+td:nth-child(3) {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  text-align: center;
+}
+td:nth-child(4) {
+  padding-left: 1rem;
+}
+
+.profile-image {
+  @apply flex-none sm:w-[176px] w-[200px] relative;
+  
+  img {
+    @apply rounded-full;
+  }
+}
+
 .markdown {
   @apply leading-relaxed sm:leading-loose font-sans break-all;
 }
