@@ -21,7 +21,7 @@ export default function Blog({ post }: Props) {
       <Head>
         <title>{pageTitle}</title>
       </Head>
-      <article className='post-article'>
+      <article className="post-article">
         <h1>{post.meta.title}</h1>
         <p>{post.meta.date}</p>
         <div className="post-tags-container">
@@ -29,7 +29,10 @@ export default function Blog({ post }: Props) {
             <span key={tag}>#{tag}</span>
           ))}
         </div>
-        <div className="post markdown" dangerouslySetInnerHTML={{ __html: post.body }}/>
+        <div
+          className="post markdown"
+          dangerouslySetInnerHTML={{ __html: post.body }}
+        />
       </article>
     </>
   )

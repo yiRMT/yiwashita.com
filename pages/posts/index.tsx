@@ -33,9 +33,9 @@ export default function Blog({ posts }: Props) {
           {posts.map((post) => (
             <li key={post.id}>
               <a href={`/posts/${post.id}`}>
-                <div className='post-card'>
+                <div className="post-card">
                   <div className="post-title">{post.title}</div>
-                  <div className='post-date-tags-container'>
+                  <div className="post-date-tags-container">
                     <div className="post-date">{post.date}</div>
                     <div className="post-tags-container">
                       {post.tags.map((tag) => (
