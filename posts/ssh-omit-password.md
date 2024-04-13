@@ -57,6 +57,6 @@ hoge@client: ~$ ssh サーバのユーザ名@サーバのホスト名
 詳しくは[こちら](https://docs.oracle.com/cd/E56342_01/html/E54074/ssh-keygen-1.html)をご確認ください
 
 # 参考
-https://tech-blog.rakus.co.jp/entry/20210727/ssh
-https://qiita.com/tag1216/items/5d06bad7468f731f590e
-https://qiita.com/kazokmr/items/754169cfa996b24fcbf5
+- https://tech-blog.rakus.co.jp/entry/20210727/ssh
+- https://qiita.com/tag1216/items/5d06bad7468f731f590e
+- https://qiita.com/kazokmr/items/754169cfa996b24fcbf5
