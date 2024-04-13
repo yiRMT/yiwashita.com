@@ -33,10 +33,8 @@ export default function Blog({ posts }: Props) {
       <Head>
         <title>{blogTitle}</title>
       </Head>
-      <div className="mx-5 sm:mx-10 md:mx-16 lg:mx-auto my-32 sm:my-24 md:my-32 md:mb-96 max-w-4xl flex flex-col">
-        <h1 className="mx-auto mb-5 font-semibold md:text-4xl text-3xl">
-          {t.BLOG}
-        </h1>
+      <h1>{t.BLOG}</h1>
+      <div className="flex flex-col">
         <ul className="gap-4 flex flex-col">
           {posts.map((post) => (
             <li className="" key={post.id}>

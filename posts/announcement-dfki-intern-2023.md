@@ -2,7 +2,7 @@
 title: "半年間ドイツに行ってきます！ 🇩🇪 / I'm going to Germany for 6 months! 🇩🇪"
 date: '2023-09-16'
 image: {}
-tags: ["Resarch", "DFKI"]
+tags: ["Research", "DFKI"]
 ---
 今年の9月から[ドイツ人工知能研究センター (DFKI)](https://www.dfki.de/en/web)にて半年間研究してきます 🇩🇪
 

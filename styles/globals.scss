@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @apply text-gray-900;
+  @apply bg-gray-100 text-gray-800;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +20,7 @@ body {
 }
 
 a {
-  @apply hover:underline;
+  @apply hover:underline text-gray-500 dark:text-slate-400;
 }
 
 td:nth-child(1),
@@ -34,11 +34,132 @@ td:nth-child(4) {
   padding-left: 1rem;
 }
 
-.profile-image {
-  @apply flex-none sm:w-[176px] w-[200px] relative;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-semibold;
+}
+
+h1 {
+  @apply md:text-4xl text-3xl mt-10 mb-5;
+}
+
+h2 {
+  @apply md:text-3xl text-2xl mt-8 mb-4;
+}
+
+h3 {
+  @apply md:text-2xl text-xl mt-6 mb-3;
+}
+
+h4,
+h5,
+h6 {
+  @apply md:text-xl text-lg;
+}
+
+dl,
+dd,
+ol,
+ul {
+  @apply pl-1;
+}
+
+.site-header {
+  @apply sm:sticky static top-0 z-50 bg-gray-300/70 dark:bg-slate-900/70 backdrop-blur;
+
+  .wrapper {
+    @apply flex sm:flex-row flex-col justify-between sm:h-16 h-20 max-w-6xl mx-auto;
+  }
+
+  .title-container {
+    @apply my-auto text-xl font-semibold;
+    a {
+      @apply text-gray-800 dark:text-slate-100;
+    }
+  }
+
+  .nav-container {
+    @apply my-auto;
+    ul {
+      @apply flex sm:gap-5 gap-3 items-center pl-0;
+    }
+  }
+
+  .nav-active {
+    a {
+      @apply text-gray-400 dark:text-white;
+    }
+  }
+
+  .locale-switch-container {
+    @apply sm:flex hidden place-items-center;
+  }
+}
+
+.site-footer {
+  @apply sm:sticky static bottom-0 z-50 bg-gray-300 dark:bg-slate-900;
+
+  .wrapper {
+    @apply flex sm:flex-row flex-col justify-between sm:h-16 h-20 max-w-6xl mx-auto;
+  }
+
+  .copyright-container {
+    @apply my-auto text-sm; 
+  }
+
+  .nav-container {
+    @apply my-auto text-sm;
+    ul {
+      @apply flex sm:gap-5 gap-3 items-center pl-0;
+    }
+    .icon-link {
+      a {
+        @apply text-gray-500 dark:text-slate-400 hover:text-gray-800 dark:hover:text-slate-100;
+      }
+      svg {
+        @apply sm:w-5 w-4 sm:h-5 h-4;
+      }
+    }
+  }
+}
+
+.content {
+  @apply md:mt-16 sm:mt-14 mt-10 md:mb-16 sm:mb-12 mb-8 min-h-screen;
+}
+
+.wrapper {
+  @apply max-w-4xl mx-auto px-4;
+}
+
+.bio-container {
+  @apply flex flex-col sm:flex-row items-center gap-5;
   
-  img {
-    @apply rounded-full;
+  .bio-text {
+    @apply flex flex-col gap-5 sm:items-start items-center;
+    p {
+      @apply pl-1;
+    }
+  }
+
+  .bio-image {
+    @apply flex-none sm:w-[176px] w-[200px] relative;
+    
+    img {
+      @apply rounded-full;
+    }
+  }
+}
+
+.publications {
+  ul {
+    @apply list-decimal list-inside pl-6 -indent-5;
+  }
+  li {
+    @apply my-2;
   }
 }
 

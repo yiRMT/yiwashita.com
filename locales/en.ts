@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   NAME: "Yuichiro Iwashita",
 
   // Page Title
@@ -10,22 +10,30 @@ export default {
   
   // Home
   AFFILIATION: "Academic Affiliation",
-  PUBLICATION: "Publication",
+  PUBLICATIONS: "Publications",
   BACHELOR_AFFILIATION: "College of Engineering, Osaka Prefecture University (OPU)",
   MASTER_AFFILIATION: "Graduate School of Informatics, Osaka Metropolitan University (OMU)",
   RPTU: 'Department of Informatics, University of Kaiserslautern-Landau (RPTU)',
-  INTRODUCTION: "Master's student at Graduate School of Informatics, Osaka Metropolitan University. Recieved Bachelor of Engineering (B.Eng.) at Osaka Prefecture University in 03/2023. I have been researching how to augument our intelligence by using technologies such as AI. From 2022, I have been also working on research about solving problems in medical field by using AI.",
-  KEYWORDS: "Keywords: Human-Centered AI, Human-Computer Interaction, EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, Medical x AI, Survival Analysis, etc.",
+  INTRODUCTION: "Yuichiro Iwashita is a master's student at Graduate School of Informatics, Osaka Metropolitan University. He recieved bachelor of engineering (B.Eng.) at College of Englineering, Osaka Prefecture University in March 2023. He has been researching how to augument our intelligence by using technologies such as AI. From 2022, he has also been working on research about solving problems in medical field by using AI.",
+  KEYWORDS: "Keywords: Human-Centered AI, Human-Computer Interaction (HCI), EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, Medical x AI, Survival Analysis, etc.",
   BACHELOR_AND_MASTER_LAB: "Intelligence Media Processing Research Group",
   EXPERIENCES: "Work Experiences",
   RESEACHPROJECTS: "Research Projects",
   LINKS: "Links",
-  MEDxAI: "Medical x AI",
+  MEDxAI: "Medical x AI (in collaboration with School of Medicine, OMU and DFKI)",
+  INTERNATIONAL_CONFERENCE_PAPERS: "International Conference Papers",
+  JOURNAL_PAPERS: "Journal Papers",
+  DOMESTIC_CONFERENCE_PAPERS: "Domestic Conference Papers",
+  MISC_PAPERS: "Miscellaneous",
+  PRESENT: "Present",
+
 
   FULLNAME: "Full Name",
   EMAIL: "Email",
   COMMENT: "Comment",
   SUBMIT: "Submit",
+
+  LINK: "Link",
 
   // Experiences
   INTERNSHIP: "Internship",
