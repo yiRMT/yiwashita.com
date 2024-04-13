@@ -42,7 +42,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     Web: https://yiwashita.com/en
 
     E-mail (Personal): yiwashita.cu@gmail.com
-    `
+    `,
   })
 
   res.status(200).json({
