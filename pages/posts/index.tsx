@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Head from 'next/head'
 import type { PostMetadata } from 'types/blog'
 import { useLocale } from 'hooks/useLocale'
@@ -29,34 +28,23 @@ export default function Blog({ posts }: Props) {
         <title>{pageTitle}</title>
       </Head>
       <h1>{t.BLOG}</h1>
-      <div className="flex flex-col">
-        <ul className="gap-4 flex flex-col">
+      <div className="posts-container">
+        <ul>
           {posts.map((post) => (
-            <li className="" key={post.id}>
-              <Link href={`/posts/${post.id}`} passHref locale="ja">
-                <a>
-                  <div className="flex flex-col gap-2 rounded-xl shadow-lg px-6 py-4 transition bg-gray-100 hover:bg-gray-300 dark:bg-slate-900 dark:hover:bg-slate-700">
-                    <div className="font-bold sm:text-lg text-base">
-                      {post.title}
-                    </div>
-                    <div className="flex sm:gap-5 gap-2 sm:flex-row flex-col">
-                      <div className="font-semibold sm:text-base text-sm">
-                        {post.date}
-                      </div>
-                      <div className="flex gap-2">
-                        {post.tags.map((tag) => (
-                          <span
-                            className="px-3 py-1 rounded-full font-semibold sm:text-sm text-xs text-gray-700 dark:text-slate-700 bg-gray-200 "
-                            key={tag}
-                          >
-                            #{tag}
-                          </span>
-                        ))}
-                      </div>
+            <li key={post.id}>
+              <a href={`/posts/${post.id}`}>
+                <div className='post-card'>
+                  <div className="post-title">{post.title}</div>
+                  <div className='post-date-tags-container'>
+                    <div className="post-date">{post.date}</div>
+                    <div className="post-tags-container">
+                      {post.tags.map((tag) => (
+                        <span key={tag}>#{tag}</span>
+                      ))}
                     </div>
                   </div>
-                </a>
-              </Link>
+                </div>
+              </a>
             </li>
           ))}
         </ul>

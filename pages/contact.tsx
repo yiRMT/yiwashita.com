@@ -45,12 +45,11 @@ export default function Contact() {
         <title>{pageTitle}</title>
       </Head>
       <h1>{t.CONTACT}</h1>
-      <div className="flex flex-col gap-5">
-        <form className="my-10">
-          <div className="flex flex-col my-6 gap-2">
-            <label className="font-bold">{t.FULLNAME}</label>
+      <div className="contact-container">
+        <form>
+          <div className="form-item">
+            <label>{t.FULLNAME}</label>
             <input
-              className=" bg-gray-200 dark:bg-slate-200 rounded p-4 text-gray-70 dark:text-slate-800 focus:bg-white transition"
               onChange={(e) => {
                 const val = e.currentTarget.value
                 setForm((props) => ({
@@ -64,8 +63,8 @@ export default function Contact() {
               placeholder={t.FULLNAME}
             />
           </div>
-          <div className="flex flex-col my-6 gap-2">
-            <label className="font-bold">{t.EMAIL}</label>
+          <div className="form-item">
+            <label>{t.EMAIL}</label>
             <input
               onChange={(e) => {
                 const val = e.currentTarget.value
@@ -77,12 +76,11 @@ export default function Contact() {
               value={form.email}
               name="email"
               type="email"
-              className="bg-gray-200 dark:bg-slate-200 rounded p-4 text-gray-70 dark:text-slate-800 focus:bg-white transition"
               placeholder={t.EMAIL}
             />
           </div>
-          <div className="flex flex-col my-6 gap-2">
-            <label className="font-bold">{t.COMMENT}</label>
+          <div className="form-item">
+            <label>{t.COMMENT}</label>
             <textarea
               onChange={(e) => {
                 const val = e.currentTarget.value
@@ -93,12 +91,10 @@ export default function Contact() {
               }}
               value={form.msg}
               name="text"
-              className="bg-gray-200 dark:bg-slate-200 rounded p-4 text-gray-70 dark:text-slate-800 focus:bg-white transition"
               placeholder={t.COMMENT}
             />
           </div>
           <button
-            className="w-full shadow bg-gray-700 hover:bg-gray-600 dark:bg-slate-900 hover:dark:bg-slate-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded transition"
             onClick={async (e) => {
               handleSubmit(e)
             }}
