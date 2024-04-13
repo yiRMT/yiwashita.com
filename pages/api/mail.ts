@@ -19,8 +19,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     cc: 'Yuichiro Iwashita <yiwashita.cu@gmail.com>',
     subject:
       '以下の内容でお問い合わせを受け付けました / Recieved your inquiries',
-    text: 
-`名前 / Full Name:
+    text: `名前 / Full Name:
 ${data.name}
 
 メールアドレス / Email:
