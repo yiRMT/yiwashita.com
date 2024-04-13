@@ -203,12 +203,90 @@ ul {
   }
 }
 
+.posts-container {
+  @apply flex flex-col;
+
+  ul {
+    @apply gap-4 flex flex-col pl-0;
+  }
+
+  li {
+    @apply px-6 py-4 bg-gray-200 hover:bg-gray-300 dark:bg-slate-900 dark:hover:bg-slate-700 rounded-xl shadow-lg transition;
+  }
+
+  a {
+    @apply text-gray-800 dark:text-slate-100 no-underline;
+  }
+
+  .post-card {
+    @apply flex flex-col gap-2;
+
+    .post-title {
+      @apply font-bold sm:text-lg text-base;
+    }
+
+    .post-date-tags-container {
+      @apply flex sm:gap-5 gap-2 sm:flex-row flex-col;
+    }
+  
+    .post-date {
+      @apply font-semibold sm:text-base text-sm;
+    }
+  
+    .post-tags-container {
+      @apply flex gap-2;
+  
+      span {
+        @apply px-3 py-1 font-semibold sm:text-sm text-xs text-gray-700 dark:text-slate-700 bg-gray-300 rounded-full;
+      }
+    }
+  }
+}
+
+.post-article {
+  .post-tags-container {
+    @apply flex my-4 gap-2;
+  
+    span {
+      @apply px-3 py-1 font-semibold text-sm text-gray-700 dark:text-slate-700 bg-gray-200 rounded-full;
+    }
+  }
+
+  .post {
+    @apply p-2 sm:p-4 md:p-6 lg:p-8 bg-gray-200 dark:bg-slate-900 rounded-lg;
+  }
+}
+
+.contact-container {
+  @apply flex flex-col gap-5;
+
+  .form-item {
+    @apply flex flex-col my-6 gap-2;
+  }
+
+  label {
+    @apply font-semibold;
+  }
+
+  input {
+    @apply bg-gray-200 dark:bg-slate-200 rounded p-4 text-gray-700 dark:text-slate-800 focus:bg-white transition;
+  }
+
+  textarea {
+    @apply bg-gray-200 dark:bg-slate-200 rounded p-4 text-gray-700 dark:text-slate-800 focus:bg-white transition;
+  }
+
+  button {
+    @apply w-full shadow bg-gray-700 hover:bg-gray-600 dark:bg-slate-900 hover:dark:bg-slate-700 text-white font-bold py-2 px-4 rounded transition;
+  }
+}
+
 .markdown {
   @apply leading-relaxed sm:leading-loose font-sans break-all;
 }
 
 .markdown p {
-  @apply my-4;
+  @apply mt-1 mb-3;
 }
 
 .markdown a {
@@ -251,7 +329,7 @@ ul {
 }
 
 .markdown blockquote {
-  @apply border-l-4 border-gray-400 dark:border-slate-400 bg-gray-200 dark:bg-slate-800 rounded border-solid pl-4 my-4;
+  @apply border-l-4 border-gray-400 dark:border-slate-400 bg-gray-300 dark:bg-slate-800 rounded border-solid pl-4 my-4;
 }
 
 .markdown table {
