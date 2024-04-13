@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   NAME: "岩下 雄一郎",
 
   // Page Title
