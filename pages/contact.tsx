@@ -1,10 +1,10 @@
-import Head from 'next/head'
 import React, { useState } from 'react'
-import { useLocale } from '../hooks/useLocale'
+import Head from 'next/head'
+import { useLocale } from 'hooks/useLocale'
 
 export default function Contact() {
   const { t } = useLocale()
-  const contactTitle = `${t.CONTACT} - ${t.NAME}`
+  const pageTitle = `${t.CONTACT} - ${t.NAME}`
 
   const [form, setForm] = useState({
     name: '',
@@ -42,7 +42,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>{contactTitle}</title>
+        <title>{pageTitle}</title>
       </Head>
       <h1>{t.CONTACT}</h1>
       <div className="flex flex-col gap-5">

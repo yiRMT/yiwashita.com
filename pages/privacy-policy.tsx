@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useLocale } from '../hooks/useLocale'
+import { useLocale } from 'hooks/useLocale'
 
 export default function PrivacyPolicy() {
   const { t } = useLocale()

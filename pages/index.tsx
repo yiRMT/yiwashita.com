@@ -5,11 +5,11 @@ import { useLocale } from 'hooks/useLocale'
 
 export default function Home() {
   const { locale, t } = useLocale()
-  const topTitle = t.NAME
+  const pageTitle = t.NAME
   return (
     <>
       <Head>
-        <title>{topTitle}</title>
+        <title>{pageTitle}</title>
       </Head>
       <h1>{t.NAME}</h1>
       <div className="bio-container">
