@@ -27,7 +27,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GaScript />
       <NextTopLoader color="#334155" showSpinner={false} />
       <Header />
-      <Component {...pageProps} />
+      <div className="content">
+        <div className="wrapper">
+          <Component {...pageProps} />
+        </div>
+      </div>
       <Footer />
     </>
   )

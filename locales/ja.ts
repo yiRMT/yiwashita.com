@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   NAME: "岩下 雄一郎",
 
   // Page Title
@@ -10,22 +10,29 @@ export default {
   
   // Home
   AFFILIATION: "所属",
-  PUBLICATION: "論文",
+  PUBLICATIONS: "論文",
   BACHELOR_AFFILIATION: "大阪府立大学 工学域",
   MASTER_AFFILIATION: "大阪公立大学 大学院情報学研究科",
   RPTU: 'カイザースラウテルン＝ランダウ大学 (RPTU) 情報学科',
-  INTRODUCTION: "大阪公立大学 大学院情報学研究科の修士課程で情報学を学ぶ学生です．2023年3月に大阪府立大学にて学士（工学）を取得しました．2021年よりAIなどのテクノロジーを使って人間の知能を増強する研究を行っています．また，2022年からは医療分野の諸問題をAIを使って解決する研究も行っています．",
-  KEYWORDS: "キーワード：人間中心のAI，ヒューマン・コンピュータ・インタラクション，教育工学，認知科学，ナッジ戦略，知能増強，大規模言語モデル，医療×AI，生存分析，etc．",
+  INTRODUCTION: "大阪公立大学 大学院情報学研究科の博士前期課程 (修士課程) で情報学を学ぶ学生です。2023年3月に大阪府立大学 工学域にて学士 (工学) を取得しました。2021年よりAIなどのテクノロジーを使って人間の知能を増強する研究を行っています。また、2022年からは医療分野の諸問題をAIを使って解決する研究も行っています。",
+  KEYWORDS: "キーワード：人間中心のAI、ヒューマン・コンピュータ・インタラクション (HCI)、教育工学、認知科学、ナッジ戦略、知能増強、大規模言語モデル、医療×AI、生存分析、etc。",
   BACHELOR_AND_MASTER_LAB: "知能メディア処理研究グループ",
   EXPERIENCES: "職歴",
   RESEACHPROJECTS: "研究プロジェクト",
   LINKS: "外部サイト",
-  MEDxAI: "医療×AI",
+  MEDxAI: "医療×AI (大阪公立大学 医学部、DFKIとの共同研究)",
+  INTERNATIONAL_CONFERENCE_PAPERS: "国際会議",
+  JOURNAL_PAPERS: "論文誌",
+  DOMESTIC_CONFERENCE_PAPERS: "国内会議",
+  MISC_PAPERS: "その他",
+  PRESENT: "現在",
 
   FULLNAME: "氏名",
   EMAIL: "メールアドレス",
   COMMENT: "本文",
   SUBMIT: "送信",
+
+  LINK: "リンク",
 
   // Experiences
   INTERNSHIP: "インターン",

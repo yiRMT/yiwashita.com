@@ -44,10 +44,8 @@ export default function Contact() {
       <Head>
         <title>{contactTitle}</title>
       </Head>
-      <div className="mx-5 sm:mx-10 md:mx-16 lg:mx-auto my-32 sm:my-24 md:my-28 md:mb-96 max-w-4xl flex flex-col gap-5">
-        <h1 className="mx-auto font-semibold md:text-4xl text-3xl">
-          {t.CONTACT}
-        </h1>
+      <h1>{t.CONTACT}</h1>
+      <div className="flex flex-col gap-5">
         <form className="my-10">
           <div className="flex flex-col my-6 gap-2">
             <label className="font-bold">{t.FULLNAME}</label>

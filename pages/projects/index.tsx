@@ -34,10 +34,8 @@ export default function Projects({ posts }: Props) {
       <Head>
         <title>{projectsTitle}</title>
       </Head>
-      <div className="mx-5 sm:mx-10 md:mx-16 lg:mx-auto my-32 sm:my-24 md:my-28 md:mb-96 max-w-5xl flex flex-col">
-        <h1 className="mx-auto mb-5 font-semibold md:text-4xl text-3xl">
-          {t.PROJECTS}
-        </h1>
+      <h1>{t.PROJECTS}</h1>
+      <div className="flex flex-col">
         <ul className="gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <li className="" key={post.id}>
