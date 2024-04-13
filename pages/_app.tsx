@@ -1,13 +1,13 @@
-import '../styles/reset.min.css'
-import '../styles/globals.scss'
+import 'styles/reset.min.css'
+import 'styles/globals.scss'
 import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import * as gtag from '../libs/gtag'
-import { GaScript } from '../components/GaScripts'
 import NextTopLoader from 'nextjs-toploader'
+import * as gtag from 'libs/gtag'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+import { GaScript } from 'components/GaScripts'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()

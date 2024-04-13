@@ -1,7 +1,7 @@
-import type { Post } from '../../types/blog'
-import { useLocale } from '../../hooks/useLocale'
 import Head from 'next/head'
-import { getAllPostIds, getPostData } from '../../libs/posts'
+import type { Post } from 'types/blog'
+import { useLocale } from 'hooks/useLocale'
+import { getAllPostIds, getPostData } from 'libs/posts'
 
 type Props = {
   post: Post
@@ -15,11 +15,11 @@ type Params = {
 
 export default function Blog({ post }: Props) {
   const { t } = useLocale()
-  const blogDetailTitle = `${post.meta.title} - ${t.NAME}`
+  const pageTitle = `${post.meta.title} - ${t.NAME}`
   return (
     <>
       <Head>
-        <title>{blogDetailTitle}</title>
+        <title>{pageTitle}</title>
       </Head>
       <article className="mx-5 sm:mx-10 md:mx-16 lg:mx-auto my-32 sm:my-24 md:my-28 md:mb-96 max-w-4xl flex flex-col">
         <h1 className="text-xl sm:text-2xl md:text-4xl font-bold">

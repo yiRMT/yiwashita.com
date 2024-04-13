@@ -30,44 +30,19 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     ${data.msg}
     ---------------------------------------------
     
-    #############################################
-    Yuichiro Iwashita
-    
-    Master's student (M1)
-    Intelligent Media Processing Group,
-    Graduate School of Informatics, 
+    --
+    Yuichiro Iwashita, B.Eng., Master's student
+
+    Intelligent Media Processing Research Group,
+    Dept. of Core Informatics,
+    Graduate School of Informatics,
     Osaka Metropolitan University
+    1-1 Gakuen-cho, Nakaku, Sakai, Osaka 599-8531, JAPAN
+
+    Web: https://yiwashita.com/en
 
     E-mail (Personal): yiwashita.cu@gmail.com
-    E-mail (University): sc23370s@st.omu.ac.jp
-    #############################################
-    `,
-    html: `
-    <p>
-    名前/Name: <br>
-    ${data.name}<br>
-    <br>
-    メールアドレス/Email: <br>
-    ${data.email}<br>
-    <br>
-    お問い合わせ内容/Inquiry: <br>
-    ---------------------------------------------<br>
-    ${data.msg}<br>
-    ---------------------------------------------<br>
-    <br>
-    #############################################<br>
-    <b>Yuichiro Iwashita</b><br>
-    <br>
-    Master's student (M1)<br>
-    Intelligent Media Processing Group,<br>
-    Graduate School of Engineering, <br>
-    Osaka Metropolitan University<br>
-    <br>
-    E-mail (Personal): yiwashita.cu@gmail.com <br>
-    E-mail (University): sc23370s@st.omu.ac.jp <br>
-    #############################################
-    </p>
-    `,
+    `
   })
 
   res.status(200).json({

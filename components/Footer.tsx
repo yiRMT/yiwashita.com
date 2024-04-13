@@ -12,7 +12,6 @@ export default function Footer() {
         <div className="copyright-container">
           {`© ${currentYear} `}
           <Link href='/'>Yuichiro Iwashita</Link>
-          {'. All Rights Reserved.'}
         </div>
         <nav className="nav-container">
           <ul>
