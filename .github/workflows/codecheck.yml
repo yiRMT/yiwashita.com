@@ -1,0 +1,45 @@
+name: Code Checker
+on:
+  pull_request:
+    branches:
+      - main
+env:
+  FILE_PATTERN: "{src,pages,__tests__}/**/*.{ts,tsx,js,jsx}"
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+          cache: yarn
+      - name: Run Prettier
+        run: |
+          yarn install
+          yarn prettier --write ${FILE_PATTERN}
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Apply Prettier Change
+          branch: ${{ github.head_ref }}
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Running linter
+        run: yarn lint
