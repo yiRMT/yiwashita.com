@@ -15,72 +15,28 @@ export default function Header() {
   ];
 
   return (
-    <header className='sticky flex flex-wrap sm:justify-start z-50'>
-      <nav className="w-full sm:flex sm:items-center fixed top-0 left-0 right-0 bg-gray-300/70 border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-slate-900/70 backdrop-blur">
-        <div className="flex items-center justify-between">
-          <Link href={'/'} className=''>
-            <a className="flex-none text-xl font-semibold text-gray-700 dark:text-white">
-              {t.NAME}
-            </a>
-          </Link>
+    <header className='site-header'>
+      <div className='wrapper'>
+        <div className='title-container'>
+          <Link href={'/'}>{t.NAME}</Link>
         </div>
-        <div className="basis-full grow block" >
-          <ul className='flex flex-wrap gap-3 sm:gap-5 mt-5 items-center sm:justify-end sm:mt-0 sm:pl-5'>
-            <li>
-              <Link href={'/'}>
-                {currentPath === '/' ? (
-                  <a className="text-gray-400 dark:text-white hover:text-gray-400 dark:hover:text-white">
-                    {t.HOME}
-                  </a>
-                ) : (
-                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
-                    {t.HOME}
-                  </a>
-                )}
-              </Link>
+        <nav className="nav-container">
+          <ul>
+            <li className={currentPath === '/' ? 'nav-active' : ''}>
+              <Link href='/'>{t.HOME}</Link>
+            </li>
+            <li className={regexList[0].test(currentPath) ? 'nav-active' : ''}>
+              <Link href='/projects'>{t.PROJECTS}</Link>
+            </li>
+            <li className={regexList[1].test(currentPath) ? 'nav-active' : ''}>
+              <Link href='/posts'>{t.BLOG}</Link>
+            </li>
+            <li className={currentPath === '/contact' ? 'nav-active' : ''}>
+              <Link href='/contact'>{t.CONTACT}</Link>
             </li>
             <li>
-              <Link href={'/projects/'}>
-                {regexList[0].test(currentPath) ? (
-                  <a className="text-gray-400 dark:text-white hover:text-gray-400 dark:hover:text-white">
-                    {t.PROJECTS}
-                  </a>
-                ) : (
-                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
-                    {t.PROJECTS}
-                  </a>
-                )}
-              </Link>
-            </li>
-            <li>
-              <Link href={'/posts/'}>
-                {regexList[1].test(currentPath) ? (
-                  <a className="text-gray-400 dark:text-white hover:text-gray-400 dark:hover:text-white">
-                    {t.BLOG}
-                  </a>
-                ) : (
-                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
-                    {t.BLOG}
-                  </a>
-                )}
-              </Link>
-            </li>
-            <li>
-              <Link href={'/contact'}>
-                {currentPath === '/contact' ? (
-                  <a className="text-gray-400 dark:text-white hover:text-gray-400 dark:hover:text-white">
-                    {t.CONTACT}
-                  </a>
-                ) : (
-                  <a className="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white">
-                    {t.CONTACT}
-                  </a>
-                )}
-              </Link>
-            </li>
-            <li>
-              <div className='flex place-items-center'>
-                <span className='text-gray-700 dark:text-gray-400'>EN</span>
+              <div className='locale-switch-container'>
+                <span>EN</span>
                 <Switch
                   checked={locale === 'ja'}
                   onChange={() => {}}
@@ -93,12 +49,12 @@ export default function Header() {
                   }}
                   color="default" 
                 />
-                <span className='text-gray-700 dark:text-gray-400'>JA</span>
+                <span>JA</span>
               </div>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }
