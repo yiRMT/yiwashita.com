@@ -190,7 +190,7 @@ export default function Home() {
             <b>Yuichiro Iwashita</b>, Andrew Vargo, Motoi Iwata, Koichi Kise.
             Personalizing Augmented Flashcards Towards Long-Term Vocabulary
             Learning. In Proceedings of the Augmented Humans International
-            Conference (AHs 2024), ACM, 2024. (to be published)
+            Conference (AHs 2024), ACM, 2024.
             {' ('}
             <Link href={`/preprint/iwashita_multimediavocabulometer_2024.pdf`}>
               Preprint
