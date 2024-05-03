@@ -195,6 +195,9 @@ export default function Home() {
             <Link href={`/preprint/iwashita2024personalizing.pdf`}>PDF</Link>
             {')'}
             {' ('}
+            <Link href={`/bib/iwashita2024personalizing.bib`}>BibTeX</Link>
+            {')'}
+            {' ('}
             <Link href={`https://doi.org/10.1145/3652920.3653045`}>
               {t.LINK}
             </Link>
@@ -214,6 +217,9 @@ export default function Home() {
                 集中治療室における再入室イベントを予測する機械学習ベースの生存時間解析モデルに時系列データが与える影響.
                 第43回医療情報学連合大会 (第24回日本医療情報学会学術大会)
                 論文集, 日本医療情報学会, 2023.
+                {' ('}
+                <Link href={`/bib/liu2023effects_ja.bib`}>BibTeX</Link>
+                {')'}
               </>
             ) : (
               <>
@@ -245,6 +251,9 @@ export default function Home() {
                 集中治療室における短期的な死亡を予測する再帰型ニューラルネットワークを用いた動的予測モデルの提案：MIMIC-IVデータベースを利用した後方視的コホート研究.
                 第43回医療情報学連合大会 (第24回日本医療情報学会学術大会)
                 論文集, 日本医療情報学会, 2023.
+                {' ('}
+                <Link href={`/bib/nonomiya2023recurrent_ja.bib`}>BibTeX</Link>
+                {')'}
               </>
             ) : (
               <>
@@ -276,6 +285,9 @@ export default function Home() {
                 臨床テーブルデータと胸部X線画像を統合したツリー系機械学習モデルによるCOVID-19患者の予後予測.
                 第43回医療情報学連合大会 (第24回日本医療情報学会学術大会)
                 論文集, 日本医療情報学会, 2023.
+                {' ('}
+                <Link href={`/bib/kotoura2023tree_ja.bib`}>BibTeX</Link>
+                {')'}
               </>
             ) : (
               <>
@@ -305,6 +317,9 @@ export default function Home() {
                 英単語学習を長期的に継続するための適応型学習システムの開発.
                 2023年電子情報通信学会総合大会講演論文集, 電子情報通信学会,
                 2023. (査読なし)
+                {' ('}
+                <Link href={`/bib/iwashita2023developing_ja.bib`}>BibTeX</Link>
+                {')'}
               </>
             ) : (
               <>
@@ -313,6 +328,9 @@ export default function Home() {
                 English vocabulary learning. In Proceedings of the 2023 IEICE
                 General Conference, IEICE, 2023. (in Japanese, without peer
                 review)
+                {' ('}
+                <Link href={`/bib/iwashita2023developing_en.bib`}>BibTeX</Link>
+                {')'}
               </>
             )}
             {' ('}
@@ -336,6 +354,9 @@ export default function Home() {
             arXiv:2402.07770v1 [cs.IR], 2024. (* equal contributions)
             {' ('}
             <Link href={`/preprint/selby2024quantitative.pdf`}>PDF</Link>
+            {')'}
+            {' ('}
+            <Link href={`/bib/selby2024quantitative.bib`}>BibTeX</Link>
             {')'}
             {' ('}
             <Link href={`https://arxiv.org/abs/2402.07770`}>{t.LINK}</Link>
