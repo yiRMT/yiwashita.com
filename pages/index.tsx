@@ -192,9 +192,7 @@ export default function Home() {
             Learning. In Proceedings of the Augmented Humans International
             Conference (AHs 2024), ACM, 2024.
             {' ('}
-            <Link href={`/preprint/iwashita_multimediavocabulometer_2024.pdf`}>
-              Preprint
-            </Link>
+            <Link href={`/preprint/iwashita2024personalizing.pdf`}>PDF</Link>
             {')'}
             {' ('}
             <Link href={`https://doi.org/10.1145/3652920.3653045`}>
@@ -336,6 +334,9 @@ export default function Home() {
             Muhammad Nabeel Asim, Koichi Kise, Sebastian Vollmer. Quantitative
             Knowledge Retrieval from Large Language Models. arXiv preprint
             arXiv:2402.07770v1 [cs.IR], 2024. (* equal contributions)
+            {' ('}
+            <Link href={`/preprint/selby2024quantitative.pdf`}>PDF</Link>
+            {')'}
             {' ('}
             <Link href={`https://arxiv.org/abs/2402.07770`}>{t.LINK}</Link>
             {')'}
