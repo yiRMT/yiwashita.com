@@ -191,6 +191,12 @@ export default function Home() {
             Personalizing Augmented Flashcards Towards Long-Term Vocabulary
             Learning. In Proceedings of the Augmented Humans International
             Conference (AHs 2024), ACM, 2024. (to be published)
+            {' ('}
+            <Link href={`/preprint/iwashita_multimediavocabulometer_2024.pdf`}>Preprint</Link>
+            {')'}
+            {' ('}
+            <Link href={`https://doi.org/10.1145/3652920.3653045`}>{t.LINK}</Link>
+            {')'}
           </li>
         </ul>
       </div>
