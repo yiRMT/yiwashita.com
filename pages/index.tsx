@@ -409,7 +409,9 @@ export default function Home() {
           <Link href="https://www.linkedin.com/in/yiwashita">LinkedIn</Link>
         </li>
         <li>
-          <Link href="https://scholar.google.com/citations?user=VxyleMEAAAAJ&hl">Google Scholar</Link>
+          <Link href="https://scholar.google.com/citations?user=VxyleMEAAAAJ&hl">
+            Google Scholar
+          </Link>
         </li>
       </ul>
     </>
