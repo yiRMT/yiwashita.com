@@ -192,7 +192,7 @@ export default function Home() {
             Learning. In Proceedings of the Augmented Humans International
             Conference (AHs 2024), ACM, 2024.
             {' ('}
-            <Link href={`/preprint/iwashita2024personalizing.pdf`}>PDF</Link>
+            <Link href={`/preprints/iwashita2024personalizing.pdf`}>PDF</Link>
             {')'}
             {' ('}
             <Link href={`/bib/iwashita2024personalizing.bib`}>BibTeX</Link>
@@ -353,7 +353,7 @@ export default function Home() {
             Knowledge Retrieval from Large Language Models. arXiv preprint
             arXiv:2402.07770v1 [cs.IR], 2024. (* equal contributions)
             {' ('}
-            <Link href={`/preprint/selby2024quantitative.pdf`}>PDF</Link>
+            <Link href={`/preprints/selby2024quantitative.pdf`}>PDF</Link>
             {')'}
             {' ('}
             <Link href={`/bib/selby2024quantitative.bib`}>BibTeX</Link>
