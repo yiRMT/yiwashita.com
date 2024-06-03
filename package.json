@@ -22,6 +22,7 @@
     "sass": "^1.77.4"
   },
   "devDependencies": {
+    "@types/gtag.js": "^0.0.20",
     "@types/markdown-it": "^14.1.1",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.15",
