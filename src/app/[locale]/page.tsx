@@ -1,8 +1,8 @@
 'use client'
 
-import Image from "next/image";
+import Image from 'next/image'
 import Link from 'next/link'
-import { useI18n } from "@/locales/client";
+import { useI18n } from '@/locales/client'
 
 export default function Home({
   params: { locale },
@@ -39,7 +39,9 @@ export default function Home({
             <td>-</td>
             <td>{t('present')}</td>
             <td>
-              <Link href="https://rptu.de/en">{t('rptu-dept-informatics')}</Link>
+              <Link href="https://rptu.de/en">
+                {t('rptu-dept-informatics')}
+              </Link>
             </td>
           </tr>
           <tr>
@@ -416,5 +418,5 @@ export default function Home({
         </li>
       </ul>
     </>
-  );
+  )
 }

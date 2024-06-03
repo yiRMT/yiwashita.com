@@ -11,7 +11,11 @@ export async function POST(req: Request): Promise<Response> {
     },
   })
 
-  const data = await req.json() as { name: string, email: string, msg: string }
+  const data = (await req.json()) as {
+    name: string
+    email: string
+    msg: string
+  }
   try {
     await transporter.sendMail({
       from: 'Yuichiro Iwashita <contact@yiwashita.com>',

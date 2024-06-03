@@ -31,9 +31,9 @@ export default async function Post({
             <span key={tag}>#{tag}</span>
           ))}
         </div>
-        <div 
+        <div
           className="post markdown"
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </article>
     </>

@@ -88,7 +88,7 @@ export function getAllContentIds(subDirectory: string) {
 export async function getContentData(
   subDirectory: string,
   id: string,
-  locale: string
+  locale: string,
 ): Promise<Content> {
   const dateDict: { [key: string]: string } = {}
   const fileNames = fs
@@ -113,7 +113,7 @@ export async function getContentData(
   const alFullPath = path.join(
     contentsDirectory,
     subDirectory,
-    idWithDate.replace(`.${locale}.`, `.${anotherLocale}.`)
+    idWithDate.replace(`.${locale}.`, `.${anotherLocale}.`),
   )
   matterResult.data.isTranslated = fs.existsSync(alFullPath) ? 'true' : 'false'
 

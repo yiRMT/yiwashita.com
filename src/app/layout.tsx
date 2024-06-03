@@ -1,4 +1,4 @@
-import NextTopLoader from "nextjs-toploader";
+import NextTopLoader from 'nextjs-toploader'
 
 export default function RootLayout({
   children,

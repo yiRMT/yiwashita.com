@@ -1,11 +1,11 @@
 'use client'
 
 import React, { useState } from 'react'
-import { useI18n } from "@/locales/client";
+import { useI18n } from '@/locales/client'
 
 export default function Contact() {
   const t = useI18n()
-  
+
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -31,7 +31,6 @@ export default function Contact() {
       alert('Failed to send a message.')
     }
   }
-
 
   return (
     <>
@@ -85,10 +84,7 @@ export default function Contact() {
               placeholder={t('body')}
             />
           </div>
-          <button
-            onClick={handleSubmit}
-            type="submit"
-          >
+          <button onClick={handleSubmit} type="submit">
             {t('submit')}
           </button>
         </form>
