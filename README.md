@@ -11,8 +11,8 @@ You can check redirect settings for https://yirmt.github.io in [this repo](https
 ## Getting started
 
 1. Run `yarn install` to install all required npm packages.
-1. Run `npx next dev` to start a development server.
+1. Run `yarn dev` to start a development server.
 
-## Licence
+## License
 
-This project is under MIT licence except blog posts located in `./posts` and images located in `./public`.
+This project is under MIT license except for blog posts located in `./contents` and images located in `./public`.
