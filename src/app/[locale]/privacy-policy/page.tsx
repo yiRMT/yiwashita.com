@@ -1,4 +1,4 @@
-import { getI18n } from "@/locales/server"
+import { getI18n } from '@/locales/server'
 
 export async function generateMetadata() {
   const t = await getI18n()

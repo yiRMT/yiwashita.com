@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 body {
@@ -97,7 +97,7 @@ ul {
 
   .nav-switch {
     @apply hover:underline text-gray-500 dark:text-slate-400 hover:text-gray-800 dark:hover:text-slate-100;
-  
+
     &:hover {
       @media (hover: hover) {
         cursor: pointer;
@@ -114,7 +114,7 @@ ul {
   }
 
   .copyright-container {
-    @apply my-auto text-sm; 
+    @apply my-auto text-sm;
   }
 
   .nav-container {
@@ -143,7 +143,7 @@ ul {
 
 .bio-container {
   @apply flex flex-col sm:flex-row items-center gap-5;
-  
+
   .bio-text {
     @apply flex flex-col gap-5 sm:items-start items-center;
     p {
@@ -153,7 +153,7 @@ ul {
 
   .bio-image {
     @apply flex-none sm:w-[176px] w-[200px] relative;
-    
+
     img {
       @apply rounded-full;
     }
@@ -234,14 +234,14 @@ ul {
     .post-date-tags-container {
       @apply flex sm:gap-5 gap-2 sm:flex-row flex-col;
     }
-  
+
     .post-date {
       @apply font-semibold sm:text-base text-sm;
     }
-  
+
     .post-tags-container {
       @apply flex gap-2;
-  
+
       span {
         @apply px-3 py-1 font-semibold sm:text-sm text-xs text-gray-700 dark:text-slate-700 bg-gray-300 rounded-full;
       }
@@ -252,7 +252,7 @@ ul {
 .post-article {
   .post-tags-container {
     @apply flex my-4 gap-2;
-  
+
     span {
       @apply px-3 py-1 font-semibold text-sm text-gray-700 dark:text-slate-700 bg-gray-200 rounded-full;
     }
@@ -326,7 +326,15 @@ ul {
   @apply p-4 bg-gray-800 dark:bg-slate-800 rounded overflow-auto text-white font-mono;
 }
 
-.markdown p code, li code, h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, td code {
+.markdown p code,
+li code,
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code,
+td code {
   @apply bg-gray-300 dark:bg-slate-700 font-mono mx-1 px-0.5 py-0.5 rounded;
 }
 
@@ -350,22 +358,22 @@ ul {
   @apply p-1 border border-gray-300 dark:border-slate-400 border-solid;
 }
 
-.markdown a[id^="user-content-user-content-fnref"] {
+.markdown a[id^='user-content-user-content-fnref'] {
   @apply mx-0.5;
 }
 
-.markdown a[id^="user-content-user-content-fnref"]:before {
-  content: "[";
+.markdown a[id^='user-content-user-content-fnref']:before {
+  content: '[';
 }
 
-.markdown a[id^="user-content-user-content-fnref"]:after {
-  content: "]";
+.markdown a[id^='user-content-user-content-fnref']:after {
+  content: ']';
 }
 
-.markdown h2[id="user-content-footnote-label"] {
+.markdown h2[id='user-content-footnote-label'] {
   @apply mt-2 mb-0 text-sm;
 }
 
-.markdown li[id^="user-content-user-content"] {
+.markdown li[id^='user-content-user-content'] {
   @apply text-sm;
 }
