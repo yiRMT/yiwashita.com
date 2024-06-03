@@ -1,9 +1,14 @@
-'use client'
+import { getI18n } from "@/locales/server"
 
-import { useI18n } from '@/locales/client'
+export async function generateMetadata() {
+  const t = await getI18n()
+  return {
+    title: `${t('privacy-policy')} - yiwashita.com`,
+  }
+}
 
-export default function PrivacyPolicy() {
-  const t = useI18n()
+export default async function PrivacyPolicy() {
+  const t = await getI18n()
 
   return (
     <>

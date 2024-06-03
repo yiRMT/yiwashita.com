@@ -1,15 +1,20 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
-import { useI18n } from '@/locales/client'
+import { getI18n } from '@/locales/server'
 
-export default function Home({
+export async function generateMetadata() {
+  const t = await getI18n()
+  return {
+    title: `${t('name')} - yiwashita.com`,
+  }
+}
+
+export default async function Home({
   params: { locale },
 }: {
   params: { locale: string }
 }) {
-  const t = useI18n()
+  const t = await getI18n()
   return (
     <>
       <h1>{t('name')}</h1>

@@ -3,11 +3,7 @@ import Image from 'next/image'
 import { getSortedContentsData } from '@/libs/contents'
 import { getI18n } from '@/locales/server'
 
-export async function generateMetadata({
-  params: { locale },
-}: {
-  params: { locale: string }
-}) {
+export async function generateMetadata() {
   const t = await getI18n()
   return {
     title: `${t('projects')} - yiwashita.com`,
