@@ -200,7 +200,18 @@ export default async function Home({
             Support Learning: An In-the-wild Study on Notification Timing. In
             Companion of the 2024 ACM International Joint Conference on
             Pervasive and Ubiquitous Computing Pervasive and Ubiquitous
-            Computing (UbiComp Companion &apos;24), ACM, 2024. (to be published)
+            Computing (UbiComp Companion &apos;24), ACM, 2024.
+            {' ('}
+            <Link href={`https://dl.acm.org/doi/pdf/10.1145/3675094.3677576`}>PDF</Link>
+            {')'}
+            {' ('}
+            <Link href={`/bib/iwashita2024peer.bib`}>BibTeX</Link>
+            {')'}
+            {' ('}
+            <Link href={`https://doi.org/10.1145/3675094.3677576`}>
+              {t('link')}
+            </Link>
+            {')'}
           </li>
           <li>
             <b>Yuichiro Iwashita</b>, Andrew Vargo, Motoi Iwata, Koichi Kise.
