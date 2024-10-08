@@ -202,7 +202,9 @@ export default async function Home({
             Pervasive and Ubiquitous Computing Pervasive and Ubiquitous
             Computing (UbiComp Companion &apos;24), ACM, 2024.
             {' ('}
-            <Link href={`https://dl.acm.org/doi/pdf/10.1145/3675094.3677576`}>PDF</Link>
+            <Link href={`https://dl.acm.org/doi/pdf/10.1145/3675094.3677576`}>
+              PDF
+            </Link>
             {')'}
             {' ('}
             <Link href={`/bib/iwashita2024peer.bib`}>BibTeX</Link>
