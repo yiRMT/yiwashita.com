@@ -195,6 +195,25 @@ export default async function Home({
       <div className="publications">
         <ul>
           <li>
+            David Selby*, Kai Spriestersbach*, <b>Yuichiro Iwashita</b>*, Dennis
+            Bappert, Archana Warrier, Sumantrak Mukherjee, Sergey Redyuk,
+            Muhammad Nabeel Asim, Koichi Kise, Sebastian Vollmer. Had enough of
+            experts? Elicitation and evaluation of Bayesian priors from large
+            language models. In NeurIPS 2024 Workshop on Bayesian
+            Decision-making and Uncertainty, 2024. (* equal contributions)
+            {' ('}
+            <Link href={`https://openreview.net/pdf?id=3iDxHRQfVy`}>PDF</Link>
+            {')'}
+            {' ('}
+            <Link href={`/bib/selby2024had.bib`}>BibTeX</Link>
+            {')'}
+            {' ('}
+            <Link href={`https://openreview.net/forum?id=3iDxHRQfVy`}>
+              {t('link')}
+            </Link>
+            {')'}
+          </li>
+          <li>
             <b>Yuichiro Iwashita</b>, Ryuki Kurashige, Andrew Vargo, Benjamin
             Tag, Tilman Dingler, Motoi Iwata, Koichi Kise. Peer-Awareness to
             Support Learning: An In-the-wild Study on Notification Timing. In
