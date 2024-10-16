@@ -40,16 +40,6 @@ export default async function Home({
       <table>
         <tbody>
           <tr>
-            <td>2023.10</td>
-            <td>-</td>
-            <td>{t('present')}</td>
-            <td>
-              <Link href="https://rptu.de/en">
-                {t('rptu-dept-informatics')}
-              </Link>
-            </td>
-          </tr>
-          <tr>
             <td>2023.04</td>
             <td>-</td>
             <td>{t('present')}</td>
@@ -78,6 +68,16 @@ export default async function Home({
                 }
               >
                 {t('imlab')}
+              </Link>
+            </td>
+          </tr>
+          <tr>
+            <td>2023.10</td>
+            <td>-</td>
+            <td>2024.09</td>
+            <td>
+              <Link href="https://rptu.de/en">
+                {t('rptu-dept-informatics')}
               </Link>
             </td>
           </tr>
@@ -114,9 +114,27 @@ export default async function Home({
             </td>
           </tr>
           <tr>
-            <td>2023.09</td>
+            <td>2021.09</td>
             <td>-</td>
             <td>{t('present')}</td>
+            <td>
+              {t('server-admin')}
+              {', '}
+              <Link
+                href={
+                  locale === 'ja'
+                    ? 'https://imlab.jp'
+                    : 'https://imlab.jp/index-e.html'
+                }
+              >
+                {t('imlab')}
+              </Link>
+            </td>
+          </tr>
+          <tr>
+            <td>2023.09</td>
+            <td>-</td>
+            <td>2024.09</td>
             <td>
               {t('internship')}
               {', '}
@@ -167,24 +185,6 @@ export default async function Home({
               {t('internship')}
               {', '}
               <Link href="https://www.dfki.de/en/web">{t('dfki')}</Link>
-            </td>
-          </tr>
-          <tr>
-            <td>2021.09</td>
-            <td>-</td>
-            <td>{t('present')}</td>
-            <td>
-              {t('server-admin')}
-              {', '}
-              <Link
-                href={
-                  locale === 'ja'
-                    ? 'https://imlab.jp'
-                    : 'https://imlab.jp/index-e.html'
-                }
-              >
-                {t('imlab')}
-              </Link>
             </td>
           </tr>
         </tbody>
