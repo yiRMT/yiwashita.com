@@ -1,26 +1,22 @@
-import { Post } from '@/types/microCMS';
-import { createClient } from 'microcms-js-sdk';
+import { Post } from '@/types/microCMS'
+import { createClient } from 'microcms-js-sdk'
 
 const client = createClient({
   serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN as string,
-  apiKey: process.env.MICROCMS_API_KEY as string
-});
+  apiKey: process.env.MICROCMS_API_KEY as string,
+})
 
-export const getPostList = async ({
-  locale
-}: {
-  locale: string  
-}) => {
-  const postList = await client.getList<Post>({ 
+export const getPostList = async ({ locale }: { locale: string }) => {
+  const postList = await client.getList<Post>({
     endpoint: 'posts',
     queries: {
       fields: 'id,publishedAt,title,tags',
     },
     customRequestInit: {
-      cache: 'no-cache'
-    }
+      cache: 'no-cache',
+    },
   })
-  
+
   return postList.contents.sort((a, b) => {
     if (a.publishedAt === '' && b.publishedAt === '') {
       if ((a.id as string) > (b.id as string)) {
@@ -40,19 +36,19 @@ export const getPostList = async ({
 
 export const getPostDetail = async ({
   contentId,
-  locale
+  locale,
 }: {
-  contentId: string,
+  contentId: string
   locale: string
 }) => {
-  return await client.getListDetail<Post>({ 
+  return await client.getListDetail<Post>({
     endpoint: 'posts',
     contentId: contentId,
     queries: {
       fields: 'title,tags,body,publishedAt',
     },
     customRequestInit: {
-      cache: 'no-cache'
-    }
+      cache: 'no-cache',
+    },
   })
 }

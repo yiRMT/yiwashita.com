@@ -2,7 +2,7 @@ import type {
   MicroCMSImage,
   MicroCMSDate,
   MicroCMSContentId,
-} from "microcms-js-sdk";
+} from 'microcms-js-sdk'
 
 export interface Post {
   id: MicroCMSContentId

@@ -1,7 +1,7 @@
 import { getContentData } from '@/libs/contents'
 import { getI18n } from '@/locales/server'
-import { getPostDetail } from '@/libs/microCMSClient';
-import { formatDate } from '@/libs/utils';
+import { getPostDetail } from '@/libs/microCMSClient'
+import { formatDate } from '@/libs/utils'
 
 export async function generateMetadata({
   params: { locale, id },
