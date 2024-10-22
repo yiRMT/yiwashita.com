@@ -13,6 +13,7 @@
     "highlight.js": "^11.9.0",
     "markdown-it": "^14.1.0",
     "markdown-it-footnote": "^4.0.0",
+    "microcms-js-sdk": "^3.1.2",
     "next": "14.2.10",
     "next-international": "^1.2.4",
     "nextjs-toploader": "^1.6.12",
