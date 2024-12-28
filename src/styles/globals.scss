@@ -300,7 +300,9 @@ ul {
 }
 
 .article-body p {
-  @apply mt-1 mb-3;
+  &:not(:first-child):not(:last-child) {
+    @apply mb-3;
+  }
 }
 
 .article-body a {
