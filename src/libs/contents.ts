@@ -117,9 +117,6 @@ export async function getContentData(
   )
   matterResult.data.isTranslated = fs.existsSync(alFullPath) ? 'true' : 'false'
 
-  const pattern = idWithDate.match(RegExp('(\\d{4}-\\d{2}-\\d{2})'))
-  matterResult.data.date = pattern ? pattern[1] : ''
-
   const tagsStr: string = matterResult.data.tags
     ? matterResult.data.tags + ''
     : ''

@@ -1,6 +1,5 @@
 import { getContentData } from '@/libs/contents'
 import { getI18n } from '@/locales/server'
-import { getPostDetail } from '@/libs/microCMSClient'
 import { formatDate } from '@/libs/utils'
 
 export async function generateMetadata({
@@ -8,11 +7,12 @@ export async function generateMetadata({
 }: {
   params: { locale: string; id: string }
 }) {
-  const postData = await getPostDetail({ contentId: id, locale })
+  const postData = await getContentData('posts', id, locale)
   const t = await getI18n()
   return {
-    title: `${postData.title} - ${t('blog')} - yiwashita.com`,
-    tags: postData.tags.map(({ tag }) => tag).join(', '),
+    title: `${postData.metadata.title} - ${t('blog')} - yiwashita.com`,
+    description: postData.metadata.description,
+    tags: postData.metadata.tags.map(( tag ) => tag).join(', '),
   }
 }
 
@@ -21,19 +21,22 @@ export default async function Post({
 }: {
   params: { locale: string; id: string }
 }) {
-  const postData = await getPostDetail({ contentId: id, locale })
+  const postData = await getContentData('posts', id, locale)
   return (
     <>
       <article className="post-article">
-        <h1>{postData.title}</h1>
-        <div className="post-tags-container">
-          {postData.tags.map(({ tag }) => (
-            <span key={tag}>#{tag}</span>
-          ))}
+        <h1>{postData.metadata.title}</h1>
+        <div className='post-meta-container'>
+          <span className='post-date'>{formatDate(postData.metadata.date)}</span>
+          <div className="post-tags-container">
+            {postData.metadata.tags.map(( tag ) => (
+              <span key={tag}>#{tag}</span>
+            ))}
+          </div>
         </div>
         <div
           className="post article-body"
-          dangerouslySetInnerHTML={{ __html: postData.body }}
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </article>
     </>
