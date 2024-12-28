@@ -12,7 +12,7 @@ export async function generateMetadata({
   return {
     title: `${postData.metadata.title} - ${t('blog')} - yiwashita.com`,
     description: postData.metadata.description,
-    tags: postData.metadata.tags.map(( tag ) => tag).join(', '),
+    tags: postData.metadata.tags.map((tag) => tag).join(', '),
   }
 }
 
@@ -26,10 +26,12 @@ export default async function Post({
     <>
       <article className="post-article">
         <h1>{postData.metadata.title}</h1>
-        <div className='post-meta-container'>
-          <span className='post-date'>{formatDate(postData.metadata.date)}</span>
+        <div className="post-meta-container">
+          <span className="post-date">
+            {formatDate(postData.metadata.date)}
+          </span>
           <div className="post-tags-container">
-            {postData.metadata.tags.map(( tag ) => (
+            {postData.metadata.tags.map((tag) => (
               <span key={tag}>#{tag}</span>
             ))}
           </div>

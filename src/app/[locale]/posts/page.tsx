@@ -15,7 +15,7 @@ export default async function Posts({
 }: {
   params: { locale: string }
 }) {
-  const postList =  getSortedContentsData('posts', locale)
+  const postList = getSortedContentsData('posts', locale)
   const t = await getI18n()
   return (
     <>
