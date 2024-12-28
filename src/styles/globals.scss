@@ -356,7 +356,7 @@ td code {
 }
 
 .article-body blockquote {
-  @apply border-l-4 border-gray-400 dark:border-slate-400 bg-gray-300 dark:bg-slate-800 rounded border-solid pl-4 my-4;
+  @apply border-l-4 border-gray-400 dark:border-slate-400 bg-gray-300 dark:bg-slate-800 rounded border-solid pt-2 pb-2 pl-4 pr-4 my-4;
 }
 
 .article-body table {
