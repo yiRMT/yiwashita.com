@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { getI18n } from '@/locales/server'
-import { getPostList } from '@/libs/microCMSClient'
+import { getSortedContentsData } from '@/libs/contents'
 import { formatDate } from '@/libs/utils'
 
 export async function generateMetadata() {
@@ -15,7 +15,7 @@ export default async function Posts({
 }: {
   params: { locale: string }
 }) {
-  const postList = await getPostList({ locale })
+  const postList = getSortedContentsData('posts', locale)
   const t = await getI18n()
   return (
     <>
@@ -23,15 +23,15 @@ export default async function Posts({
       <div className="posts-container">
         <ul>
           {postList.length === 0 && <p>{t('no-posts-found')}</p>}
-          {postList.map(({ id, publishedAt, title, tags }) => (
+          {postList.map(({ id, date, title, tags }) => (
             <li key={id}>
               <Link href={`/posts/${id}`}>
                 <div className="post-card">
                   <div className="post-title">{title}</div>
                   <div className="post-date-tags-container">
-                    <div className="post-date">{formatDate(publishedAt)}</div>
+                    <div className="post-date">{formatDate(date)}</div>
                     <div className="post-tags-container">
-                      {tags.map(({ tag }) => (
+                      {tags.map((tag) => (
                         <span key={tag}>#{tag}</span>
                       ))}
                     </div>

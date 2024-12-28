@@ -232,29 +232,37 @@ ul {
     }
 
     .post-date-tags-container {
-      @apply flex sm:gap-5 gap-2 sm:flex-row flex-col;
-    }
+      @apply flex sm:gap-5 gap-2 sm:flex-row flex-col items-center;
 
-    .post-date {
-      @apply font-semibold sm:text-base text-sm;
-    }
-
-    .post-tags-container {
-      @apply flex gap-2;
-
-      span {
-        @apply px-3 py-1 font-semibold sm:text-sm text-xs text-gray-700 dark:text-slate-700 bg-gray-300 rounded-full;
+      .post-date {
+        @apply font-mono text-gray-500 dark:text-slate-400 sm:text-base text-sm;
+      }
+  
+      .post-tags-container {
+        @apply flex gap-2;
+  
+        span {
+          @apply px-3 py-1 font-semibold sm:text-sm text-xs text-gray-700 dark:text-slate-700 bg-gray-300 rounded-full;
+        }
       }
     }
   }
 }
 
 .post-article {
-  .post-tags-container {
-    @apply flex my-4 gap-2;
+  .post-meta-container {
+    @apply flex flex-row my-4 items-center justify-between;
 
-    span {
-      @apply px-3 py-1 font-semibold text-sm text-gray-700 dark:text-slate-700 bg-gray-200 rounded-full;
+    .post-date {
+      @apply text-gray-500 dark:text-slate-400 font-mono;
+    }
+
+    .post-tags-container {
+      @apply flex gap-2;
+
+      span {
+        @apply px-3 py-1 font-semibold text-sm text-gray-700 dark:text-slate-700 bg-gray-200 rounded-full;
+      }
     }
   }
 
