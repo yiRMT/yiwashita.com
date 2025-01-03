@@ -1,5 +1,6 @@
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 import NextTopLoader from 'nextjs-toploader'
+import { Suspense } from 'react'
 
 export default function RootLayout({
   children,
@@ -9,7 +10,9 @@ export default function RootLayout({
   return (
     <html>
       <head>
-        <GoogleAnalytics />
+        <Suspense>
+          <GoogleAnalytics />
+        </Suspense>
       </head>
       <body>
         <NextTopLoader color="#334155" showSpinner={false} />
