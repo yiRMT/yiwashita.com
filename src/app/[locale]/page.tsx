@@ -191,6 +191,18 @@ export default async function Home({
       </table>
 
       <h2>{t('publications')}</h2>
+      <h3>{t('journal-papers')}</h3>
+      <div className="publications">
+        <ul>
+          <li>
+            David Selby*, <b>Yuichiro Iwashita</b>*, Kai Spriestersbach*,
+            Mohammad Saad, Dennis Bappert, Archana Warrier, Sumantrak Mukherjee,
+            Koichi Kise, Sebastian Vollmer. Had enough of experts? Quantitative
+            knowledge retrieval from large language models. Stat, 2025. (* equal
+            contributions, to appear)
+          </li>
+        </ul>
+      </div>
       <h3>{t('international-conference-papers')}</h3>
       <div className="publications">
         <ul>
