@@ -269,31 +269,29 @@ export default async function Home({
       <div className="publications">
         <ul>
           <li>
-            {locale == 'ja' ? (
-              <>
-                劉 少楠, 野々宮 悠太, <b>岩下 雄一郎</b>, 木村 誠一, 齋藤 美紅,
-                山崎 桜花, 石丸 翔也, 仲子 聡一郎, 岡村 浩史, 岩村 雅一, 黄瀬
-                浩一, 新谷 歩.
-                集中治療室における再入室イベントを予測する機械学習ベースの生存時間解析モデルに時系列データが与える影響.
-                第43回医療情報学連合大会 (第24回日本医療情報学会学術大会)
-                論文集, 日本医療情報学会, 2023.
-                {' ('}
-                <Link href={`/bib/liu2023effects_ja.bib`}>BibTeX</Link>
-                {')'}
-              </>
-            ) : (
-              <>
-                Shaonan Liu, Yuta Nonomiya, <b>Yuichiro Iwashita</b>, Seiichi
-                Kimura, Miku Saito, Oka Yamasaki, Shoya Ishimaru, Soichiro
-                Nakako, Hiroshi Okamura, Masakazu Iwamura, Koichi Kise, Ayumi
-                Shintani. Effects of time-series data on machine learning-based
-                survival analysis models for predicting readmission events in
-                intensive care units. In Proceedings of the 43rd Joint
-                Conference on Medical Informatics (the 24th conference of the
-                Japan Association for Medical Informatics), JAMI, 2023. (in
-                Japanese)
-              </>
-            )}
+            大塚 遙, 岩田 基, <b>岩下 雄一郎</b>, 黄瀬 浩一. 生成 AI
+            で画像を作りながら学べる英単語学習システム. 情報処理学会 INTERACTION
+            2025 予稿集, 情報処理学会, 2025. (to appear)
+            {' ('}
+            <Link
+              href={
+                'https://www.interaction-ipsj.org/2025/web-catalog/#interactive1'
+              }
+            >
+              {t('link')}
+            </Link>
+            {')'}
+          </li>
+          <li>
+            劉 少楠, 野々宮 悠太, <b>岩下 雄一郎</b>, 木村 誠一, 齋藤 美紅, 山崎
+            桜花, 石丸 翔也, 仲子 聡一郎, 岡村 浩史, 岩村 雅一, 黄瀬 浩一, 新谷
+            歩.
+            集中治療室における再入室イベントを予測する機械学習ベースの生存時間解析モデルに時系列データが与える影響.
+            第43回医療情報学連合大会 (第24回日本医療情報学会学術大会) 論文集,
+            日本医療情報学会, 2023.
+            {' ('}
+            <Link href={`/bib/liu2023effects_ja.bib`}>BibTeX</Link>
+            {')'}
             {' ('}
             <Link
               href={`https://publication.imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1940&lang=${locale}`}
@@ -303,31 +301,15 @@ export default async function Home({
             {')'}
           </li>
           <li>
-            {locale == 'ja' ? (
-              <>
-                野々宮 悠太, 柳 健大, 栗生 薫, 内田 時央, <b>岩下 雄一郎</b>,
-                藤原 史規, 山岡 幹太, 石丸 翔也, 仲子 聡一郎, 岡村 浩史, 岩村
-                雅一, 黄瀬 浩一, 新谷 歩.
-                集中治療室における短期的な死亡を予測する再帰型ニューラルネットワークを用いた動的予測モデルの提案：MIMIC-IVデータベースを利用した後方視的コホート研究.
-                第43回医療情報学連合大会 (第24回日本医療情報学会学術大会)
-                論文集, 日本医療情報学会, 2023.
-                {' ('}
-                <Link href={`/bib/nonomiya2023recurrent_ja.bib`}>BibTeX</Link>
-                {')'}
-              </>
-            ) : (
-              <>
-                Yuta Nonomiya, Kenta Yanagi, Kaori Kuriu, Tokio Uchida,{' '}
-                <b>Yuichiro Iwashita</b>, Fuminori Fujiwara, Kanta Yamaoka,
-                Shoya Ishimaru, Soichiro Nakako, Hiroshi Okamura, Masakazu
-                Iwamura, Koichi Kise, Ayumi Shintani. Recurrent neural
-                network-based dynamic prediction model for short-term mortality
-                in intensive care units: retrospective cohort study using the
-                MIMIC-IV database. In Proceedings of the 43rd Joint Conference
-                on Medical Informatics (the 24th conference of the Japan
-                Association for Medical Informatics), JAMI, 2023. (in Japanese)
-              </>
-            )}
+            野々宮 悠太, 柳 健大, 栗生 薫, 内田 時央, <b>岩下 雄一郎</b>, 藤原
+            史規, 山岡 幹太, 石丸 翔也, 仲子 聡一郎, 岡村 浩史, 岩村 雅一, 黄瀬
+            浩一, 新谷 歩.
+            集中治療室における短期的な死亡を予測する再帰型ニューラルネットワークを用いた動的予測モデルの提案：MIMIC-IVデータベースを利用した後方視的コホート研究.
+            第43回医療情報学連合大会 (第24回日本医療情報学会学術大会) 論文集,
+            日本医療情報学会, 2023.
+            {' ('}
+            <Link href={`/bib/nonomiya2023recurrent_ja.bib`}>BibTeX</Link>
+            {')'}
             {' ('}
             <Link
               href={`https://publication.imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1941&lang=${locale}`}
@@ -337,31 +319,15 @@ export default async function Home({
             {')'}
           </li>
           <li>
-            {locale == 'ja' ? (
-              <>
-                琴浦 陽南, 山本 航平, 堀川 昴輝, 高本 凌平, 野々宮 悠太,{' '}
-                <b>岩下 雄一郎</b>, 栗生 薫, 石丸 翔也, 仲子 聡一郎, 岡村 浩史,
-                岩村 雅一, 黄瀬 浩一, 新谷 歩.
-                臨床テーブルデータと胸部X線画像を統合したツリー系機械学習モデルによるCOVID-19患者の予後予測.
-                第43回医療情報学連合大会 (第24回日本医療情報学会学術大会)
-                論文集, 日本医療情報学会, 2023.
-                {' ('}
-                <Link href={`/bib/kotoura2023tree_ja.bib`}>BibTeX</Link>
-                {')'}
-              </>
-            ) : (
-              <>
-                Hina Kotoura, Kohei Yamamoto, Koki Horikawa, Ryohei Takamoto,
-                Yuta Nonomiya, <b>Yuichiro Iwashita</b>, Kaori Kuriu, Shoya
-                Ishimaru, Soichiro Nakako, Hiroshi Okamura, Masakazu Iwamura,
-                Koichi Kise, Ayumi Shintani. Tree-based machine learning model
-                integrating clinical table data and chest x-ray images to
-                predict prognosis of covid-19 patients. In Proceedings of the
-                43rd Joint Conference on Medical Informatics (the 24th
-                conference of the Japan Association for Medical Informatics),
-                JAMI, 2023. (in Japanese)
-              </>
-            )}
+            琴浦 陽南, 山本 航平, 堀川 昴輝, 高本 凌平, 野々宮 悠太,{' '}
+            <b>岩下 雄一郎</b>, 栗生 薫, 石丸 翔也, 仲子 聡一郎, 岡村 浩史, 岩村
+            雅一, 黄瀬 浩一, 新谷 歩.
+            臨床テーブルデータと胸部X線画像を統合したツリー系機械学習モデルによるCOVID-19患者の予後予測.
+            第43回医療情報学連合大会 (第24回日本医療情報学会学術大会) 論文集,
+            日本医療情報学会, 2023.
+            {' ('}
+            <Link href={`/bib/kotoura2023tree_ja.bib`}>BibTeX</Link>
+            {')'}
             {' ('}
             <Link
               href={`https://publication.imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1942&lang=${locale}`}
@@ -371,28 +337,13 @@ export default async function Home({
             {')'}
           </li>
           <li>
-            {locale == 'ja' ? (
-              <>
-                <b>岩下 雄一郎</b>, 岩田 基, Andrew W. Vargo, 黄瀬 浩一.
-                英単語学習を長期的に継続するための適応型学習システムの開発.
-                2023年電子情報通信学会総合大会講演論文集, 電子情報通信学会,
-                2023. (査読なし)
-                {' ('}
-                <Link href={`/bib/iwashita2023developing_ja.bib`}>BibTeX</Link>
-                {')'}
-              </>
-            ) : (
-              <>
-                <b>Yuichiro Iwashita</b>, Motoi Iwata, Andrew W. Vargo, Koichi
-                Kise. Developing an adaptive learning system for long-term
-                English vocabulary learning. In Proceedings of the 2023 IEICE
-                General Conference, IEICE, 2023. (in Japanese, without peer
-                review)
-                {' ('}
-                <Link href={`/bib/iwashita2023developing_en.bib`}>BibTeX</Link>
-                {')'}
-              </>
-            )}
+            <b>岩下 雄一郎</b>, 岩田 基, Andrew W. Vargo, 黄瀬 浩一.
+            英単語学習を長期的に継続するための適応型学習システムの開発.
+            2023年電子情報通信学会総合大会講演論文集, 電子情報通信学会, 2023.
+            (査読なし)
+            {' ('}
+            <Link href={`/bib/iwashita2023developing_ja.bib`}>BibTeX</Link>
+            {')'}
             {' ('}
             <Link
               href={`https://publication.imlab.jp/cgi-bin/publication_public.cgi?func=show_detail&id=1906&lang=${locale}`}
