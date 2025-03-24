@@ -42,7 +42,7 @@ export default async function Home({
           <tr>
             <td>2023.04</td>
             <td>-</td>
-            <td>{t('present')}</td>
+            <td>2025.03</td>
             <td>
               <Link
                 href={
@@ -58,7 +58,7 @@ export default async function Home({
           <tr>
             <td>2021.09</td>
             <td>-</td>
-            <td>{t('present')}</td>
+            <td>2025.03</td>
             <td>
               <Link
                 href={
@@ -116,7 +116,7 @@ export default async function Home({
           <tr>
             <td>2021.09</td>
             <td>-</td>
-            <td>{t('present')}</td>
+            <td>2025.03</td>
             <td>
               {t('server-admin')}
               {', '}
@@ -198,8 +198,16 @@ export default async function Home({
             David Selby*, <b>Yuichiro Iwashita</b>*, Kai Spriestersbach*,
             Mohammad Saad, Dennis Bappert, Archana Warrier, Sumantrak Mukherjee,
             Koichi Kise, Sebastian Vollmer. Had enough of experts? Quantitative
-            knowledge retrieval from large language models. Stat, 2025. (* equal
-            contributions, to appear)
+            knowledge retrieval from large language models. Stat, 14, pp.e70054, 2025. (* equal contributions)
+            {' ('}
+            <Link href={'https://onlinelibrary.wiley.com/doi/epdf/10.1002/sta4.70054'}>PDF</Link>
+            {')'}
+            {' ('}
+            <Link href={`/bib/selby2025had.bib`}>BibTeX</Link>
+            {')'}
+            {' ('}
+            <Link href={'https://doi.org/10.1002/sta4.70054'}>{t('link')}</Link>
+            {')'}
           </li>
         </ul>
       </div>
