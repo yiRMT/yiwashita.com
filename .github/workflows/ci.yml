@@ -8,6 +8,10 @@ env:
 jobs:
   prettier:
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      checks: write
+      contents: write
     strategy:
       matrix:
         node-version: [18.x]
