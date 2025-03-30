@@ -198,9 +198,16 @@ export default async function Home({
             David Selby*, <b>Yuichiro Iwashita</b>*, Kai Spriestersbach*,
             Mohammad Saad, Dennis Bappert, Archana Warrier, Sumantrak Mukherjee,
             Koichi Kise, Sebastian Vollmer. Had enough of experts? Quantitative
-            knowledge retrieval from large language models. Stat, 14, pp.e70054, 2025. (* equal contributions)
+            knowledge retrieval from large language models. Stat, 14, pp.e70054,
+            2025. (* equal contributions)
             {' ('}
-            <Link href={'https://onlinelibrary.wiley.com/doi/epdf/10.1002/sta4.70054'}>PDF</Link>
+            <Link
+              href={
+                'https://onlinelibrary.wiley.com/doi/epdf/10.1002/sta4.70054'
+              }
+            >
+              PDF
+            </Link>
             {')'}
             {' ('}
             <Link href={`/bib/selby2025had.bib`}>BibTeX</Link>
