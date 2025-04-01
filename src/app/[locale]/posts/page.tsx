@@ -10,11 +10,13 @@ export async function generateMetadata() {
   }
 }
 
-export default async function Posts({
-  params: { locale },
-}: {
-  params: { locale: string }
+export default async function Posts(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
+
+  const { locale } = params
+
   const postList = getSortedContentsData('posts', locale)
   const t = await getI18n()
   return (
