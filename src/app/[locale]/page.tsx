@@ -46,6 +46,16 @@ export default async function Home(
       <table>
         <tbody>
           <tr>
+            <td>2025.04</td>
+            <td>-</td>
+            <td>{t('present')}</td>
+            <td>
+              <Link href="https://rptu.de/en">
+                {t('rptu-dept-informatics')}
+              </Link>
+            </td>
+          </tr>
+          <tr>
             <td>2023.04</td>
             <td>-</td>
             <td>2025.03</td>
@@ -401,12 +411,22 @@ export default async function Home(
       <table>
         <tbody>
           <tr>
-            <td>2022.06</td>
+            <td>2024.12</td>
             <td>-</td>
             <td>{t('present')}</td>
             <td>
-              <Link href="https://www.omu.ac.jp/info/news/entry-10852.html">
-                {t('pj-medical-ai')}
+              <Link href="https://www.aspire-mxai.com">
+                {t('pj-aspire-mxai')}
+              </Link>
+            </td>
+          </tr>
+          <tr>
+            <td>2022.06</td>
+            <td>-</td>
+            <td>2025.03</td>
+            <td>
+              <Link href="https://www.omu.ac.jp/info/news/entry-17121.html">
+                {t('pj-medical-ai-omu')}
               </Link>
             </td>
           </tr>
@@ -416,7 +436,7 @@ export default async function Home(
             <td>2024.03</td>
             <td>
               <Link href="https://opu-imp.github.io/lecycl/">
-                Learning Cyclotron (LeCycl)
+                {t('pj-lecycl')}
               </Link>
             </td>
           </tr>
