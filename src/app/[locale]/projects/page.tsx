@@ -10,16 +10,12 @@ export async function generateMetadata() {
   }
 }
 
-export default async function Projects(
-  props: {
-    params: Promise<{ locale: string }>
-  }
-) {
-  const params = await props.params;
+export default async function Projects(props: {
+  params: Promise<{ locale: string }>
+}) {
+  const params = await props.params
 
-  const {
-    locale
-  } = params;
+  const { locale } = params
 
   const allProjectsData = getSortedContentsData('projects', locale)
   const t = await getI18n()

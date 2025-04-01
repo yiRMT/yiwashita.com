@@ -2,17 +2,12 @@ import { getContentData } from '@/libs/contents'
 import { getI18n } from '@/locales/server'
 import { formatDate } from '@/libs/utils'
 
-export async function generateMetadata(
-  props: {
-    params: Promise<{ locale: string; id: string }>
-  }
-) {
-  const params = await props.params;
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; id: string }>
+}) {
+  const params = await props.params
 
-  const {
-    locale,
-    id
-  } = params;
+  const { locale, id } = params
 
   const postData = await getContentData('posts', id, locale)
   const t = await getI18n()
@@ -23,17 +18,12 @@ export async function generateMetadata(
   }
 }
 
-export default async function Post(
-  props: {
-    params: Promise<{ locale: string; id: string }>
-  }
-) {
-  const params = await props.params;
+export default async function Post(props: {
+  params: Promise<{ locale: string; id: string }>
+}) {
+  const params = await props.params
 
-  const {
-    locale,
-    id
-  } = params;
+  const { locale, id } = params
 
   const postData = await getContentData('posts', id, locale)
   return (

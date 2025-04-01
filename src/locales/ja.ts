@@ -18,8 +18,10 @@ export default {
   'work-experience': '職歴',
   'research-projects': '研究プロジェクト',
   links: '外部サイト',
-  'pj-aspire-mxai': '医療×AIの日独重層型研究開発ネットワーク形成と産業創出 (JST ASPIRE採択プロジェクト)',
-  'pj-medical-ai-omu': '医療×AIの重層型研究開発拠点形成 (大阪公立大学による支援)',
+  'pj-aspire-mxai':
+    '医療×AIの日独重層型研究開発ネットワーク形成と産業創出 (JST ASPIRE採択プロジェクト)',
+  'pj-medical-ai-omu':
+    '医療×AIの重層型研究開発拠点形成 (大阪公立大学による支援)',
   'pj-lecycl': '学習サイクロトロン (LeCycl) (JST 日独仏AI研究採択プロジェクト)',
   'international-conference-papers': '国際会議の予稿',
   'journal-papers': '論文誌',

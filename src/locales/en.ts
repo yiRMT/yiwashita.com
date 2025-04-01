@@ -14,14 +14,15 @@ export default {
   'rptu-dept-informatics':
     'Department of Informatics, University of Kaiserslautern-Landau (RPTU)',
   introduction:
-    "Yuichiro Iwashita is a Ph.D. student at the University of Kaiserslautern-Landau (RPTU). He recieved master of informatics at Graduate School of Informatics, Osaka Metropolitan University in March 2025, and bachelor of engineering at College of Englineering, Osaka Prefecture University in March 2023. He has been working on research related to medical AI, particularly multimodal data, clinical trials, and time series analysis. He has also been involved in research to augment human intelligence.",
+    'Yuichiro Iwashita is a Ph.D. student at the University of Kaiserslautern-Landau (RPTU). He recieved master of informatics at Graduate School of Informatics, Osaka Metropolitan University in March 2025, and bachelor of engineering at College of Englineering, Osaka Prefecture University in March 2023. He has been working on research related to medical AI, particularly multimodal data, clinical trials, and time series analysis. He has also been involved in research to augment human intelligence.',
   keywords:
     'Keywords: Medical x AI, Multimodal, Clinical Trials, Time Series, Survival Analysis, Human-Centered AI, Human-Computer Interaction (HCI), EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, etc.',
   imlab: 'Intelligence Media Processing Research Group',
   'work-experience': 'Work Experiences',
   'research-projects': 'Research Projects',
   links: 'External Links',
-  'pj-aspire-mxai': 'Formation of a Japan-Germany Multilayered R&D Network for Medical x AI and its Application to Industry Creation (JST ASPIRE Project)',
+  'pj-aspire-mxai':
+    'Formation of a Japan-Germany Multilayered R&D Network for Medical x AI and its Application to Industry Creation (JST ASPIRE Project)',
   'pj-medical-ai-omu':
     'Formation of a Multilayered R&D Center for Medical x AI (Supported by Osaka Metropolitan University)',
   'pj-lecycl': 'Learning Cyclotron (LeCycl) (JST Trilateral AI Project)',
