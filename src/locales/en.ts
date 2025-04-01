@@ -14,15 +14,17 @@ export default {
   'rptu-dept-informatics':
     'Department of Informatics, University of Kaiserslautern-Landau (RPTU)',
   introduction:
-    "Yuichiro Iwashita is a master's student at Graduate School of Informatics, Osaka Metropolitan University. He recieved bachelor of engineering (B.Eng.) at College of Englineering, Osaka Prefecture University in March 2023. He has been researching how to augument our intelligence by using technologies such as AI. From 2022, he has also been working on research about solving problems in medical field by using AI.",
+    "Yuichiro Iwashita is a Ph.D. student at the University of Kaiserslautern-Landau (RPTU). He recieved master of informatics at Graduate School of Informatics, Osaka Metropolitan University in March 2025, and bachelor of engineering at College of Englineering, Osaka Prefecture University in March 2023. He has been working on research related to medical AI, particularly multimodal data, clinical trials, and time series analysis. He has also been involved in research to augment human intelligence.",
   keywords:
-    'Keywords: Human-Centered AI, Human-Computer Interaction (HCI), EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, Medical x AI, Survival Analysis, etc.',
+    'Keywords: Medical x AI, Multimodal, Clinical Trials, Time Series, Survival Analysis, Human-Centered AI, Human-Computer Interaction (HCI), EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, etc.',
   imlab: 'Intelligence Media Processing Research Group',
   'work-experience': 'Work Experiences',
   'research-projects': 'Research Projects',
   links: 'External Links',
-  'pj-medical-ai':
-    'Medical x AI (in collaboration with School of Medicine, OMU and DFKI)',
+  'pj-aspire-mxai': 'Formation of a Japan-Germany Multilayered R&D Network for Medical x AI and its Application to Industry Creation (JST ASPIRE Project)',
+  'pj-medical-ai-omu':
+    'Formation of a Multilayered R&D Center for Medical x AI (Supported by Osaka Metropolitan University)',
+  'pj-lecycl': 'Learning Cyclotron (LeCycl) (JST Trilateral AI Project)',
   'international-conference-papers': 'International Conference Papers',
   'journal-papers': 'Journal Papers',
   'domestic-conference-papers': 'Domestic Conference Papers',
