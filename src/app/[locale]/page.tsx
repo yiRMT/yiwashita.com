@@ -307,12 +307,17 @@ export default async function Home(props: {
         <ul>
           <li>
             大塚 遙, 岩田 基, <b>岩下 雄一郎</b>, 黄瀬 浩一. 生成 AI
-            で画像を作りながら学べる英単語学習システム. 情報処理学会 INTERACTION
-            2025 予稿集, 情報処理学会, 2025. (to appear)
+            で画像を作りながら学べる英単語学習システム. インタラクション2025論文集, 情報処理学会, 2025.
+            {' ('}
+            <Link href={'https://www.interaction-ipsj.org/proceedings/2025/data/pdf/1B-28.pdf'}>PDF</Link>
+            {')'}
+            {' ('}
+            <Link href={`/bib/otsuka2025generative_ja.bib`}>BibTeX</Link>
+            {')'}
             {' ('}
             <Link
               href={
-                'https://www.interaction-ipsj.org/2025/web-catalog/#interactive1'
+                'https://www.interaction-ipsj.org/proceedings/2025/data/bib/1B-28.html'
               }
             >
               {t('link')}
