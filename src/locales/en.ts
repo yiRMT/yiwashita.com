@@ -11,6 +11,7 @@ export default {
     'College of Engineering, Osaka Prefecture University (OPU)',
   'omu-grad-informatics':
     'Graduate School of Informatics, Osaka Metropolitan University (OMU)',
+  'omu-dfkijp': 'DFKI Lab Japan, Osaka Metropolitan University (OMU)',
   'rptu-dept-informatics':
     'Department of Informatics, University of Kaiserslautern-Landau (RPTU)',
   introduction:
@@ -38,6 +39,7 @@ export default {
   internship: 'Internship',
   'software-engineer': 'Software Engineer',
   'server-admin': 'Server Administrator',
+  'visiting-researcher': 'Visiting Researcher',
   dfki: 'German Research Center for Artificial Intelligence GmbH (DFKI)',
   freee: 'freee K.K.',
   rakuten: 'Rakuten Group, Inc.',

@@ -116,6 +116,16 @@ export default async function Home(props: {
       <table>
         <tbody>
           <tr>
+            <td>2025.05</td>
+            <td>-</td>
+            <td>{t('present')}</td>
+            <td>
+              {t('visiting-researcher')}
+              {', '}
+              <Link href="https://www.omu.ac.jp/orp/org/crc/dfkijp/">{t('omu-dfkijp')}</Link>
+            </td>
+          </tr>
+          <tr>
             <td>2024.02</td>
             <td>-</td>
             <td>{t('present')}</td>
