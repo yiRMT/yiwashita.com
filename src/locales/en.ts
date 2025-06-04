@@ -5,19 +5,22 @@ export default {
   projects: 'Projects',
   contact: 'Contact',
   'privacy-policy': 'Privacy Policy',
-  affiliation: 'Academic Affiliation',
+  education: 'Education',
   publications: 'Publications',
+  'kontaktstudent-promotion': 'Doctoral Visiting Student',
+  'kontaktstudent': 'Visiting Student',
+  beng: 'Bachelor of Engineering',
+  msc: 'Master of Informatics',
   'opu-college-engineering':
-    'College of Engineering, Osaka Prefecture University (OPU)',
+    'Osaka Prefecture University (OPU)',
   'omu-grad-informatics':
-    'Graduate School of Informatics, Osaka Metropolitan University (OMU)',
+    'Osaka Metropolitan University (OMU) (formerly OPU)',
   'omu-dfkijp': 'DFKI Lab Japan, Osaka Metropolitan University (OMU)',
-  'rptu-dept-informatics':
-    'Department of Informatics, University of Kaiserslautern-Landau (RPTU)',
+  'rptu-dept-informatics': 'University of Kaiserslautern-Landau (RPTU)',
   introduction:
-    'Yuichiro Iwashita is a Ph.D. student at the University of Kaiserslautern-Landau (RPTU). He recieved master of informatics at Graduate School of Informatics, Osaka Metropolitan University in March 2025, and bachelor of engineering at College of Englineering, Osaka Prefecture University in March 2023. He has been working on research related to medical AI, particularly multimodal data, clinical trials, and time series analysis. He has also been involved in research to augment human intelligence.',
+    'Yuichiro Iwashita is a PhD researcher at the German Research Center for AI (DFKI) and the University of Kaiserslautern-Landau (RPTU). He has been working on research related to medical AI, particularly multimodal data, multi-omics integration, and time series analysis. Before involved in medical AI, he worked on augmenting human intelligence within HCI field.',
   keywords:
-    'Keywords: Medical x AI, Multimodal, Clinical Trials, Time Series, Survival Analysis, Human-Centered AI, Human-Computer Interaction (HCI), EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, etc.',
+    'Keywords: Medical x AI, Multimodal, Multi-omics, Time Series, Survival Analysis, Human-Centered AI, Human-Computer Interaction (HCI), EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, etc.',
   imlab: 'Intelligence Media Processing Research Group',
   'work-experience': 'Work Experiences',
   'research-projects': 'Research Projects',
@@ -40,7 +43,7 @@ export default {
   'software-engineer': 'Software Engineer',
   'server-admin': 'Server Administrator',
   'visiting-researcher': 'Visiting Researcher',
-  dfki: 'German Research Center for Artificial Intelligence GmbH (DFKI)',
+  dfki: 'German Research Center for Artificial Intelligence (DFKI GmbH)',
   freee: 'freee K.K.',
   rakuten: 'Rakuten Group, Inc.',
   affectify: 'Affectify Inc.',

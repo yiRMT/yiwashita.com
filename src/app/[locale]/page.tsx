@@ -38,7 +38,7 @@ export default async function Home(props: {
         </div>
       </div>
 
-      <h2>{t('affiliation')}</h2>
+      <h2>{t('education')}</h2>
       <table>
         <tbody>
           <tr>
@@ -46,6 +46,8 @@ export default async function Home(props: {
             <td>-</td>
             <td>{t('present')}</td>
             <td>
+              {t('kontaktstudent-promotion')}
+              {', '}
               <Link href="https://rptu.de/en">
                 {t('rptu-dept-informatics')}
               </Link>
@@ -56,6 +58,8 @@ export default async function Home(props: {
             <td>-</td>
             <td>2025.03</td>
             <td>
+              {t('msc')}
+              {', '}
               <Link
                 href={
                   locale === 'ja'
@@ -67,7 +71,7 @@ export default async function Home(props: {
               </Link>
             </td>
           </tr>
-          <tr>
+          {/* <tr>
             <td>2021.09</td>
             <td>-</td>
             <td>2025.03</td>
@@ -82,12 +86,14 @@ export default async function Home(props: {
                 {t('imlab')}
               </Link>
             </td>
-          </tr>
+          </tr> */}
           <tr>
             <td>2023.10</td>
             <td>-</td>
             <td>2024.09</td>
             <td>
+              {t('kontaktstudent')}
+              {', '}
               <Link href="https://rptu.de/en">
                 {t('rptu-dept-informatics')}
               </Link>
@@ -98,6 +104,8 @@ export default async function Home(props: {
             <td>-</td>
             <td>2023.03</td>
             <td>
+              {t('beng')}
+              {', '}
               <Link
                 href={
                   locale === 'ja'
@@ -123,6 +131,16 @@ export default async function Home(props: {
               {t('visiting-researcher')}
               {', '}
               <Link href="https://www.omu.ac.jp/orp/org/crc/dfkijp/">{t('omu-dfkijp')}</Link>
+            </td>
+          </tr>
+          <tr>
+            <td>2025.04</td>
+            <td>-</td>
+            <td>{t('present')}</td>
+            <td>
+              PhD Researcher
+              {', '}
+              <Link href="https://www.omu.ac.jp/orp/org/crc/dfkijp/">{t('dfki')}</Link>
             </td>
           </tr>
           <tr>
