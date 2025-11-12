@@ -3,7 +3,6 @@ export default {
   home: 'ホーム',
   blog: 'ブログ',
   projects: 'プロジェクト',
-  contact: '連絡',
   'privacy-policy': 'プライバシーポリシー',
   education: '学歴',
   publications: '論文',

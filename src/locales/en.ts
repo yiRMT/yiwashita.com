@@ -3,7 +3,6 @@ export default {
   home: 'Home',
   blog: 'Blog',
   projects: 'Projects',
-  contact: 'Contact',
   'privacy-policy': 'Privacy Policy',
   education: 'Education',
   publications: 'Publications',

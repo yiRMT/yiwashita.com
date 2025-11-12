@@ -33,9 +33,6 @@ export default function Header() {
             <li className={regexList[1].test(currentPath) ? 'nav-active' : ''}>
               <Link href="/posts">{t('blog')}</Link>
             </li>
-            <li className={currentPath === '/contact' ? 'nav-active' : ''}>
-              <Link href="/contact">{t('contact')}</Link>
-            </li>
             <li>
               <div
                 className="nav-switch"
