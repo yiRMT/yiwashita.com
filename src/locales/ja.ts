@@ -7,6 +7,7 @@ export default {
   'privacy-policy': 'プライバシーポリシー',
   education: '学歴',
   publications: '論文',
+  'phd-student': '博士課程',
   'kontaktstudent-promotion': '博士課程 (研究生)',
   kontaktstudent: '修士課程 (研究生)',
   beng: '学士 (工学)',

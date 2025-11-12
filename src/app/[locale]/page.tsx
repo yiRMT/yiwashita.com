@@ -42,9 +42,21 @@ export default async function Home(props: {
       <table>
         <tbody>
           <tr>
-            <td>2025.04</td>
+            <td>2025.10</td>
             <td>-</td>
             <td>{t('present')}</td>
+            <td>
+              {t('phd-student')}
+              {', '}
+              <Link href="https://rptu.de/en">
+                {t('rptu-dept-informatics')}
+              </Link>
+            </td>
+          </tr>
+          <tr>
+            <td>2025.04</td>
+            <td>-</td>
+            <td>2025.09</td>
             <td>
               {t('kontaktstudent-promotion')}
               {', '}

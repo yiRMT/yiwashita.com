@@ -7,6 +7,7 @@ export default {
   'privacy-policy': 'Privacy Policy',
   education: 'Education',
   publications: 'Publications',
+  'phd-student': 'PhD Student',
   'kontaktstudent-promotion': 'Doctoral Visiting Student',
   'kontaktstudent': 'Visiting Student',
   beng: 'Bachelor of Engineering',
@@ -16,9 +17,9 @@ export default {
   'omu-grad-informatics':
     'Osaka Metropolitan University (OMU) (formerly OPU)',
   'omu-dfkijp': 'DFKI Lab Japan, Osaka Metropolitan University (OMU)',
-  'rptu-dept-informatics': 'University of Kaiserslautern-Landau (RPTU)',
+  'rptu-dept-informatics': 'RPTU University Kaiserslautern-Landau',
   introduction:
-    'Yuichiro Iwashita is a PhD researcher at the German Research Center for AI (DFKI) and the University of Kaiserslautern-Landau (RPTU). He has been working on research related to medical AI, particularly multimodal data, multi-omics integration, and time series analysis. Before involved in medical AI, he worked on augmenting human intelligence within HCI field.',
+    'Yuichiro Iwashita is a PhD researcher at the German Research Center for AI (DFKI) and the RPTU University Kaiserslautern-Landau. He has been working on research related to medical AI, particularly multimodal data, multi-omics integration, and time series analysis. Before involved in medical AI, he worked on augmenting human intelligence within HCI field.',
   keywords:
     'Keywords: Medical x AI, Multimodal, Multi-omics, Time Series, Survival Analysis, Human-Centered AI, Human-Computer Interaction (HCI), EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, etc.',
   imlab: 'Intelligence Media Processing Research Group',
