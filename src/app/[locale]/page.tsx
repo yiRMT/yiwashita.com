@@ -83,22 +83,6 @@ export default async function Home(props: {
               </Link>
             </td>
           </tr>
-          {/* <tr>
-            <td>2021.09</td>
-            <td>-</td>
-            <td>2025.03</td>
-            <td>
-              <Link
-                href={
-                  locale === 'ja'
-                    ? 'https://imlab.jp'
-                    : 'https://imlab.jp/index-e.html'
-                }
-              >
-                {t('imlab')}
-              </Link>
-            </td>
-          </tr> */}
           <tr>
             <td>2023.10</td>
             <td>-</td>
@@ -136,6 +120,16 @@ export default async function Home(props: {
       <table>
         <tbody>
           <tr>
+            <td>2025.06</td>
+            <td>-</td>
+            <td>{t('present')}</td>
+            <td>
+              Research Assistant
+              {', '}
+              <Link href="https://www.dfki.de/en/web">{t('dfki')}</Link>
+            </td>
+          </tr>
+          <tr>
             <td>2025.05</td>
             <td>-</td>
             <td>{t('present')}</td>
@@ -148,17 +142,17 @@ export default async function Home(props: {
           <tr>
             <td>2025.04</td>
             <td>-</td>
-            <td>{t('present')}</td>
+            <td>2025.05</td>
             <td>
-              PhD Researcher
+              {t('visiting-researcher')}
               {', '}
-              <Link href="https://www.omu.ac.jp/orp/org/crc/dfkijp/">{t('dfki')}</Link>
+              <Link href="https://www.dfki.de/en/web">{t('dfki')}</Link>
             </td>
           </tr>
           <tr>
             <td>2024.02</td>
             <td>-</td>
-            <td>{t('present')}</td>
+            <td>2025.03</td>
             <td>
               {t('software-engineer')}
               {', '}
@@ -188,7 +182,7 @@ export default async function Home(props: {
             <td>-</td>
             <td>2024.09</td>
             <td>
-              {t('internship')}
+              {t('visiting-researcher')}
               {', '}
               <Link href="https://www.dfki.de/en/web">{t('dfki')}</Link>
             </td>
@@ -198,7 +192,7 @@ export default async function Home(props: {
             <td>-</td>
             <td>2023.09</td>
             <td>
-              {t('internship')}
+              {t('summer-internship')}
               {', '}
               <Link
                 href={
@@ -216,7 +210,7 @@ export default async function Home(props: {
             <td>-</td>
             <td>2023.09</td>
             <td>
-              {t('internship')}
+              {t('summer-internship')}
               {', '}
               <Link
                 href={
@@ -227,16 +221,6 @@ export default async function Home(props: {
               >
                 {t('freee')}
               </Link>
-            </td>
-          </tr>
-          <tr>
-            <td>2023.03</td>
-            <td>-</td>
-            <td>2023.03</td>
-            <td>
-              {t('internship')}
-              {', '}
-              <Link href="https://www.dfki.de/en/web">{t('dfki')}</Link>
             </td>
           </tr>
         </tbody>
