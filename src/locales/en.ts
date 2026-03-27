@@ -9,6 +9,7 @@ export default {
   'phd-student': 'PhD Student',
   'kontaktstudent-promotion': 'Doctoral Visiting Student',
   'kontaktstudent': 'Visiting Student',
+  contact: 'Contact',
   beng: 'Bachelor of Engineering',
   msc: 'Master of Informatics',
   'opu-college-engineering':

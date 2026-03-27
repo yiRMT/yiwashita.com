@@ -9,6 +9,7 @@ export default {
   'phd-student': '博士課程',
   'kontaktstudent-promotion': '博士課程 (研究生)',
   kontaktstudent: '修士課程 (研究生)',
+  contact: '連絡先',
   beng: '学士 (工学)',
   msc: '修士 (情報学)',
   'opu-college-engineering': '大阪府立大学',

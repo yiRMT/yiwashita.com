@@ -572,6 +572,11 @@ export default async function Home(props: {
           </Link>
         </li>
       </ul>
+
+      <h2>{t('contact')}</h2>
+      <p>
+        [firstname].[lastname]@dfki.de
+      </p>
     </>
   )
 }
