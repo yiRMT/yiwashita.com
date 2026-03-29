@@ -1,10 +1,11 @@
 'use client'
 
 import Link from 'next/link'
-import { useI18n } from '@/locales/client'
+import { useI18n, useCurrentLocale } from '@/locales/client'
 
 export default function Footer() {
   const t = useI18n()
+  const currentLocale = useCurrentLocale()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -12,12 +13,12 @@ export default function Footer() {
       <div className="wrapper">
         <div className="copyright-container">
           {`© ${currentYear} `}
-          <Link href="/">Yuichiro Iwashita</Link>
+          <Link href={`/${currentLocale}`}>Yuichiro Iwashita</Link>
         </div>
         <nav className="nav-container">
           <ul>
             <li>
-              <Link href="/privacy-policy">{t('privacy-policy')}</Link>
+              <Link href={`/${currentLocale}/privacy-policy`}>{t('privacy-policy')}</Link>
             </li>
             <li className="icon-link">
               <a
