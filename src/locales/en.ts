@@ -9,6 +9,7 @@ export default {
   'phd-student': 'PhD Student',
   'kontaktstudent-promotion': 'Doctoral Visiting Student',
   'kontaktstudent': 'Visiting Student',
+  contact: 'Contact',
   beng: 'Bachelor of Engineering',
   msc: 'Master of Informatics',
   'opu-college-engineering':
@@ -18,9 +19,9 @@ export default {
   'omu-dfkijp': 'DFKI Lab Japan, Osaka Metropolitan University (OMU)',
   'rptu-dept-informatics': 'RPTU University Kaiserslautern-Landau',
   introduction:
-    'Yuichiro Iwashita is a PhD researcher at the German Research Center for AI (DFKI) and the RPTU University Kaiserslautern-Landau. He has been working on research related to medical AI, particularly multimodal data, multi-omics integration, and time series analysis. Before involved in medical AI, he worked on augmenting human intelligence within HCI field.',
+    'Yuichiro Iwashita is a PhD researcher at the German Research Center for Artificial Intelligence (DFKI GmbH) and the RPTU University Kaiserslautern-Landau. He has been working on research related to medical AI, particularly single-cell data analysis, multimodal data analysis, and time series analysis. Before involved in medical AI, he worked on augmenting human intelligence within HCI field.',
   keywords:
-    'Keywords: Medical x AI, Multimodal, Multi-omics, Time Series, Survival Analysis, Human-Centered AI, Human-Computer Interaction (HCI), EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, etc.',
+    'Keywords: Medical x AI, Single-cell, Multimodal, Time Series, Survival Analysis, Human-Centered AI, Human-Computer Interaction (HCI), EdTech, Cognitive Science, Nudging Strategies, Intelligence Augumentation, Large Language Models, etc.',
   imlab: 'Intelligence Media Processing Research Group',
   'work-experience': 'Work Experiences',
   'research-projects': 'Research Projects',
@@ -40,6 +41,7 @@ export default {
   body: 'Body',
   submit: 'Submit',
   internship: 'Internship',
+  'summer-internship': 'Summer Internship',
   'software-engineer': 'Software Engineer',
   'server-admin': 'Server Administrator',
   'visiting-researcher': 'Visiting Researcher',

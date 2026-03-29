@@ -10,28 +10,30 @@ export default function Header() {
   const nextLocale = currentLocale === 'ja' ? 'en' : 'ja'
   const changeLocale = useChangeLocale()
 
-  const currentPath = usePathname()
-    .replace(`${currentLocale}/`, '')
-    .replace(`${currentLocale}`, '')
+  const pathname = usePathname()
+  const currentPath = pathname
+    .replace(`/${currentLocale}/`, '/')
+    .replace(`/${currentLocale}`, '/')
 
+  const localePrefix = `/${currentLocale}`
   const regexList = [/\/projects*/, /\/posts*/]
 
   return (
     <header className="site-header">
       <div className="wrapper">
         <div className="title-container">
-          <Link href="/">{t('name')}</Link>
+          <Link href={`${localePrefix}`}>{t('name')}</Link>
         </div>
         <nav className="nav-container">
           <ul>
             <li className={currentPath === '/' ? 'nav-active' : ''}>
-              <Link href="/">{t('home')}</Link>
+              <Link href={`${localePrefix}`}>{t('home')}</Link>
             </li>
             <li className={regexList[0].test(currentPath) ? 'nav-active' : ''}>
-              <Link href="/projects">{t('projects')}</Link>
+              <Link href={`${localePrefix}/projects`}>{t('projects')}</Link>
             </li>
             <li className={regexList[1].test(currentPath) ? 'nav-active' : ''}>
-              <Link href="/posts">{t('blog')}</Link>
+              <Link href={`${localePrefix}/posts`}>{t('blog')}</Link>
             </li>
             <li>
               <div

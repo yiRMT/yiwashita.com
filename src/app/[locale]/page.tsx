@@ -83,22 +83,6 @@ export default async function Home(props: {
               </Link>
             </td>
           </tr>
-          {/* <tr>
-            <td>2021.09</td>
-            <td>-</td>
-            <td>2025.03</td>
-            <td>
-              <Link
-                href={
-                  locale === 'ja'
-                    ? 'https://imlab.jp'
-                    : 'https://imlab.jp/index-e.html'
-                }
-              >
-                {t('imlab')}
-              </Link>
-            </td>
-          </tr> */}
           <tr>
             <td>2023.10</td>
             <td>-</td>
@@ -136,6 +120,16 @@ export default async function Home(props: {
       <table>
         <tbody>
           <tr>
+            <td>2025.06</td>
+            <td>-</td>
+            <td>{t('present')}</td>
+            <td>
+              Research Assistant
+              {', '}
+              <Link href="https://www.dfki.de/en/web">{t('dfki')}</Link>
+            </td>
+          </tr>
+          <tr>
             <td>2025.05</td>
             <td>-</td>
             <td>{t('present')}</td>
@@ -148,17 +142,17 @@ export default async function Home(props: {
           <tr>
             <td>2025.04</td>
             <td>-</td>
-            <td>{t('present')}</td>
+            <td>2025.05</td>
             <td>
-              PhD Researcher
+              {t('visiting-researcher')}
               {', '}
-              <Link href="https://www.omu.ac.jp/orp/org/crc/dfkijp/">{t('dfki')}</Link>
+              <Link href="https://www.dfki.de/en/web">{t('dfki')}</Link>
             </td>
           </tr>
           <tr>
             <td>2024.02</td>
             <td>-</td>
-            <td>{t('present')}</td>
+            <td>2025.03</td>
             <td>
               {t('software-engineer')}
               {', '}
@@ -188,7 +182,7 @@ export default async function Home(props: {
             <td>-</td>
             <td>2024.09</td>
             <td>
-              {t('internship')}
+              {t('visiting-researcher')}
               {', '}
               <Link href="https://www.dfki.de/en/web">{t('dfki')}</Link>
             </td>
@@ -198,7 +192,7 @@ export default async function Home(props: {
             <td>-</td>
             <td>2023.09</td>
             <td>
-              {t('internship')}
+              {t('summer-internship')}
               {', '}
               <Link
                 href={
@@ -216,7 +210,7 @@ export default async function Home(props: {
             <td>-</td>
             <td>2023.09</td>
             <td>
-              {t('internship')}
+              {t('summer-internship')}
               {', '}
               <Link
                 href={
@@ -227,16 +221,6 @@ export default async function Home(props: {
               >
                 {t('freee')}
               </Link>
-            </td>
-          </tr>
-          <tr>
-            <td>2023.03</td>
-            <td>-</td>
-            <td>2023.03</td>
-            <td>
-              {t('internship')}
-              {', '}
-              <Link href="https://www.dfki.de/en/web">{t('dfki')}</Link>
             </td>
           </tr>
         </tbody>
@@ -332,9 +316,111 @@ export default async function Home(props: {
           </li>
         </ul>
       </div>
+      <h3>{t('misc-papers')}</h3>
+      <div className="publications">
+        <ul>
+          <li>
+            <b>Yuichiro Iwashita</b>*, Ahtisham Fazeel Abbasi*, Muhammad Nabeel Asim, 
+            Andreas Dengel. A Large-Scale Comparative Analysis of Imputation 
+            Methods for Single-Cell RNA Sequencing Data. arXiv preprint
+            arXiv:2603.24626 [q-bio.GN], 2026. (* equal contributions)
+            {' ('}
+            <Link href={`https://arxiv.org/pdf/2603.24626`}>PDF</Link>
+            {')'}
+            {' ('}
+            <Link href={`/bib/iwashita2026largescale.bib`}>BibTeX</Link>
+            {')'}
+            {' ('}
+            <Link href={`https://arxiv.org/abs/2603.24626`}>{t('link')}</Link>
+            {')'}
+          </li>
+          <li>
+            Shaonan Liu, <b>Yuichiro Iwashita</b>, Soichiro Nakako,
+            Masakazu Iwamura, Koichi Kise. CDMT-EHR: A Continuous-Time 
+            Diffusion Framework for Generating Mixed-Type Time-Series 
+            Electronic Health Records. arXiv preprint
+            arXiv:2603.23719 [cs.LG], 2026.
+            {' ('}
+            <Link href={`https://arxiv.org/pdf/2603.23719`}>PDF</Link>
+            {')'}
+            {' ('}
+            <Link href={`/bib/liu2026cdmtehr.bib`}>BibTeX</Link>
+            {')'}
+            {' ('}
+            <Link href={`https://arxiv.org/abs/2603.23719`}>{t('link')}</Link>
+            {')'}
+          </li>
+        </ul>
+      </div>
       <h3>{t('domestic-conference-papers')}</h3>
       <div className="publications">
         <ul>
+          <li>
+            劉 少楠, <b>岩下 雄一郎</b>, 仲子 聡一郎, 岩村 雅一, 黄瀬 浩一. 
+            連続時間型の拡散モデルを用いた混合型時系列EHRの生成. 
+            2026年電子情報通信学会総合大会講演論文集, 電子情報通信学会, 2026. 
+            (査読なし)
+            {' ('}
+            <Link href={`/bib/liu2026continuous_ja.bib`}>BibTeX</Link>
+            {')'}
+            {' ('}
+            <Link
+              href={`https://pub.confit.atlas.jp/${locale}/event/general2026/presentation/D-19-16`}
+            >
+              {t('link')}
+            </Link>
+            {')'}
+          </li>
+          <li>
+            劉 少楠, <b>岩下 雄一郎</b>, 仲子 聡一郎, 岩村 雅一, 黄瀬 浩一. 
+            院内死亡予測のためのTransformerベースの拡散モデルによる合成時系列EHRの生成. 
+            第45回医療情報学連合大会 (第26回日本医療情報学会学術大会) 論文集,
+            日本医療情報学会, 2025.
+            {' ('}
+            <Link href={`/bib/liu2025transformer_ja.bib`}>BibTeX</Link>
+            {')'}
+            {' ('}
+            <Link
+              href={`https://pub.confit.atlas.jp/${locale}/event/jcmi2025/presentation/3-D-3-01`}
+            >
+              {t('link')}
+            </Link>
+            {')'}
+          </li>
+          <li>
+            筒崎 乙華, <b>岩下 雄一郎</b>, 劉 少楠, 野々宮 悠太, 井上 達意, 
+            仲子 聡一郎, 岡村 浩史, 岩村 雅一, 石丸 翔也, 黄瀬 浩一. 
+            マルチモーダルな医療データを用いたICU患者の動的予後予測モデルの提案. 
+            第45回医療情報学連合大会 (第26回日本医療情報学会学術大会) 論文集,
+            日本医療情報学会, 2025.
+            {' ('}
+            <Link href={`/bib/tsutsusaki2025multimodal_ja.bib`}>BibTeX</Link>
+            {')'}
+            {' ('}
+            <Link
+              href={`https://pub.confit.atlas.jp/${locale}/event/jcmi2025/presentation/3-D-3-03`}
+            >
+              {t('link')}
+            </Link>
+            {')'}
+          </li>
+          <li>
+            <b>岩下 雄一郎</b>, 筒崎 乙華, 落合 梓香, 井上 達意, 野々宮 悠太, 光山 容仁, 仲子 聡一郎, 
+            岩村 雅一, Muhammad Nabeel Asim, Andreas Dengel, 黄瀬 浩一. 
+            マルチモーダルEHRを用いた動的予測ベンチマークの構築.
+            第45回医療情報学連合大会 (第26回日本医療情報学会学術大会) 論文集,
+            日本医療情報学会, 2025.
+            {' ('}
+            <Link href={`/bib/iwashita2025multimodal_ja.bib`}>BibTeX</Link>
+            {')'}
+            {' ('}
+            <Link
+              href={`https://pub.confit.atlas.jp/${locale}/event/jcmi2025/presentation/4-E-1-01`}
+            >
+              {t('link')}
+            </Link>
+            {')'}
+          </li>
           <li>
             大塚 遙, 岩田 基, <b>岩下 雄一郎</b>, 黄瀬 浩一. 生成 AI
             で画像を作りながら学べる英単語学習システム. インタラクション2025論文集, 情報処理学会, 2025.
@@ -426,27 +512,6 @@ export default async function Home(props: {
           </li>
         </ul>
       </div>
-      <h3>{t('misc-papers')}</h3>
-      <div className="publications">
-        <ul>
-          <li>
-            David Selby*, Kai Spriestersbach*, <b>Yuichiro Iwashita</b>*, Dennis
-            Bappert, Archana Warrier, Sumantrak Mukherjee, Sergey Redyuk,
-            Muhammad Nabeel Asim, Koichi Kise, Sebastian Vollmer. Quantitative
-            Knowledge Retrieval from Large Language Models. arXiv preprint
-            arXiv:2402.07770v1 [cs.IR], 2024. (* equal contributions)
-            {' ('}
-            <Link href={`/preprints/selby2024quantitative.pdf`}>PDF</Link>
-            {')'}
-            {' ('}
-            <Link href={`/bib/selby2024quantitative.bib`}>BibTeX</Link>
-            {')'}
-            {' ('}
-            <Link href={`https://arxiv.org/abs/2402.07770`}>{t('link')}</Link>
-            {')'}
-          </li>
-        </ul>
-      </div>
 
       <h2>{t('research-projects')}</h2>
       <table>
@@ -507,6 +572,11 @@ export default async function Home(props: {
           </Link>
         </li>
       </ul>
+
+      <h2>{t('contact')}</h2>
+      <p>
+        [firstname].[lastname]@dfki.de
+      </p>
     </>
   )
 }
