@@ -12,18 +12,15 @@ jobs:
       actions: write
       checks: write
       contents: write
-    strategy:
-      matrix:
-        node-version: [18.x]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
-      - name: Setup node ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - name: Setup node
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 22
           cache: yarn
       - name: Install dependencies
         run: yarn install
@@ -38,9 +35,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install
       - name: Run ESLint with reviewdog
         uses: reviewdog/action-eslint@v1
         with:
