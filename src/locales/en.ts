@@ -8,14 +8,12 @@ export default {
   publications: 'Publications',
   'phd-student': 'PhD Student',
   'kontaktstudent-promotion': 'Doctoral Visiting Student',
-  'kontaktstudent': 'Visiting Student',
+  kontaktstudent: 'Visiting Student',
   contact: 'Contact',
   beng: 'Bachelor of Engineering',
   msc: 'Master of Informatics',
-  'opu-college-engineering':
-    'Osaka Prefecture University (OPU)',
-  'omu-grad-informatics':
-    'Osaka Metropolitan University (OMU) (formerly OPU)',
+  'opu-college-engineering': 'Osaka Prefecture University (OPU)',
+  'omu-grad-informatics': 'Osaka Metropolitan University (OMU) (formerly OPU)',
   'omu-dfkijp': 'DFKI Lab Japan, Osaka Metropolitan University (OMU)',
   'rptu-dept-informatics': 'RPTU University Kaiserslautern-Landau',
   introduction:

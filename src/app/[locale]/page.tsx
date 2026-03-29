@@ -136,7 +136,9 @@ export default async function Home(props: {
             <td>
               {t('visiting-researcher')}
               {', '}
-              <Link href="https://www.omu.ac.jp/orp/org/crc/dfkijp/">{t('omu-dfkijp')}</Link>
+              <Link href="https://www.omu.ac.jp/orp/org/crc/dfkijp/">
+                {t('omu-dfkijp')}
+              </Link>
             </td>
           </tr>
           <tr>
@@ -320,10 +322,10 @@ export default async function Home(props: {
       <div className="publications">
         <ul>
           <li>
-            <b>Yuichiro Iwashita</b>*, Ahtisham Fazeel Abbasi*, Muhammad Nabeel Asim, 
-            Andreas Dengel. A Large-Scale Comparative Analysis of Imputation 
-            Methods for Single-Cell RNA Sequencing Data. arXiv preprint
-            arXiv:2603.24626 [q-bio.GN], 2026. (* equal contributions)
+            <b>Yuichiro Iwashita</b>*, Ahtisham Fazeel Abbasi*, Muhammad Nabeel
+            Asim, Andreas Dengel. A Large-Scale Comparative Analysis of
+            Imputation Methods for Single-Cell RNA Sequencing Data. arXiv
+            preprint arXiv:2603.24626 [q-bio.GN], 2026. (* equal contributions)
             {' ('}
             <Link href={`https://arxiv.org/pdf/2603.24626`}>PDF</Link>
             {')'}
@@ -335,11 +337,10 @@ export default async function Home(props: {
             {')'}
           </li>
           <li>
-            Shaonan Liu, <b>Yuichiro Iwashita</b>, Soichiro Nakako,
-            Masakazu Iwamura, Koichi Kise. CDMT-EHR: A Continuous-Time 
-            Diffusion Framework for Generating Mixed-Type Time-Series 
-            Electronic Health Records. arXiv preprint
-            arXiv:2603.23719 [cs.LG], 2026.
+            Shaonan Liu, <b>Yuichiro Iwashita</b>, Soichiro Nakako, Masakazu
+            Iwamura, Koichi Kise. CDMT-EHR: A Continuous-Time Diffusion
+            Framework for Generating Mixed-Type Time-Series Electronic Health
+            Records. arXiv preprint arXiv:2603.23719 [cs.LG], 2026.
             {' ('}
             <Link href={`https://arxiv.org/pdf/2603.23719`}>PDF</Link>
             {')'}
@@ -356,9 +357,9 @@ export default async function Home(props: {
       <div className="publications">
         <ul>
           <li>
-            劉 少楠, <b>岩下 雄一郎</b>, 仲子 聡一郎, 岩村 雅一, 黄瀬 浩一. 
-            連続時間型の拡散モデルを用いた混合型時系列EHRの生成. 
-            2026年電子情報通信学会総合大会講演論文集, 電子情報通信学会, 2026. 
+            劉 少楠, <b>岩下 雄一郎</b>, 仲子 聡一郎, 岩村 雅一, 黄瀬 浩一.
+            連続時間型の拡散モデルを用いた混合型時系列EHRの生成.
+            2026年電子情報通信学会総合大会講演論文集, 電子情報通信学会, 2026.
             (査読なし)
             {' ('}
             <Link href={`/bib/liu2026continuous_ja.bib`}>BibTeX</Link>
@@ -372,8 +373,8 @@ export default async function Home(props: {
             {')'}
           </li>
           <li>
-            劉 少楠, <b>岩下 雄一郎</b>, 仲子 聡一郎, 岩村 雅一, 黄瀬 浩一. 
-            院内死亡予測のためのTransformerベースの拡散モデルによる合成時系列EHRの生成. 
+            劉 少楠, <b>岩下 雄一郎</b>, 仲子 聡一郎, 岩村 雅一, 黄瀬 浩一.
+            院内死亡予測のためのTransformerベースの拡散モデルによる合成時系列EHRの生成.
             第45回医療情報学連合大会 (第26回日本医療情報学会学術大会) 論文集,
             日本医療情報学会, 2025.
             {' ('}
@@ -388,9 +389,9 @@ export default async function Home(props: {
             {')'}
           </li>
           <li>
-            筒崎 乙華, <b>岩下 雄一郎</b>, 劉 少楠, 野々宮 悠太, 井上 達意, 
-            仲子 聡一郎, 岡村 浩史, 岩村 雅一, 石丸 翔也, 黄瀬 浩一. 
-            マルチモーダルな医療データを用いたICU患者の動的予後予測モデルの提案. 
+            筒崎 乙華, <b>岩下 雄一郎</b>, 劉 少楠, 野々宮 悠太, 井上 達意, 仲子
+            聡一郎, 岡村 浩史, 岩村 雅一, 石丸 翔也, 黄瀬 浩一.
+            マルチモーダルな医療データを用いたICU患者の動的予後予測モデルの提案.
             第45回医療情報学連合大会 (第26回日本医療情報学会学術大会) 論文集,
             日本医療情報学会, 2025.
             {' ('}
@@ -405,8 +406,9 @@ export default async function Home(props: {
             {')'}
           </li>
           <li>
-            <b>岩下 雄一郎</b>, 筒崎 乙華, 落合 梓香, 井上 達意, 野々宮 悠太, 光山 容仁, 仲子 聡一郎, 
-            岩村 雅一, Muhammad Nabeel Asim, Andreas Dengel, 黄瀬 浩一. 
+            <b>岩下 雄一郎</b>, 筒崎 乙華, 落合 梓香, 井上 達意, 野々宮 悠太,
+            光山 容仁, 仲子 聡一郎, 岩村 雅一, Muhammad Nabeel Asim, Andreas
+            Dengel, 黄瀬 浩一.
             マルチモーダルEHRを用いた動的予測ベンチマークの構築.
             第45回医療情報学連合大会 (第26回日本医療情報学会学術大会) 論文集,
             日本医療情報学会, 2025.
@@ -423,9 +425,16 @@ export default async function Home(props: {
           </li>
           <li>
             大塚 遙, 岩田 基, <b>岩下 雄一郎</b>, 黄瀬 浩一. 生成 AI
-            で画像を作りながら学べる英単語学習システム. インタラクション2025論文集, 情報処理学会, 2025.
+            で画像を作りながら学べる英単語学習システム.
+            インタラクション2025論文集, 情報処理学会, 2025.
             {' ('}
-            <Link href={'https://www.interaction-ipsj.org/proceedings/2025/data/pdf/1B-28.pdf'}>PDF</Link>
+            <Link
+              href={
+                'https://www.interaction-ipsj.org/proceedings/2025/data/pdf/1B-28.pdf'
+              }
+            >
+              PDF
+            </Link>
             {')'}
             {' ('}
             <Link href={`/bib/otsuka2025generative_ja.bib`}>BibTeX</Link>
@@ -574,9 +583,7 @@ export default async function Home(props: {
       </ul>
 
       <h2>{t('contact')}</h2>
-      <p>
-        [firstname].[lastname]@dfki.de
-      </p>
+      <p>[firstname].[lastname]@dfki.de</p>
     </>
   )
 }
