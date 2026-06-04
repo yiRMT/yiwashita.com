@@ -49,8 +49,10 @@ export default {
   rakuten: '楽天グループ株式会社',
   affectify: '株式会社Affectify',
   'list-of-posts': '投稿一覧',
-  'blog-description': '岩下雄一郎によるソフトウェア・研究・海外生活などの記事。',
-  'projects-description': '岩下雄一郎が関わったプロジェクトやソフトウェアの一覧。',
+  'blog-description':
+    '岩下雄一郎によるソフトウェア・研究・海外生活などの記事。',
+  'projects-description':
+    '岩下雄一郎が関わったプロジェクトやソフトウェアの一覧。',
   'privacy-policy-fulltext':
     '当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。このGoogleアナリティクスはデータの収集のためにCookieを使用しています。このデータは匿名で収集されており、個人を特定するものではありません。この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関しての詳細はGoogleアナリティクスサービス利用規約のページやGoogleポリシーと規約ページをご覧ください。',
   link: 'リンク',
