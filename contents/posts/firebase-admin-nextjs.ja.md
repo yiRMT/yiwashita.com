@@ -1,5 +1,6 @@
 ---
 title: "Next.jsにFirebase Adminを導入したときにハマったこと"
+description: "Next.jsにFirebase Admin SDKを導入する際にハマったポイントと、API Routesを使ってサーバーサイドでFirebaseを操作する方法をコード付きで解説します。"
 date: '2023-05-26'
 image: {}
 tags: ["Tech", "Firebase", "Next.js"]

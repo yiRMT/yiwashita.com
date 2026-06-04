@@ -1,13 +1,23 @@
-import type { Metadata } from 'next'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import '@/styles/globals.scss'
 import { I18nProviderClient } from '@/locales/client'
+import { getI18n } from '@/locales/server'
+import { SITE_URL } from '@/libs/metadata'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import NextTopLoader from 'nextjs-toploader'
 
-export const metadata: Metadata = {
-  title: 'yiwashita.com',
+export async function generateMetadata() {
+  const t = await getI18n()
+  // Site-level defaults only — intentionally NO openGraph/twitter here. Each
+  // page sets its own complete OG/Twitter metadata via buildMetadata. If the
+  // layout also defined openGraph, Next.js would merge the two and the
+  // layout's og:type (website) would clobber a page's og:type (article).
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: `${t('name')} - yiwashita.com`,
+    description: t('introduction'),
+  }
 }
 
 export default async function LocaleLayout(props: {

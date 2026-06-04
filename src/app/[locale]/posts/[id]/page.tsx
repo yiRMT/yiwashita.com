@@ -1,6 +1,7 @@
 import { getContentData } from '@/libs/contents'
 import { getI18n } from '@/locales/server'
 import { formatDate } from '@/libs/utils'
+import { buildMetadata } from '@/libs/metadata'
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string; id: string }>
@@ -12,9 +13,18 @@ export async function generateMetadata(props: {
   const postData = await getContentData('posts', id, locale)
   const t = await getI18n()
   return {
-    title: `${postData.metadata.title} - ${t('blog')} - yiwashita.com`,
-    description: postData.metadata.description,
-    tags: postData.metadata.tags.map((tag) => tag).join(', '),
+    ...buildMetadata({
+      title: `${postData.metadata.title} - ${t('blog')} - yiwashita.com`,
+      description: postData.metadata.description,
+      locale,
+      path: `/posts/${id}`,
+      article: {
+        publishedTime: postData.metadata.date
+          ? new Date(postData.metadata.date).toISOString()
+          : undefined,
+      },
+    }),
+    keywords: postData.metadata.tags,
   }
 }
 

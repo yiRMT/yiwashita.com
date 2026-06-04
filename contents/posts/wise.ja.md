@@ -1,5 +1,6 @@
 ---
 title: "ドイツ留学で銀行口座を開設するには"
+description: "ドイツ留学での銀行口座開設について、N26やMoneseでの失敗談を経て、最終的にWiseに行き着いた理由と、初期設定やデビットカード発行の方法を紹介します。"
 date: '2024-12-29'
 image: {}
 tags: ["Study Abroad", "Germany"]

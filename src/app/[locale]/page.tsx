@@ -1,12 +1,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { getI18n } from '@/locales/server'
+import { buildMetadata } from '@/libs/metadata'
 
-export async function generateMetadata() {
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await props.params
   const t = await getI18n()
-  return {
+  return buildMetadata({
     title: `${t('name')} - yiwashita.com`,
-  }
+    description: t('introduction'),
+    locale,
+  })
 }
 
 export default async function Home(props: {
