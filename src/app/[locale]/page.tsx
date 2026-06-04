@@ -48,23 +48,11 @@ export default async function Home(props: {
       <table>
         <tbody>
           <tr>
-            <td>2025.10</td>
+            <td>2025.05</td>
             <td>-</td>
             <td>{t('present')}</td>
             <td>
               {t('phd-student')}
-              {', '}
-              <Link href="https://rptu.de/en">
-                {t('rptu-dept-informatics')}
-              </Link>
-            </td>
-          </tr>
-          <tr>
-            <td>2025.04</td>
-            <td>-</td>
-            <td>2025.09</td>
-            <td>
-              {t('kontaktstudent-promotion')}
               {', '}
               <Link href="https://rptu.de/en">
                 {t('rptu-dept-informatics')}
@@ -86,18 +74,6 @@ export default async function Home(props: {
                 }
               >
                 {t('omu-grad-informatics')}
-              </Link>
-            </td>
-          </tr>
-          <tr>
-            <td>2023.10</td>
-            <td>-</td>
-            <td>2024.09</td>
-            <td>
-              {t('kontaktstudent')}
-              {', '}
-              <Link href="https://rptu.de/en">
-                {t('rptu-dept-informatics')}
               </Link>
             </td>
           </tr>
@@ -328,10 +304,27 @@ export default async function Home(props: {
       <div className="publications">
         <ul>
           <li>
-            <b>Yuichiro Iwashita</b>*, Ahtisham Fazeel Abbasi*, Muhammad Nabeel
-            Asim, Andreas Dengel. A Large-Scale Comparative Analysis of
-            Imputation Methods for Single-Cell RNA Sequencing Data. arXiv
-            preprint arXiv:2603.24626 [q-bio.GN], 2026. (* equal contributions)
+            Kaito Shiku, Ahtisham Fazeel Abbasi, Ryoma Bise,{' '}
+            <b>Yuichiro Iwashita</b>, Kazuya Nishimura, Andreas Dengel, Muhammad
+            Nabeel Asim. GC-MoE: Genomics-Guided Cell-Type-Specific Mixture of
+            Experts for Histology-Based Single-Cell Spatial Transcriptomics.
+            arXiv preprint arXiv:2606.02424 [cs.CV], 2026.
+            {' ('}
+            <Link href={`https://arxiv.org/pdf/2606.02424`}>PDF</Link>
+            {')'}
+            {' ('}
+            <Link href={`/bib/shiku2026gcmoe.bib`}>BibTeX</Link>
+            {')'}
+            {' ('}
+            <Link href={`https://arxiv.org/abs/2606.02424`}>{t('link')}</Link>
+            {')'}
+          </li>
+          <li>
+            <b>Yuichiro Iwashita</b>*, Ahtisham Fazeel Abbasi*, Koichi Kise,
+            Andreas Dengel, Muhammad Nabeel Asim. A Large-Scale Comparative
+            Analysis of Imputation Methods for Single-Cell RNA Sequencing Data.
+            arXiv preprint arXiv:2603.24626 [q-bio.GN], 2026. (* equal
+            contributions)
             {' ('}
             <Link href={`https://arxiv.org/pdf/2603.24626`}>PDF</Link>
             {')'}
