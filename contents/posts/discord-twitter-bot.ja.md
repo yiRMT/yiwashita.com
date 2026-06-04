@@ -1,5 +1,6 @@
 ---
 title: "Discordツイ速Botの作り方（2023年Ver）"
+description: "Zapierを使って、特定ユーザーの最新ツイートをDiscordに自動投稿するBotの作り方を、Zapの作成からPublishまで順を追って紹介します。"
 date: '2023-04-01'
 image: {}
 tags: ["Discord", "Twitter", "Zapier", "Tech"]

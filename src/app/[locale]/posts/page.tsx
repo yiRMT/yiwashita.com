@@ -2,12 +2,19 @@ import Link from 'next/link'
 import { getI18n } from '@/locales/server'
 import { getSortedContentsData } from '@/libs/contents'
 import { formatDate } from '@/libs/utils'
+import { buildMetadata } from '@/libs/metadata'
 
-export async function generateMetadata() {
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await props.params
   const t = await getI18n()
-  return {
+  return buildMetadata({
     title: `${t('blog')} - yiwashita.com`,
-  }
+    description: t('blog-description'),
+    locale,
+    path: '/posts',
+  })
 }
 
 export default async function Posts(props: {
