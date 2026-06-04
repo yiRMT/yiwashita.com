@@ -1,5 +1,6 @@
 ---
 title: "Cloudflareを使ってドメインを登録した話"
+description: "Cloudflareで独自ドメインを購入し、DNSSECやSSL/TLS、VercelへのDNSレコード反映までを設定した手順を、つまずいたポイントも含めて解説します。"
 date: '2023-07-09'
 image: {}
 tags: ["Dev", "Domain", "Cloudflare"]

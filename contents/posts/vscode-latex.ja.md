@@ -1,5 +1,6 @@
 ---
 title: "VSCodeでLaTeXを使う"
+description: "VSCodeの拡張機能 LaTeX Workshop を使ってローカルでLaTeXを動かすための設定を、settings.json のサンプル付きで解説します。"
 date: '2023-05-13'
 image: {}
 tags: ["Tech", "Research"]

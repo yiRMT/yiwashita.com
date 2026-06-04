@@ -1,5 +1,6 @@
 ---
 title: "半年間ドイツに行ってきます！ 🇩🇪 / I'm going to Germany for 6 months! 🇩🇪"
+description: "2023年9月から半年間、ドイツ人工知能研究センター (DFKI) に研究留学することになりました。留学に至った経緯と、現地で取り組む「医療×AI」プロジェクトについて紹介します。"
 date: '2023-09-16'
 image: {}
 tags: ["Research", "DFKI"]
