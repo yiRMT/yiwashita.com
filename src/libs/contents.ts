@@ -89,7 +89,7 @@ export async function getContentData(
   subDirectory: string,
   id: string,
   locale: string,
-): Promise<Content> {
+): Promise<Content | null> {
   const dateDict: { [key: string]: string } = {}
   const fileNames = fs
     .readdirSync(path.join(contentsDirectory, subDirectory))
@@ -102,6 +102,8 @@ export async function getContentData(
   }
 
   const idWithDate = dateDict[id]
+  // No markdown file for this id/locale — let the caller render a 404.
+  if (!idWithDate) return null
   const fullPath = path.join(contentsDirectory, subDirectory, idWithDate)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const matterResult = matter(fileContents)
