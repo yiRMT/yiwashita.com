@@ -17,6 +17,13 @@ export async function generateMetadata() {
     metadataBase: new URL(SITE_URL),
     title: `${t('name')} - yiwashita.com`,
     description: t('introduction'),
+    // Declared so crawlers/Slack reliably find the site icon. `icon` also
+    // renders the browser favicon link.
+    icons: {
+      icon: '/favicon.ico',
+      shortcut: '/favicon.ico',
+      apple: '/icon.png',
+    },
   }
 }
 

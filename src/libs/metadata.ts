@@ -15,6 +15,15 @@ const localizedUrl = (locale: string, path: string) => {
 
 const ogLocale = (locale: string) => (locale === 'ja' ? 'ja_JP' : 'en_US')
 
+// Square site icon used as the link-preview thumbnail (Slack, etc.) and the
+// Twitter card image. Resolved to an absolute URL via `metadataBase`.
+const OG_IMAGE = {
+  url: '/icon.png',
+  width: 256,
+  height: 256,
+  alt: SITE_NAME,
+}
+
 export function buildMetadata({
   title,
   description,
@@ -38,6 +47,7 @@ export function buildMetadata({
     description,
     url,
     locale: ogLocale(locale),
+    images: [OG_IMAGE],
   }
   const openGraph: Metadata['openGraph'] = article
     ? { ...ogBase, type: 'article', publishedTime: article.publishedTime }
@@ -52,12 +62,14 @@ export function buildMetadata({
     alternates: { canonical: url },
     openGraph,
     twitter: {
-      // No OG image, so use the small summary card rather than summary_large_image.
+      // The icon is square, so the small summary card fits it better than
+      // summary_large_image (which is cropped to 1.91:1).
       card: 'summary',
       site: TWITTER_HANDLE,
       creator: TWITTER_HANDLE,
       title,
       description,
+      images: [OG_IMAGE.url],
     },
   }
 }
