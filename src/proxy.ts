@@ -3,7 +3,7 @@ import { NextRequest } from 'next/server'
 
 const I18nMiddleware = createI18nMiddleware({
   locales: ['ja', 'en'],
-  defaultLocale: 'ja',
+  defaultLocale: 'en',
   urlMappingStrategy: 'rewriteDefault',
 })
 

@@ -7,9 +7,9 @@ const TWITTER_HANDLE = '@rmt_cu'
 const AUTHOR_NAME = '岩下 雄一郎'
 
 // `urlMappingStrategy: 'rewriteDefault'` in src/proxy.ts: the default locale
-// (ja) has no URL prefix, every other locale is served under `/<locale>`.
+// (en) has no URL prefix, every other locale is served under `/<locale>`.
 const localizedUrl = (locale: string, path: string) => {
-  const prefix = locale === 'ja' ? '' : `/${locale}`
+  const prefix = locale === 'en' ? '' : `/${locale}`
   return `${BASE_URL}${prefix}${path}`
 }
 
