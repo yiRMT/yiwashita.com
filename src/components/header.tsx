@@ -16,7 +16,7 @@ export default function Header() {
     .replace(`/${currentLocale}`, '/')
 
   const localePrefix = `/${currentLocale}`
-  const regexList = [/\/projects*/, /\/posts*/]
+  const regexList = [/\/projects*/, /\/posts*/, /\/publications*/]
 
   return (
     <header className="site-header">
@@ -28,6 +28,11 @@ export default function Header() {
           <ul>
             <li className={currentPath === '/' ? 'nav-active' : ''}>
               <Link href={`${localePrefix}`}>{t('home')}</Link>
+            </li>
+            <li className={regexList[2].test(currentPath) ? 'nav-active' : ''}>
+              <Link href={`${localePrefix}/publications`}>
+                {t('publications')}
+              </Link>
             </li>
             <li className={regexList[0].test(currentPath) ? 'nav-active' : ''}>
               <Link href={`${localePrefix}/projects`}>{t('projects')}</Link>
