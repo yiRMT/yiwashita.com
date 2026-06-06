@@ -5,11 +5,27 @@ import '@/styles/globals.scss'
 import 'highlight.js/styles/github-dark.css'
 // KaTeX styles for LaTeX math rendered in markdown ($...$ / $$...$$).
 import 'katex/dist/katex.min.css'
+import { Noto_Sans_JP, Noto_Sans_Mono } from 'next/font/google'
 import { I18nProviderClient } from '@/locales/client'
 import { getI18n } from '@/locales/server'
 import { SITE_URL } from '@/libs/metadata'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import NextTopLoader from 'nextjs-toploader'
+
+// Self-hosted via next/font (no external request, no layout shift). Exposed as a
+// CSS variable that Tailwind's `font-sans` resolves to (see tailwind.config.ts).
+const notoSansJP = Noto_Sans_JP({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-noto-sans-jp',
+})
+
+// Monospace face for code blocks / inline code (Tailwind's `font-mono`).
+const notoSansMono = Noto_Sans_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-noto-sans-mono',
+})
 
 export async function generateMetadata() {
   const t = await getI18n()
@@ -44,7 +60,10 @@ export default async function LocaleLayout(props: {
   const GA_TAG_ID = process.env.NEXT_PUBLIC_GA_ID || ''
 
   return (
-    <html lang={locale}>
+    <html
+      lang={locale}
+      className={`${notoSansJP.variable} ${notoSansMono.variable}`}
+    >
       <body>
         <NextTopLoader color="#334155" showSpinner={false} />
         <I18nProviderClient locale={locale}>
