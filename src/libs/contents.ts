@@ -41,6 +41,8 @@ export function getSortedContentsData(subDirectory: string, locale: string) {
       id = id.replace(`${pattern[1]}-`, '')
     }
 
+    id = id.replace(/[^a-zA-Z0-9_-]/g, '')
+
     const tags: string[] = matterResult.data.tags
       ? (matterResult.data.tags + '').split(',')
       : []
