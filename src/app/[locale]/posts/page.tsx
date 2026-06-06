@@ -34,7 +34,7 @@ export default async function Posts(props: {
           {postList.length === 0 && <p>{t('no-posts-found')}</p>}
           {postList.map(({ id, date, title, tags }) => (
             <li key={id}>
-              <Link href={`/${locale}/posts/${id}`}>
+              <Link href={`/${locale}/posts/${encodeURIComponent(id)}`}>
                 <div className="post-card">
                   <div className="post-title">{title}</div>
                   <div className="post-date-tags-container">
