@@ -1,6 +1,6 @@
 ---
 title: "ドイツ留学で銀行口座を開設するには ver2026"
-date: '2026-06-05'
+date: '2026-06-06'
 image: {}
 tags: ["Study Abroad", "Germany"]
 ---
