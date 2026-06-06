@@ -25,6 +25,29 @@ const md = new MarkdownIt({
   // time (KaTeX). Requires katex/dist/katex.min.css (loaded in the layout).
   .use(require('@vscode/markdown-it-katex').default)
 
+// Loads a single standalone page (e.g. the home/CV page or privacy policy)
+// stored as `<subDirectory>/<id>.<locale>.md`. The whole page content lives in
+// the markdown body (HTML is allowed for layout); frontmatter holds only meta
+// such as `description`. Returns null when the file is missing.
+export async function getPageData(
+  subDirectory: string,
+  id: string,
+  locale: string,
+): Promise<{ data: { [key: string]: any }; contentHtml: string } | null> {
+  const fullPath = path.join(
+    contentsDirectory,
+    subDirectory,
+    `${id}.${locale}.md`,
+  )
+  if (!fs.existsSync(fullPath)) return null
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const matterResult = matter(fileContents)
+  return {
+    data: matterResult.data,
+    contentHtml: md.render(matterResult.content).toString(),
+  }
+}
+
 export function getSortedContentsData(subDirectory: string, locale: string) {
   const fileNames = fs
     .readdirSync(path.join(contentsDirectory, subDirectory))

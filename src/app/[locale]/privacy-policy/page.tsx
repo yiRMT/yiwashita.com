@@ -1,4 +1,6 @@
+import { notFound } from 'next/navigation'
 import { getI18n } from '@/locales/server'
+import { getPageData } from '@/libs/contents'
 import { buildMetadata } from '@/libs/metadata'
 
 export async function generateMetadata(props: {
@@ -13,13 +15,13 @@ export async function generateMetadata(props: {
   })
 }
 
-export default async function PrivacyPolicy() {
-  const t = await getI18n()
-
-  return (
-    <>
-      <h1>{t('privacy-policy')}</h1>
-      <p>{t('privacy-policy-fulltext')}</p>
-    </>
-  )
+export default async function PrivacyPolicy(props: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await props.params
+  const page = await getPageData('pages', 'privacy-policy', locale)
+  if (!page) {
+    notFound()
+  }
+  return <div dangerouslySetInnerHTML={{ __html: page.contentHtml }} />
 }
