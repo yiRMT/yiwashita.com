@@ -1,6 +1,10 @@
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import '@/styles/globals.scss'
+// Syntax-highlighting theme for fenced code blocks (highlight.js token colors).
+import 'highlight.js/styles/github-dark.css'
+// KaTeX styles for LaTeX math rendered in markdown ($...$ / $$...$$).
+import 'katex/dist/katex.min.css'
 import { I18nProviderClient } from '@/locales/client'
 import { getI18n } from '@/locales/server'
 import { SITE_URL } from '@/libs/metadata'

@@ -12,12 +12,18 @@ const md = new MarkdownIt({
   highlight: (str: string, lang: string) => {
     if (lang && hljs.getLanguage(lang)) {
       try {
-        return hljs.highlight(lang, str).value
+        // highlight.js v11 signature: highlight(code, { language }).
+        return hljs.highlight(str, { language: lang, ignoreIllegals: true })
+          .value
       } catch (__) {}
     }
     return ''
   },
-}).use(require('markdown-it-footnote'))
+})
+  .use(require('markdown-it-footnote'))
+  // LaTeX math: `$...$` inline and `$$...$$` block, rendered to HTML at build
+  // time (KaTeX). Requires katex/dist/katex.min.css (loaded in the layout).
+  .use(require('@vscode/markdown-it-katex').default)
 
 export function getSortedContentsData(subDirectory: string, locale: string) {
   const fileNames = fs

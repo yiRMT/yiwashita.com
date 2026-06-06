@@ -11,8 +11,10 @@
   "dependencies": {
     "@next/third-parties": "^16.2.1",
     "@retorquere/bibtex-parser": "^10.0.0",
+    "@vscode/markdown-it-katex": "^1.1.2",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.9.0",
+    "katex": "^0.17.0",
     "markdown-it": "^14.1.0",
     "markdown-it-footnote": "^4.0.0",
     "next": "^16.2.6",
@@ -36,7 +38,9 @@
   },
   "resolutions": {
     "@types/react": "19.0.12",
-    "@types/react-dom": "19.0.4"
+    "@types/react-dom": "19.0.4",
+    "gray-matter/js-yaml": "^3.14.2",
+    "next/postcss": "^8.5.10"
   },
   "engines": {
     "node": ">=22"
