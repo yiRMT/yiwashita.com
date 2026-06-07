@@ -2,7 +2,7 @@ export default {
   name: '岩下 雄一郎',
   home: 'ホーム',
   blog: 'ブログ',
-  projects: 'プロジェクト',
+  projects: 'ソフトウェア',
   publications: '論文',
   'privacy-policy': 'プライバシーポリシー',
   // Site-level default description (used in src/app/[locale]/layout.tsx).

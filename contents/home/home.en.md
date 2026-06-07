@@ -1,12 +1,12 @@
 ---
 title: 'Yuichiro Iwashita'
-description: 'Yuichiro Iwashita is a PhD researcher at the German Research Center for Artificial Intelligence (DFKI GmbH) and the RPTU University Kaiserslautern-Landau. He has been working on research related to medical AI, particularly single-cell data analysis, multimodal data analysis, and time series analysis. Before involved in medical AI, he worked on augmenting human intelligence within HCI field.'
+description: 'Yuichiro Iwashita is a PhD researcher at the German Research Center for Artificial Intelligence (DFKI GmbH) and the RPTU University Kaiserslautern-Landau. He received the B.E. degree in computer science from Osaka Prefecture University, Japan, in 2023, and the M.I. degree in core informatics from Osaka Metropolitan University, Japan, in 2025. He has been working on research related to medical AI, particularly single-cell data analysis, multimodal data analysis, and time series analysis. Before involved in medical AI, he worked on augmenting human intelligence within HCI field.'
 ---
 
 <div class="bio-container">
   <div class="bio-text">
-    <p>Yuichiro Iwashita is a PhD researcher at the German Research Center for Artificial Intelligence (DFKI GmbH) and the RPTU University Kaiserslautern-Landau. He has been working on research related to medical AI, particularly single-cell data analysis, multimodal data analysis, and time series analysis. Before involved in medical AI, he worked on augmenting human intelligence within HCI field.</p>
-    <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+    <p>Yuichiro Iwashita is a PhD researcher at the German Research Center for Artificial Intelligence (DFKI GmbH) and the RPTU University Kaiserslautern-Landau. He received the B.E. degree in computer science from Osaka Prefecture University, Japan, in 2023, and the M.I. degree in core informatics from Osaka Metropolitan University, Japan, in 2025. He has been working on research related to medical AI, particularly single-cell data analysis, multimodal data analysis, and time series analysis. Before involved in medical AI, he worked on augmenting human intelligence within HCI field.</p>
+    <p><a href="/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></p>
   </div>
   <div class="bio-image">
     <img src="/profile.jpg" alt="Yuichiro Iwashita" width="176" height="176" />
@@ -18,21 +18,20 @@ description: 'Yuichiro Iwashita is a PhD researcher at the German Research Cente
 |     |     |     |     |
 | --- | --- | --- | --- |
 | 2025.05 | - | Present | PhD Student, [RPTU University Kaiserslautern-Landau](https://rptu.de/en) |
-| 2023.04 | - | 2025.03 | Master of Informatics, [Osaka Metropolitan University (OMU)](https://www.omu.ac.jp/i/en/) |
-| 2021.04 | - | 2023.03 | Bachelor of Engineering, [Osaka Prefecture University (OPU) (merged into OMU)](https://www.omu.ac.jp/i/en/) |
+| 2023.04 | - | 2025.03 | Master of Informatics, [Osaka Metropolitan University](https://www.omu.ac.jp/i/en/) |
+| 2021.04 | - | 2023.03 | Bachelor of Engineering, [Osaka Prefecture University (merged into OMU)](https://www.omu.ac.jp/i/en/) |
 
 ## Work Experiences
 
 |     |     |     |     |
 | --- | --- | --- | --- |
 | 2025.06 | - | Present | Research Assistant, [German Research Center for Artificial Intelligence (DFKI GmbH)](https://www.dfki.de/en/web) |
-| 2025.05 | - | Present | Visiting Researcher, [DFKI Lab Japan, Osaka Metropolitan University (OMU)](https://www.omu.ac.jp/orp/org/crc/dfkijp/) |
-| 2025.04 | - | 2025.05 | Visiting Researcher, [German Research Center for Artificial Intelligence (DFKI GmbH)](https://www.dfki.de/en/web) |
-| 2024.02 | - | 2025.03 | Software Engineer, [Affectify Inc.](https://affectify.jp) |
-| 2021.09 | - | 2025.03 | Server Administrator, [Intelligence Media Processing Research Group](https://imlab.jp/index-e.html) |
-| 2023.09 | - | 2024.09 | Visiting Researcher, [German Research Center for Artificial Intelligence (DFKI GmbH)](https://www.dfki.de/en/web) |
+| 2025.05 | - | Present | Visiting Researcher, [DFKI Lab Japan, Osaka Metropolitan University](https://www.omu.ac.jp/orp/org/crc/dfkijp/) |
+| 2024.02 | - | 2025.03 | Lead Software Engineer, [Affectify Inc.](https://affectify.jp) |
+| 2023.09 | - | 2024.09 | Visiting Student, [German Research Center for Artificial Intelligence (DFKI GmbH)](https://www.dfki.de/en/web) |
 | 2023.09 | - | 2023.09 | Summer Internship, [Rakuten Group, Inc.](https://global.rakuten.com/corp) |
 | 2023.08 | - | 2023.09 | Summer Internship, [freee K.K.](https://corp.freee.co.jp/en) |
+| 2021.09 | - | 2025.03 | Server Administrator, [Intelligence Media Processing Research Group](https://imlab.jp/index-e.html) |
 
 ## Research Projects
 

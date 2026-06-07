@@ -2,7 +2,7 @@ export default {
   name: 'Yuichiro Iwashita',
   home: 'Home',
   blog: 'Blog',
-  projects: 'Projects',
+  projects: 'Software',
   publications: 'Publications',
   'privacy-policy': 'Privacy Policy',
   // Site-level default description (used in src/app/[locale]/layout.tsx).
