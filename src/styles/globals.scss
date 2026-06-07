@@ -287,6 +287,10 @@ ul {
   }
 }
 
+.article-body img {
+  @apply block w-full h-auto my-6 rounded-lg;
+}
+
 .article-body a {
   @apply mx-1 text-gray-500 dark:text-slate-400 hover:underline;
 }
