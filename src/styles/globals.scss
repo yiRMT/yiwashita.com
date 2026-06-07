@@ -110,6 +110,16 @@ ul {
       }
     }
   }
+
+  .nav-switch-disabled {
+    @apply text-gray-400 dark:text-slate-600;
+    cursor: not-allowed;
+
+    &:hover {
+      @apply text-gray-400 dark:text-slate-600 no-underline;
+      cursor: not-allowed;
+    }
+  }
 }
 
 .site-footer {

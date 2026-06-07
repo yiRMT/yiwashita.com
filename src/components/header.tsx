@@ -18,6 +18,11 @@ export default function Header() {
   const localePrefix = `/${currentLocale}`
   const regexList = [/\/projects*/, /\/posts*/, /\/publications*/]
 
+  // Blog posts exist per-language (currently Japanese only), so switching the
+  // locale on a post detail page would land on a missing translation. Disable
+  // the language button there (the post list at /posts is unaffected).
+  const isPostDetail = /^\/posts\/.+/.test(currentPath)
+
   return (
     <header className="site-header">
       <div className="wrapper">
@@ -42,8 +47,13 @@ export default function Header() {
             </li>
             <li>
               <div
-                className="nav-switch"
-                onClick={() => changeLocale(nextLocale)}
+                className={`nav-switch${
+                  isPostDetail ? ' nav-switch-disabled' : ''
+                }`}
+                onClick={
+                  isPostDetail ? undefined : () => changeLocale(nextLocale)
+                }
+                aria-disabled={isPostDetail}
               >
                 {nextLocale === 'ja' ? '日本語' : 'English'}
               </div>
