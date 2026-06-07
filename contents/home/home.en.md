@@ -1,8 +1,7 @@
 ---
+title: 'Yuichiro Iwashita'
 description: 'Yuichiro Iwashita is a PhD researcher at the German Research Center for Artificial Intelligence (DFKI GmbH) and the RPTU University Kaiserslautern-Landau. He has been working on research related to medical AI, particularly single-cell data analysis, multimodal data analysis, and time series analysis. Before involved in medical AI, he worked on augmenting human intelligence within HCI field.'
 ---
-
-# Yuichiro Iwashita
 
 <div class="bio-container">
   <div class="bio-text">

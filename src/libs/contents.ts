@@ -26,9 +26,10 @@ const md = new MarkdownIt({
   .use(require('@vscode/markdown-it-katex').default)
 
 // Loads a single standalone page (e.g. the home/CV page or privacy policy)
-// stored as `<subDirectory>/<id>.<locale>.md`. The whole page content lives in
-// the markdown body (HTML is allowed for layout); frontmatter holds only meta
-// such as `description`. Returns null when the file is missing.
+// stored as `<subDirectory>/<id>.<locale>.md`. The page body holds the content
+// (HTML is allowed for layout) but NOT its top-level heading; the page title and
+// `<h1>` are derived from the frontmatter `title`. Frontmatter holds meta such as
+// `title` and `description`. Returns null when the file is missing.
 export async function getPageData(
   subDirectory: string,
   id: string,

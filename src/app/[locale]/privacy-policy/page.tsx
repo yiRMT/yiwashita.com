@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation'
-import { getI18n } from '@/locales/server'
 import { getPageData } from '@/libs/contents'
 import { buildMetadata } from '@/libs/metadata'
 
@@ -7,9 +6,10 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await props.params
-  const t = await getI18n()
+  const page = await getPageData('pages', 'privacy-policy', locale)
   return buildMetadata({
-    title: `${t('privacy-policy')} - yiwashita.com`,
+    title: `${page?.data.title} - yiwashita.com`,
+    description: page?.data.description,
     locale,
     path: '/privacy-policy',
   })
@@ -23,5 +23,10 @@ export default async function PrivacyPolicy(props: {
   if (!page) {
     notFound()
   }
-  return <div dangerouslySetInnerHTML={{ __html: page.contentHtml }} />
+  return (
+    <div>
+      <h1>{page.data.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: page.contentHtml }} />
+    </div>
+  )
 }
