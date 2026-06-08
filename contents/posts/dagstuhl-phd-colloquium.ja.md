@@ -5,7 +5,6 @@ date: '2026-05-29'
 image: {}
 tags: ["PhD", "Research"]
 ---
-![Group photo at Schloss Dagstuhl](https://www.dagstuhl.de/storage/media/0007/7115/conversions/26223.01.l.jpg)
 
 Schloss Dagstuhlにて開催された[Research Meeting #26223 – Klausurtagung der Promovierenden des FB Informatik der RPTU](https://www.dagstuhl.de/26223)というイベントに参加してきた。このイベントは、私が博士学生として所属しているカイザースラウテルン・ランダウ大学 (RPTU) の情報学の博士学生を対象とした中間発表会である。RPTUでは、進学後1年〜学位取得の間に一度は研究室外で中間発表をすることが求められており、セメスターごとにこうした中間発表会が開催されているようである。通常、この中間発表会はカイザースラウテルンにて一日イベントとして開催されるが、今回は比較的人数が多い (学生14人) こともあり、ドイツのSchloss Dagstuhlにて1泊2日で開催された。
 
