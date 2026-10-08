@@ -11,6 +11,7 @@ import { getI18n } from '@/locales/server'
 import { SITE_URL } from '@/libs/metadata'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import NextTopLoader from 'nextjs-toploader'
+import { notFound } from 'next/navigation'
 
 // Self-hosted via next/font (no external request, no layout shift). Exposed as a
 // CSS variable that Tailwind's `font-sans` resolves to (see tailwind.config.ts).
@@ -54,6 +55,7 @@ export default async function LocaleLayout(props: {
   const params = await props.params
 
   const { locale } = params
+  if (locale !== 'ja' && locale !== 'en') notFound()
 
   const { children } = props
 

@@ -1,11 +1,29 @@
 import fs from 'fs'
 import path from 'path'
+import { notFound } from 'next/navigation'
 import matter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
 import hljs from 'highlight.js'
 import { Content, ContentMetadata } from '@/types/contents'
 
 const contentsDirectory = path.join(process.cwd(), 'contents')
+
+const LOCALES = ['ja', 'en']
+
+// `locale` comes from the URL and reaches fs paths, so reject anything else.
+const localeSuffix = (locale: string) => {
+  if (!LOCALES.includes(locale)) notFound()
+  return `.${locale}.md`
+}
+
+// Drafts are previewable in `yarn dev` but never built or served in production.
+const listContentFiles = (subDirectory: string) =>
+  fs
+    .readdirSync(path.join(contentsDirectory, subDirectory))
+    .filter(
+      (f) =>
+        process.env.NODE_ENV !== 'production' || !f.startsWith('draft-'),
+    )
 
 const md = new MarkdownIt({
   html: true,
@@ -38,7 +56,7 @@ export async function getPageData(
   const fullPath = path.join(
     contentsDirectory,
     subDirectory,
-    `${id}.${locale}.md`,
+    `${id}${localeSuffix(locale)}`,
   )
   if (!fs.existsSync(fullPath)) return null
   const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -50,11 +68,12 @@ export async function getPageData(
 }
 
 export function getSortedContentsData(subDirectory: string, locale: string) {
-  const fileNames = fs
-    .readdirSync(path.join(contentsDirectory, subDirectory))
-    .filter((f) => RegExp(`.${locale}.md$`).test(f))
+  const suffix = localeSuffix(locale)
+  const fileNames = listContentFiles(subDirectory).filter((f) =>
+    f.endsWith(suffix),
+  )
   const allContentsData: ContentMetadata[] = fileNames.map((fileName) => {
-    var id = fileName.replace(RegExp(`.${locale}.md$`), '')
+    var id = fileName.slice(0, -suffix.length)
     const fullPath = path.join(contentsDirectory, subDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const matterResult = matter(fileContents)
@@ -101,7 +120,7 @@ export function getSortedContentsData(subDirectory: string, locale: string) {
 
 export function getAllContentIds(subDirectory: string) {
   let paths = []
-  const fileNames = fs.readdirSync(path.join(contentsDirectory, subDirectory))
+  const fileNames = listContentFiles(subDirectory)
   for (let fileName of fileNames) {
     const pattern = fileName.match(RegExp('.(\\S{2}).md$'))
     if (pattern) {
@@ -123,11 +142,12 @@ export async function getContentData(
   locale: string,
 ): Promise<Content | null> {
   const dateDict: { [key: string]: string } = {}
-  const fileNames = fs
-    .readdirSync(path.join(contentsDirectory, subDirectory))
-    .filter((f) => RegExp(`.${locale}.md$`).test(f))
+  const suffix = localeSuffix(locale)
+  const fileNames = listContentFiles(subDirectory).filter((f) =>
+    f.endsWith(suffix),
+  )
   for (const fileName of fileNames) {
-    var fileId = fileName.replace(`.${locale}.md`, '')
+    var fileId = fileName.slice(0, -suffix.length)
     const pattern = fileName.match(RegExp('(\\d{4}-\\d{2}-\\d{2})'))
     fileId = pattern ? fileId.replace(`${pattern[1]}-`, '') : fileId
     dateDict[fileId] = fileName
