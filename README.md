@@ -10,8 +10,8 @@ You can check redirect settings for https://yirmt.github.io in [this repo](https
 
 ## Getting started
 
-1. Run `yarn install` to install all required npm packages.
-1. Run `yarn dev` to start a development server.
+1. Run `pnpm install` to install all required npm packages.
+1. Run `pnpm dev` to start a development server.
 
 ## License
 

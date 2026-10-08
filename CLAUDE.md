@@ -4,17 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal academic portfolio + blog (`yiwashita.com`, v2). Next.js 16 (App Router) + React 19 + TypeScript, internationalized with **`next-international`**, styled mainly with **SCSS** (`sass`) with Tailwind CSS v3 also wired up. Deployed on Vercel. The package manager in use is **yarn** (`yarn.lock`, CI uses yarn).
+Personal academic portfolio + blog (`yiwashita.com`, v2). Next.js 16 (App Router) + React 19 + TypeScript, internationalized with **`next-international`**, styled mainly with **SCSS** (`sass`) with Tailwind CSS v3 also wired up. Deployed on Vercel. The package manager in use is **pnpm** (`pnpm-lock.yaml`, version pinned via `packageManager`; settings such as `overrides`, `allowBuilds`, and `minimumReleaseAge` live in `pnpm-workspace.yaml`).
 
 ## Commands
 
 ```bash
-yarn install     # Install dependencies
-yarn dev         # Dev server with Turbopack at http://localhost:3000
-yarn build       # Production build
-yarn start       # Serve the production build
-yarn lint        # eslint . (eslint-config-next)
-yarn prettier --write "{src,pages,__tests__}/**/*.{ts,tsx,js,jsx}"   # Format (same glob CI uses)
+pnpm install     # Install dependencies
+pnpm dev         # Dev server with Turbopack at http://localhost:3000
+pnpm build       # Production build
+pnpm start       # Serve the production build
+pnpm lint        # eslint . (eslint-config-next)
+pnpm prettier --write "{src,pages,__tests__}/**/*.{ts,tsx,js,jsx}"   # Format (same glob CI uses)
 ```
 
 No test suite exists. Requires Node >= 22.
