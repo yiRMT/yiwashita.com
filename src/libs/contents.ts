@@ -40,7 +40,11 @@ const md = new MarkdownIt({
   .use(require('markdown-it-footnote'))
   // LaTeX math: `$...$` inline and `$$...$$` block, rendered to HTML at build
   // time (KaTeX). Requires katex/dist/katex.min.css (loaded in the layout).
-  .use(require('@vscode/markdown-it-katex').default)
+  // Pass our katex so rendering matches the katex.min.css version; the plugin
+  // otherwise renders with its own bundled katex 0.16, whose class names differ.
+  .use(require('@vscode/markdown-it-katex').default, {
+    katex: require('katex'),
+  })
 
 // Loads a single standalone page (e.g. the home/CV page or privacy policy)
 // stored as `<subDirectory>/<id>.<locale>.md`. The page body holds the content

@@ -17,7 +17,7 @@ pnpm lint        # eslint . (eslint-config-next)
 pnpm prettier --write "{src,pages,__tests__}/**/*.{ts,tsx,js,jsx}"   # Format (same glob CI uses)
 ```
 
-No test suite exists. Requires Node >= 22.
+No test suite exists. Requires Node >= 22.13 (ESLint 10).
 
 ### CI (`.github/workflows/ci.yml`)
 
@@ -34,13 +34,13 @@ Runs **on pull requests to `main`** (not on push):
 
 ### Internationalization (`next-international`) — the backbone
 
-Every page lives under `src/app/[locale]/`, where `locale` is `ja` (default) or `en`.
+Every page lives under `src/app/[locale]/`, where `locale` is `en` (default) or `ja`.
 
-- `src/proxy.ts` — the locale middleware. Uses `createI18nMiddleware` with `locales: ['ja','en']`, `defaultLocale: 'ja'`, `urlMappingStrategy: 'rewriteDefault'` (the default locale `ja` is **not** shown in the URL; `en` is served under `/en`). Exported as `proxy` (Next.js 16's middleware/proxy convention). The matcher excludes `api`, `static`, `_next`, files with extensions, etc.
+- `src/proxy.ts` — a hand-written locale proxy (not `createI18nMiddleware`), exported as `proxy` (Next.js 16's middleware/proxy convention). Routing is URL-driven only (no Accept-Language detection): prefix-less paths are rewritten to `/en/...`, `/ja/...` is served as-is, and `/en/...` redirects to the prefix-less URL. It sets the `X-Next-Locale` header that next-international's server helpers read. The matcher excludes `api`, `static`, `_next`, and any path containing a dot, so the `[locale]` param is **not** guaranteed to be valid — `src/app/[locale]/layout.tsx` and `src/libs/contents.ts` reject anything other than `ja`/`en` with `notFound()`.
 - `src/locales/ja.ts`, `src/locales/en.ts` — flat `key: value` dictionaries (`as const`). **Keep both in sync** when adding keys.
-- `src/locales/server.ts` — `createI18nServer`; exports `getI18n`, `getScopedI18n`, `getCurrentLocale`, `getStaticParams` for **server components**: `const t = await getI18n()` then `t('key')`.
+- `src/locales/server.ts` — `createI18nServer`; exports `getI18n` for **server components**: `const t = await getI18n()` then `t('key')`.
 - `src/locales/client.ts` — `createI18nClient`; exports `I18nProviderClient` plus client hooks (`useI18n`, `useChangeLocale`, etc.) for **client components**.
-- Pages read `locale` via `const { locale } = await props.params`. Locale-specific external URLs are chosen inline with `locale === 'ja' ? ... : ...` (see `src/app/[locale]/page.tsx`), not stored in dictionaries.
+- Pages read `locale` via `const { locale } = await props.params`.
 
 ### Layouts
 
@@ -49,19 +49,22 @@ Every page lives under `src/app/[locale]/`, where `locale` is `ja` (default) or 
 
 ### Routes (under `src/app/[locale]/`)
 
-- `/` — home: CV-style page (bio, education, work experience, publications with BibTeX/PDF links, research projects, links). Contact is shown as plain text email, not a form. BibTeX files live in `public/bib/`.
-- `/posts`, `/posts/[id]` — blog index and post detail.
+- `/` — home: CV-style page rendered from `contents/home/home.<locale>.md` via `getPageData` (the markdown body contains raw HTML for layout).
+- `/publications` — built from BibTeX files by `src/libs/publications.ts`. Each `.bib` file (one entry per file) goes in `public/bib/<category>/`, where category is `journal`, `international`, `misc`, or `domestic`; files directly under `public/bib/` are ignored. Custom fields: `equalcontrib` (comma-separated surnames), `note = {査読なし}`, `url`.
+- `/posts`, `/posts/[id]` — blog index and post detail. `[id]` uses `generateStaticParams` + `dynamicParams = false`.
 - `/projects` — project portfolio cards.
-- `/privacy-policy`.
+- `/privacy-policy` — rendered from `contents/pages/privacy-policy.<locale>.md` via `getPageData`.
+- `[...rest]` catch-all calls `notFound()` so unmatched paths render `src/app/[locale]/not-found.tsx` inside the locale layout; `src/app/not-found.tsx` is the bare fallback.
 
 ### Content system — local markdown
 
-`src/libs/contents.ts` reads files from the top-level `contents/` directory (`contents/posts/`, `contents/projects/`). The `posts`, `posts/[id]`, and `projects` pages all use `getSortedContentsData` / `getContentData` / `getAllContentIds` from here.
+`src/libs/contents.ts` reads files from the top-level `contents/` directory (`contents/posts/`, `contents/projects/`, plus standalone pages in `contents/home/` and `contents/pages/`). The `posts`, `posts/[id]`, and `projects` pages use `getSortedContentsData` / `getContentData` / `getAllContentIds`; standalone pages use `getPageData`.
 
 - File naming: `[<YYYY-MM-DD>-]<id>.<locale>.md`. The date prefix (if present) becomes the post date and is stripped from the `id`; the `.<locale>.md` suffix selects the language. So one logical post = two files (`.ja.md` + `.en.md`).
 - Frontmatter (parsed by `gray-matter`): `title`/`name`, `description`, `tags` (comma-separated string), `image` (e.g. `{path: "/projects/x.png", height, width}`, served from `public/`), `links` (e.g. `links.website`, `links.github`, `links.media`).
-- Markdown → HTML via `markdown-it` (`html: true`) + `markdown-it-footnote`, with `highlight.js` for code blocks. Output is injected with `dangerouslySetInnerHTML`.
-- `draft-*.ja.md` files in `contents/posts/` are works in progress.
+- Markdown → HTML via `markdown-it` (`html: true`) + `markdown-it-footnote` + `@vscode/markdown-it-katex` (`$...$` / `$$...$$`), with `highlight.js` for code blocks. Output is injected with `dangerouslySetInnerHTML` — fine because all content is first-party. The site's own `katex` is passed to the KaTeX plugin so rendered class names match the imported `katex.min.css`; keep those versions aligned.
+- `draft-*.md` files are works in progress: gitignored (never deployed) and also skipped by `contents.ts` when `NODE_ENV=production`, but visible in `pnpm dev`.
+
 ### Conventions
 
 - `@/` is the path alias for `src/` (`tsconfig.json`).

@@ -1,8 +1,5 @@
 export type PublicationCategory =
-  | 'journal'
-  | 'international'
-  | 'misc'
-  | 'domestic'
+  'journal' | 'international' | 'misc' | 'domestic'
 
 export type PublicationAuthor = {
   name: string
