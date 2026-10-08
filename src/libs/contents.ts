@@ -21,8 +21,7 @@ const listContentFiles = (subDirectory: string) =>
   fs
     .readdirSync(path.join(contentsDirectory, subDirectory))
     .filter(
-      (f) =>
-        process.env.NODE_ENV !== 'production' || !f.startsWith('draft-'),
+      (f) => process.env.NODE_ENV !== 'production' || !f.startsWith('draft-'),
     )
 
 const md = new MarkdownIt({
