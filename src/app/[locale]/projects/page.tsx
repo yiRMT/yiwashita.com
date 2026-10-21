@@ -4,6 +4,16 @@ import { getSortedContentsData } from '@/libs/contents'
 import { getI18n } from '@/locales/server'
 import { buildMetadata } from '@/libs/metadata'
 
+const thumbnail = (src: string, alt: string) => (
+  <Image
+    src={src}
+    alt={alt}
+    width={640}
+    height={360}
+    className="rounded-t-xl"
+  />
+)
+
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }) {
@@ -20,9 +30,7 @@ export async function generateMetadata(props: {
 export default async function Projects(props: {
   params: Promise<{ locale: string }>
 }) {
-  const params = await props.params
-
-  const { locale } = params
+  const { locale } = await props.params
 
   const allProjectsData = getSortedContentsData('projects', locale)
   const t = await getI18n()
@@ -32,39 +40,23 @@ export default async function Projects(props: {
       <div className="project-container">
         <ul>
           {allProjectsData.map(
-            ({ id, date, title, description, tags, image, links }) => (
+            ({ id, title, description, tags, image, links }) => (
               <li key={id}>
-                {links.website !== '' ? (
-                  <a href={links.website}>
-                    <Image
-                      src={image.path}
-                      alt={title}
-                      width={640}
-                      height={360}
-                      objectFit="cover"
-                      className="rounded-t-xl"
-                    />
-                  </a>
+                {links.website ? (
+                  <a href={links.website}>{thumbnail(image.path, title)}</a>
                 ) : (
-                  <Image
-                    src={image.path}
-                    alt={title}
-                    width={640}
-                    height={360}
-                    objectFit="cover"
-                    className="rounded-t-xl"
-                  />
+                  thumbnail(image.path, title)
                 )}
                 <div className="project-text-container">
                   <div className="project-title">
-                    {links.website !== '' ? (
+                    {links.website ? (
                       <Link href={links.website}>{title}</Link>
                     ) : (
                       title
                     )}
                   </div>
                   <div className="project-links-container">
-                    {links.github !== '' ? (
+                    {links.github && (
                       <a href={links.github}>
                         <svg
                           fill="currentColor"
@@ -78,10 +70,8 @@ export default async function Projects(props: {
                           />
                         </svg>
                       </a>
-                    ) : (
-                      <></>
                     )}
-                    {links.media !== '' ? (
+                    {links.media && (
                       <a href={links.media}>
                         <svg
                           fill="currentColor"
@@ -95,8 +85,6 @@ export default async function Projects(props: {
                           />
                         </svg>
                       </a>
-                    ) : (
-                      <></>
                     )}
                   </div>
                   <p>{description}</p>

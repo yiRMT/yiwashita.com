@@ -1,6 +1,6 @@
 import Header from '@/components/header'
 import Footer from '@/components/footer'
-import '@/styles/globals.scss'
+import '@/styles/globals.css'
 // Syntax-highlighting theme for fenced code blocks (highlight.js token colors).
 import 'highlight.js/styles/github-dark.css'
 // KaTeX styles for LaTeX math rendered in markdown ($...$ / $$...$$).
@@ -14,7 +14,7 @@ import NextTopLoader from 'nextjs-toploader'
 import { notFound } from 'next/navigation'
 
 // Self-hosted via next/font (no external request, no layout shift). Exposed as a
-// CSS variable that Tailwind's `font-sans` resolves to (see tailwind.config.ts).
+// CSS variable that Tailwind's `font-sans` resolves to (see @theme in globals.css).
 const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
   display: 'swap',
@@ -52,14 +52,10 @@ export default async function LocaleLayout(props: {
   params: Promise<{ locale: string }>
   children: React.ReactNode
 }) {
-  const params = await props.params
-
-  const { locale } = params
+  const { locale } = await props.params
   if (locale !== 'ja' && locale !== 'en') notFound()
 
-  const { children } = props
-
-  const GA_TAG_ID = process.env.NEXT_PUBLIC_GA_ID || ''
+  const gaId = process.env.NEXT_PUBLIC_GA_ID
 
   return (
     <html
@@ -71,12 +67,12 @@ export default async function LocaleLayout(props: {
         <I18nProviderClient locale={locale}>
           <Header />
           <div className="content">
-            <div className="wrapper">{children}</div>
+            <div className="wrapper">{props.children}</div>
           </div>
           <Footer />
         </I18nProviderClient>
       </body>
-      <GoogleAnalytics gaId={GA_TAG_ID} />
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   )
 }

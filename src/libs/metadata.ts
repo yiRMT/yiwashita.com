@@ -2,15 +2,14 @@ import type { Metadata } from 'next'
 
 const SITE_NAME = 'yiwashita.com'
 export const SITE_URL = 'https://yiwashita.com'
-const BASE_URL = SITE_URL
 const TWITTER_HANDLE = '@rmt_cu'
 const AUTHOR_NAME = '岩下 雄一郎'
 
-// `urlMappingStrategy: 'rewriteDefault'` in src/proxy.ts: the default locale
-// (en) has no URL prefix, every other locale is served under `/<locale>`.
+// Matches src/proxy.ts: the default locale (en) has no URL prefix, every other
+// locale is served under `/<locale>`.
 const localizedUrl = (locale: string, path: string) => {
   const prefix = locale === 'en' ? '' : `/${locale}`
-  return `${BASE_URL}${prefix}${path}`
+  return `${SITE_URL}${prefix}${path}`
 }
 
 const ogLocale = (locale: string) => (locale === 'ja' ? 'ja_JP' : 'en_US')
@@ -54,11 +53,11 @@ export function buildMetadata({
     : { ...ogBase, type: 'website' }
 
   return {
-    metadataBase: new URL(BASE_URL),
+    metadataBase: new URL(SITE_URL),
     title,
     description,
     // Renders `<meta name="author">` and `<link rel="author">`.
-    authors: [{ name: AUTHOR_NAME, url: BASE_URL }],
+    authors: [{ name: AUTHOR_NAME, url: SITE_URL }],
     alternates: { canonical: url },
     openGraph,
     twitter: {

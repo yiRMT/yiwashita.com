@@ -1,6 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss' source(none);
+@source '../components';
+@source '../app';
+
+@theme {
+  /* Noto Sans JP / Noto Sans Mono are loaded via next/font in the layout,
+     with the default stacks as fallback. */
+  --font-sans:
+    var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono:
+    var(--font-noto-sans-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+/* Tailwind v4 changed the default border color to currentColor; keep v3's gray-200. */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  /* v4's Preflight also zeroes padding on every element; v3 kept the UA's 1px
+     on table cells, which the home CV tables' row spacing relies on. */
+  td,
+  th {
+    padding: 1px;
+  }
+}
 
 html {
   scroll-behavior: smooth;
@@ -34,8 +63,8 @@ td:nth-child(4) {
   padding-left: 1rem;
 }
 
-// The home CV tables are authored as markdown tables, which require a header
-// row; ours are intentionally empty, so hide it.
+/* The home CV tables are authored as markdown tables, which require a header
+   row; ours are intentionally empty, so hide it. */
 .home table thead {
   display: none;
 }
@@ -75,7 +104,7 @@ ul {
 }
 
 .site-header {
-  @apply sm:sticky static top-0 z-50 bg-gray-300/70 dark:bg-slate-900/70 backdrop-blur;
+  @apply sm:sticky static top-0 z-50 bg-gray-300/70 dark:bg-slate-900/70 backdrop-blur-sm;
 
   .wrapper {
     @apply flex sm:flex-row flex-col justify-between sm:h-16 h-20 max-w-6xl mx-auto;
@@ -329,7 +358,7 @@ ul {
 }
 
 .article-body pre {
-  @apply p-4 bg-gray-800 dark:bg-slate-800 rounded overflow-auto text-white font-mono;
+  @apply p-4 bg-gray-800 dark:bg-slate-800 rounded-sm overflow-auto text-white font-mono;
 }
 
 .article-body p code,
@@ -341,7 +370,7 @@ h4 code,
 h5 code,
 h6 code,
 td code {
-  @apply bg-gray-300 dark:bg-slate-700 font-mono mx-1 px-0.5 py-0.5 rounded;
+  @apply bg-gray-300 dark:bg-slate-700 font-mono mx-1 px-0.5 py-0.5 rounded-sm;
 }
 
 .article-body .footnote-ref {
@@ -354,7 +383,7 @@ td code {
 }
 
 .article-body blockquote {
-  @apply border-l-4 border-gray-400 dark:border-slate-400 bg-gray-300 dark:bg-slate-800 rounded border-solid pt-2 pb-2 pl-4 pr-4 my-4;
+  @apply border-l-4 border-gray-400 dark:border-slate-400 bg-gray-300 dark:bg-slate-800 rounded-sm border-solid pt-2 pb-2 pl-4 pr-4 my-4;
 }
 
 .article-body table {
