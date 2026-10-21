@@ -52,14 +52,10 @@ export default async function LocaleLayout(props: {
   params: Promise<{ locale: string }>
   children: React.ReactNode
 }) {
-  const params = await props.params
-
-  const { locale } = params
+  const { locale } = await props.params
   if (locale !== 'ja' && locale !== 'en') notFound()
 
-  const { children } = props
-
-  const GA_TAG_ID = process.env.NEXT_PUBLIC_GA_ID || ''
+  const gaId = process.env.NEXT_PUBLIC_GA_ID
 
   return (
     <html
@@ -71,12 +67,12 @@ export default async function LocaleLayout(props: {
         <I18nProviderClient locale={locale}>
           <Header />
           <div className="content">
-            <div className="wrapper">{children}</div>
+            <div className="wrapper">{props.children}</div>
           </div>
           <Footer />
         </I18nProviderClient>
       </body>
-      <GoogleAnalytics gaId={GA_TAG_ID} />
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   )
 }

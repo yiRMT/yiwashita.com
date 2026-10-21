@@ -9,10 +9,7 @@ import { buildMetadata } from '@/libs/metadata'
 // nonexistent post returns a real 404 (a runtime notFound() in this dynamic
 // route would stream a 200 shell first).
 export function generateStaticParams() {
-  return getAllContentIds('posts').map(({ params, locale }) => ({
-    locale,
-    id: params.id,
-  }))
+  return getAllContentIds('posts')
 }
 
 export const dynamicParams = false
@@ -20,9 +17,7 @@ export const dynamicParams = false
 export async function generateMetadata(props: {
   params: Promise<{ locale: string; id: string }>
 }) {
-  const params = await props.params
-
-  const { locale, id } = params
+  const { locale, id } = await props.params
   setStaticParamsLocale(locale)
 
   const postData = await getContentData('posts', id, locale)
@@ -51,9 +46,7 @@ export async function generateMetadata(props: {
 export default async function Post(props: {
   params: Promise<{ locale: string; id: string }>
 }) {
-  const params = await props.params
-
-  const { locale, id } = params
+  const { locale, id } = await props.params
   setStaticParamsLocale(locale)
 
   const postData = await getContentData('posts', id, locale)
@@ -61,24 +54,20 @@ export default async function Post(props: {
     notFound()
   }
   return (
-    <>
-      <article className="post-article">
-        <h1>{postData.metadata.title}</h1>
-        <div className="post-meta-container">
-          <span className="post-date">
-            {formatDate(postData.metadata.date)}
-          </span>
-          <div className="post-tags-container">
-            {postData.metadata.tags.map((tag) => (
-              <span key={tag}>#{tag}</span>
-            ))}
-          </div>
+    <article className="post-article">
+      <h1>{postData.metadata.title}</h1>
+      <div className="post-meta-container">
+        <span className="post-date">{formatDate(postData.metadata.date)}</span>
+        <div className="post-tags-container">
+          {postData.metadata.tags.map((tag) => (
+            <span key={tag}>#{tag}</span>
+          ))}
         </div>
-        <div
-          className="post article-body"
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-        />
-      </article>
-    </>
+      </div>
+      <div
+        className="post article-body"
+        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+      />
+    </article>
   )
 }

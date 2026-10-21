@@ -16,7 +16,8 @@ export default function Header() {
     .replace(`/${currentLocale}`, '/')
 
   const localePrefix = `/${currentLocale}`
-  const regexList = [/\/projects*/, /\/posts*/, /\/publications*/]
+  const navClass = (path: string) =>
+    currentPath.startsWith(path) ? 'nav-active' : ''
 
   // Blog posts exist per-language (currently Japanese only), so switching the
   // locale on a post detail page would land on a missing translation. Disable
@@ -27,22 +28,22 @@ export default function Header() {
     <header className="site-header">
       <div className="wrapper">
         <div className="title-container">
-          <Link href={`${localePrefix}`}>{t('name')}</Link>
+          <Link href={localePrefix}>{t('name')}</Link>
         </div>
         <nav className="nav-container">
           <ul>
             <li className={currentPath === '/' ? 'nav-active' : ''}>
-              <Link href={`${localePrefix}`}>{t('home')}</Link>
+              <Link href={localePrefix}>{t('home')}</Link>
             </li>
-            <li className={regexList[2].test(currentPath) ? 'nav-active' : ''}>
+            <li className={navClass('/publications')}>
               <Link href={`${localePrefix}/publications`}>
                 {t('publications')}
               </Link>
             </li>
-            <li className={regexList[0].test(currentPath) ? 'nav-active' : ''}>
+            <li className={navClass('/projects')}>
               <Link href={`${localePrefix}/projects`}>{t('projects')}</Link>
             </li>
-            <li className={regexList[1].test(currentPath) ? 'nav-active' : ''}>
+            <li className={navClass('/posts')}>
               <Link href={`${localePrefix}/posts`}>{t('blog')}</Link>
             </li>
             <li>

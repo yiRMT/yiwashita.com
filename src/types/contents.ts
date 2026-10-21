@@ -13,7 +13,6 @@ export type ContentMetadata = {
 }
 
 export type Content = {
-  idWithDate: string
   metadata: ContentMetadata
   contentHtml: string
 }
