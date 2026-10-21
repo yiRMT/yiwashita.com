@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal academic portfolio + blog (`yiwashita.com`, v2). Next.js 16 (App Router) + React 19 + TypeScript, internationalized with **`next-international`**, styled mainly with **SCSS** (`sass`) with Tailwind CSS v3 also wired up. Deployed on Vercel. The package manager in use is **pnpm** (`pnpm-lock.yaml`, version pinned via `packageManager`; settings such as `overrides`, `allowBuilds`, and `minimumReleaseAge` live in `pnpm-workspace.yaml`).
+Personal academic portfolio + blog (`yiwashita.com`, v2). Next.js 16 (App Router) + React 19 + TypeScript, internationalized with **`next-international`**, styled with **Tailwind CSS v4** via `@apply` in a single global stylesheet. Deployed on Vercel. The package manager in use is **pnpm** (`pnpm-lock.yaml`, version pinned via `packageManager`; settings such as `overrides`, `allowBuilds`, and `minimumReleaseAge` live in `pnpm-workspace.yaml`).
 
 ## Commands
 
@@ -17,7 +17,7 @@ pnpm lint        # eslint . (eslint-config-next)
 pnpm prettier --write "{src,pages,__tests__}/**/*.{ts,tsx,js,jsx}"   # Format (same glob CI uses)
 ```
 
-No test suite exists. Requires Node >= 22.13 (ESLint 10).
+No test suite exists. Requires Node >= 24 (CI and Vercel run Node 24). TypeScript stays on 6.x because typescript-eslint (via `eslint-config-next`) does not support TS 7 yet.
 
 ### CI (`.github/workflows/ci.yml`)
 
@@ -45,7 +45,7 @@ Every page lives under `src/app/[locale]/`, where `locale` is `en` (default) or 
 ### Layouts
 
 - `src/app/layout.tsx` — minimal pass-through root (`return children`).
-- `src/app/[locale]/layout.tsx` — the real shell: `<html lang={locale}>`, wraps children in `I18nProviderClient`, renders `Header`/`Footer`, mounts `NextTopLoader` (nav progress bar) and `GoogleAnalytics` (`@next/third-parties/google`, gated on `NEXT_PUBLIC_GA_ID`), and imports the global stylesheet `@/styles/globals.scss`.
+- `src/app/[locale]/layout.tsx` — the real shell: `<html lang={locale}>`, wraps children in `I18nProviderClient`, renders `Header`/`Footer`, mounts `NextTopLoader` (nav progress bar) and `GoogleAnalytics` (`@next/third-parties/google`, gated on `NEXT_PUBLIC_GA_ID`), and imports the global stylesheet `@/styles/globals.css`.
 
 ### Routes (under `src/app/[locale]/`)
 
@@ -69,6 +69,6 @@ Every page lives under `src/app/[locale]/`, where `locale` is `en` (default) or 
 
 - `@/` is the path alias for `src/` (`tsconfig.json`).
 - Prettier (`.prettierrc.json`): **no semicolons**, **single quotes**, 2-space indent.
-- Styling is primarily SCSS in `src/styles/globals.scss`; Tailwind v3 (`tailwind.config.ts`, `postcss.config.mjs`) is also configured. Match the approach of the file you're editing — most existing components use SCSS class names, not Tailwind utilities.
+- Styling lives in `src/styles/globals.css` (Tailwind v4, CSS-first config: `@theme` for fonts, `@source` limited to `src/app` and `src/components`, PostCSS via `@tailwindcss/postcss`). Components use semantic class names styled there with `@apply` and native CSS nesting, not inline Tailwind utilities. Sass is not used (Tailwind v4 does not support preprocessors).
 - Shared helpers go in `src/libs/`, types in `src/types/`, components in `src/components/` (lowercase filenames, e.g. `header.tsx`, `footer.tsx`).
 - License note: code is MIT, but blog posts in `./contents` and images in `./public` are excluded from it.

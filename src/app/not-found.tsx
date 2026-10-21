@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import '@/styles/globals.scss'
+import '@/styles/globals.css'
 
 // Fallback for requests that never reach a locale segment. Normal 404s are
 // handled by app/[locale]/not-found.tsx (with Header/Footer); this only needs

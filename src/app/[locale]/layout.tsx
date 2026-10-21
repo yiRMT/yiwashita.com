@@ -1,6 +1,6 @@
 import Header from '@/components/header'
 import Footer from '@/components/footer'
-import '@/styles/globals.scss'
+import '@/styles/globals.css'
 // Syntax-highlighting theme for fenced code blocks (highlight.js token colors).
 import 'highlight.js/styles/github-dark.css'
 // KaTeX styles for LaTeX math rendered in markdown ($...$ / $$...$$).
@@ -14,7 +14,7 @@ import NextTopLoader from 'nextjs-toploader'
 import { notFound } from 'next/navigation'
 
 // Self-hosted via next/font (no external request, no layout shift). Exposed as a
-// CSS variable that Tailwind's `font-sans` resolves to (see tailwind.config.ts).
+// CSS variable that Tailwind's `font-sans` resolves to (see @theme in globals.css).
 const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
   display: 'swap',
