@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@next/third-parties": "^16.4.3",
-    "@retorquere/bibtex-parser": "^12.1.13",
+    "@retorquere/bibtex-parser": "^13.0.4",
     "@vscode/markdown-it-katex": "^1.1.2",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.12.0",

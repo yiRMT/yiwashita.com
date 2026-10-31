@@ -174,8 +174,8 @@ importers:
         specifier: ^16.4.3
         version: 16.4.3(next@16.4.3(@babel/core@7.29.7)(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sass@1.105.2))(react@19.3.1)
       '@retorquere/bibtex-parser':
-        specifier: ^12.1.13
-        version: 12.1.13
+        specifier: ^13.0.4
+        version: 13.0.4
       '@vscode/markdown-it-katex':
         specifier: ^1.1.2
         version: 1.1.2
@@ -747,8 +747,8 @@ packages:
   '@pomgui/deep@3.0.4':
     resolution: {integrity: sha512-XCAbJPSP+Y6SZiuhRAxjX29mlMMB9j1BQ9lCuXUMsJpgjj8odN7VIiWqOcQdmDu6iYFgcylHv6F9ZbACmyIFyQ==}
 
-  '@retorquere/bibtex-parser@12.1.13':
-    resolution: {integrity: sha512-BBZY4oKsgi0zXHEoD9VYGFYijz5nURwEjCqlCfmqyD0zRv9M2gVZUpsAHj7auTz1LG6NuQMiaaxqlnEeUkaV2g==}
+  '@retorquere/bibtex-parser@13.0.4':
+    resolution: {integrity: sha512-ywQq82EGiw1eokPp5NSHxa0qgYgIMH/wHUSEgOELkKwmUODxbx1QAUBbfa7DrnEpkmP6pRsuiBJlPd0dsPDLbw==}
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -2931,7 +2931,7 @@ snapshots:
 
   '@pomgui/deep@3.0.4': {}
 
-  '@retorquere/bibtex-parser@12.1.13':
+  '@retorquere/bibtex-parser@13.0.4':
     dependencies:
       '@unified-latex/unified-latex-util-pegjs': 1.8.4
       '@unified-latex/unified-latex-util-print-raw': 1.8.4
