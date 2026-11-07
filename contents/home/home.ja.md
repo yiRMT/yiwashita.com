@@ -17,9 +17,12 @@ description: 'ドイツ人工知能研究センター (DFKI GmbH) およびカ�
 
 |     |     |     |     |
 | --- | --- | --- | --- |
-| 2025.05 | - | 現在 | 博士課程, [カイザースラウテルン・ランダウ大学 (RPTU)](https://rptu.de/en) |
-| 2023.04 | - | 2025.03 | 修士 (情報学), [大阪公立大学](https://www.omu.ac.jp/i/) |
-| 2021.04 | - | 2023.03 | 学士 (工学), [大阪府立大学 (大阪公立大学に統合)](https://www.omu.ac.jp/i/) |
+| 2025.05 | - | 現在 | 博士課程, [カイザースラウテルン・ランダウ大学 (RPTU)](https://cs.rptu.de/en) |
+| | | | [人工知能研究グループ](https://ai.cs.rptu.de) |
+| 2023.04 | - | 2025.03 | 修士 (情報学), [大阪公立大学 大学院情報学研究科](https://www.omu.ac.jp/i/) |
+| | | | [知能メディア処理研究グループ](https://m.i.omu.ac.jp) |
+| 2021.04 | - | 2023.03 | 学士 (工学), [大阪府立大学 工学域 情報工学課程 (現: 大阪公立大学 工学部 情報工学科) ](https://www.omu.ac.jp/i/) |
+| | | | [知能メディア処理研究グループ](https://m.i.omu.ac.jp) |
 
 ## 職歴
 
@@ -45,6 +48,39 @@ description: 'ドイツ人工知能研究センター (DFKI GmbH) およびカ�
 | 2022.06 | - | 2025.03 | [医療×AIの重層型研究開発拠点形成 (助成: 大阪公立大学)](https://www.omu.ac.jp/info/news/entry-17121.html) |
 | 2021.09 | - | 2024.03 | [学習サイクロトロン (LeCycl) (助成: JST日独仏AI研究プログラム)](https://opu-imp.github.io/lecycl/) |
 
+## 学生指導
+
+大阪府立大学・大阪公立大学での指導は、すべて黄瀬浩一教授との共同指導です。
+
+|     |     |     |     |
+| --- | --- | --- | --- |
+| 2026.10 | - | 現在 | プロジェクト (修士), RPTU |
+| 2026.10 | - | 現在 | セミナー (修士), RPTU |
+| 2026.10 | - | 現在 | セミナー (学士), RPTU |
+| 2026.04 | - | 2026.09 | セミナー (修士), RPTU |
+| 2026.04 | - | 2026.09 | セミナー (学士), RPTU |
+| 2025.04 | - | 2026.03 | 卒業論文, 大阪公立大学 |
+| 2024.09 | - | 2025.01 | プロジェクト (学士), 大阪公立大学 |
+| 2024.04 | - | 2026.03 | 修士論文, 大阪公立大学 |
+| 2023.09 | - | 2024.01 | プロジェクト (学士), 大阪府立大学 |
+| 2023.04 | - | 2024.03 | 卒業論文, 大阪府立大学 |
+| 2022.09 | - | 2023.01 | プロジェクト (学士), 大阪府立大学 |
+
+## 学術活動
+
+### 運営
+
+- 共同オーガナイザー, [ACCV 2026 MM4SciReal Workshop](https://mm4scireal.github.io)
+
+### 査読
+
+- [ACCV 2026 MM4SciReal Workshop](https://mm4scireal.github.io) (2件)
+- [ICML 2026 SD4H Workshop](https://structureddata4health.github.io) (3件)
+- [NeurIPS 2025 TS4H Workshop](https://timeseries4health.github.io) (2件)
+- [CHI 2025](https://chi2025.acm.org) Late-Breaking Work Track (1件)
+- [CUI 2025](https://cui.acm.org/2025) Short Papers & Works-in-Progress Track (1件)
+- [Briefings in Bioinformatics](https://academic.oup.com/bib) (1件)
+
 ## 外部サイト
 
 - [Zenn.dev](https://zenn.dev/rmt_drums)
@@ -56,8 +92,7 @@ description: 'ドイツ人工知能研究センター (DFKI GmbH) およびカ�
 
 ## 連絡先
 
-`[firstname].[lastname]@dfki.de`
+共同研究を希望される方は、お気軽にメールでご連絡ください。
 
-`[firstname].[lastname]@cs.rptu.de`
-
-`[firstname].[lastname]@omu.ac.jp`
+- Official: <a data-email-user="yuichiro.iwashita" data-email-domain="dfki.de"></a>
+- Private: <a data-email-user="contact" data-email-domain="yiwashita.com"></a>

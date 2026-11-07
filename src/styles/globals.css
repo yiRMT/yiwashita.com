@@ -69,6 +69,23 @@ td:nth-child(4) {
   display: none;
 }
 
+.home {
+  @apply leading-relaxed;
+
+  > div > :is(p, ul, ol, table) {
+    @apply my-3;
+  }
+
+  > div > ul {
+    @apply list-disc pl-6;
+  }
+
+  td,
+  li {
+    @apply py-0.5;
+  }
+}
+
 h1,
 h2,
 h3,

@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getPageData } from '@/libs/contents'
 import { buildMetadata } from '@/libs/metadata'
+import EmailLinks from '@/components/email-links'
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
@@ -26,6 +27,7 @@ export default async function Home(props: {
     <div className="home">
       <h1>{page.data.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: page.contentHtml }} />
+      <EmailLinks />
     </div>
   )
 }
