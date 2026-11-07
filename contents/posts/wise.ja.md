@@ -38,9 +38,9 @@ tags: ["Study Abroad", "Germany"]
 > このドキュメントによると、日本人はパスポートに加えて滞在許可証が必要。
 > また、滞在許可証は1年以上かつカードタイプである必要がある (ステッカータイプはNG)
 > 
-> ![N26](https://i.gyazo.com/ce05f7b0fc5bd08f0f5fe7cca94c0a2d.png)
+> ![N26](/posts/wise/n26-1.png)
 > 
-> ![N26](https://i.gyazo.com/a467c880a312e049019f1951c53dfb6e.png)
+> ![N26](/posts/wise/n26-2.png)
 
 ## 口座凍結の危機
 

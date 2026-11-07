@@ -9,7 +9,6 @@ import { Noto_Sans_JP, Noto_Sans_Mono } from 'next/font/google'
 import { I18nProviderClient } from '@/locales/client'
 import { getI18n } from '@/locales/server'
 import { SITE_URL } from '@/libs/metadata'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import NextTopLoader from 'nextjs-toploader'
 import { notFound } from 'next/navigation'
 
@@ -55,8 +54,6 @@ export default async function LocaleLayout(props: {
   const { locale } = await props.params
   if (locale !== 'ja' && locale !== 'en') notFound()
 
-  const gaId = process.env.NEXT_PUBLIC_GA_ID
-
   return (
     <html
       lang={locale}
@@ -72,7 +69,6 @@ export default async function LocaleLayout(props: {
           <Footer />
         </I18nProviderClient>
       </body>
-      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   )
 }

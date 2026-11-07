@@ -317,13 +317,21 @@ ul {
 }
 
 .article-body {
-  @apply leading-relaxed sm:leading-loose font-sans break-all;
+  @apply leading-relaxed sm:leading-loose font-sans wrap-anywhere;
 }
 
-.article-body p {
-  &:not(:first-child):not(:last-child) {
-    @apply mb-3;
+.article-body :is(p, ul, ol, pre, table) {
+  @apply my-3;
+  &:first-child {
+    @apply mt-0;
   }
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+.article-body li > :is(ul, ol) {
+  @apply my-0;
 }
 
 .article-body img {
@@ -331,7 +339,7 @@ ul {
 }
 
 .article-body a {
-  @apply mx-1 text-gray-500 dark:text-slate-400 hover:underline;
+  @apply text-gray-500 dark:text-slate-400 hover:underline;
 }
 
 .article-body h1 {

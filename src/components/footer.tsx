@@ -18,6 +18,11 @@ export default function Footer() {
         <nav className="nav-container">
           <ul>
             <li>
+              <Link href={`/${currentLocale}/legal-notice`}>
+                {t('legal-notice')}
+              </Link>
+            </li>
+            <li>
               <Link href={`/${currentLocale}/privacy-policy`}>
                 {t('privacy-policy')}
               </Link>

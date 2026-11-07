@@ -26,10 +26,6 @@ Runs **on pull requests to `main`** (not on push):
 - **prettier** job: runs Prettier with `--write` over `{src,pages,__tests__}/**/*.{ts,tsx,js,jsx}` and auto-commits the formatting changes back to the PR branch (`git-auto-commit-action`). So formatting is fixed for you on PRs, but match Prettier style locally to avoid noise.
 - **eslint** job: runs ESLint via `reviewdog/action-eslint`, reporting as `github-pr-review` comments.
 
-### Environment variables (`.env.local`, not committed)
-
-- `NEXT_PUBLIC_GA_ID` — Google Analytics (`src/app/[locale]/layout.tsx`).
-
 ## Architecture
 
 ### Internationalization (`next-international`) — the backbone
@@ -45,7 +41,7 @@ Every page lives under `src/app/[locale]/`, where `locale` is `en` (default) or 
 ### Layouts
 
 - `src/app/layout.tsx` — minimal pass-through root (`return children`).
-- `src/app/[locale]/layout.tsx` — the real shell: `<html lang={locale}>`, wraps children in `I18nProviderClient`, renders `Header`/`Footer`, mounts `NextTopLoader` (nav progress bar) and `GoogleAnalytics` (`@next/third-parties/google`, gated on `NEXT_PUBLIC_GA_ID`), and imports the global stylesheet `@/styles/globals.css`.
+- `src/app/[locale]/layout.tsx` — the real shell: `<html lang={locale}>`, wraps children in `I18nProviderClient`, renders `Header`/`Footer`, mounts `NextTopLoader` (nav progress bar), and imports the global stylesheet `@/styles/globals.css`.
 
 ### Routes (under `src/app/[locale]/`)
 
@@ -53,7 +49,7 @@ Every page lives under `src/app/[locale]/`, where `locale` is `en` (default) or 
 - `/publications` — built from BibTeX files by `src/libs/publications.ts`. Each `.bib` file (one entry per file) goes in `public/bib/<category>/`, where category is `journal`, `international`, `misc`, or `domestic`; files directly under `public/bib/` are ignored. Custom fields: `equalcontrib` (comma-separated surnames), `note = {査読なし}`, `url`.
 - `/posts`, `/posts/[id]` — blog index and post detail. `[id]` uses `generateStaticParams` + `dynamicParams = false`.
 - `/projects` — project portfolio cards.
-- `/privacy-policy` — rendered from `contents/pages/privacy-policy.<locale>.md` via `getPageData`.
+- `/legal-notice` (Impressum) and `/privacy-policy` (Datenschutzerklärung) — required by German law. Each is a single bilingual German/English page, `contents/pages/legal-notice.en.md` / `privacy-policy.en.md`, served for both locales (no `.ja.md`). The site deliberately sets no cookies and loads no third-party resources (no analytics, fonts self-hosted, post images in `public/`); adding any would require updating the privacy policy and possibly a consent banner.
 - `[...rest]` catch-all calls `notFound()` so unmatched paths render `src/app/[locale]/not-found.tsx` inside the locale layout; `src/app/not-found.tsx` is the bare fallback.
 
 ### Content system — local markdown
