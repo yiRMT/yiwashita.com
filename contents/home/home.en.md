@@ -17,9 +17,12 @@ description: 'Yuichiro Iwashita is a PhD researcher at the German Research Cente
 
 |     |     |     |     |
 | --- | --- | --- | --- |
-| 2025.05 | - | Present | PhD Student, [RPTU University Kaiserslautern-Landau](https://rptu.de/en) |
-| 2023.04 | - | 2025.03 | Master of Informatics, [Osaka Metropolitan University](https://www.omu.ac.jp/i/en/) |
-| 2021.04 | - | 2023.03 | Bachelor of Engineering, [Osaka Prefecture University (merged into OMU)](https://www.omu.ac.jp/i/en/) |
+| 2025.05 | - | Present | PhD Student, [Department of Computer Science, RPTU University Kaiserslautern-Landau](https://cs.rptu.de/en) |
+| | | | [Artificial Intelligence Group](https://ai.cs.rptu.de) |
+| 2023.04 | - | 2025.03 | Master of Informatics, [Graduate School of Informatics, Osaka Metropolitan University](https://www.omu.ac.jp/i/en/) |
+| | | | [Intelligence Media Processing Research Group](https://m.i.omu.ac.jp/index-e.html) |
+| 2021.04 | - | 2023.03 | Bachelor of Engineering, [College of Engineering, Osaka Prefecture University](https://www.omu.ac.jp/i/en/) |
+| | | | [Intelligence Media Processing Research Group](https://m.i.omu.ac.jp/index-e.html) |
 
 ## Work Experiences
 
@@ -45,6 +48,39 @@ I am involved in the following funded research projects as a research member.
 | 2022.06 | - | 2025.03 | [Formation of a Multilayered R&D Center for Medical x AI (Funded by Osaka Metropolitan University Strategic Research Promotion Program)](https://www.omu.ac.jp/info/news/entry-17121.html) |
 | 2021.09 | - | 2024.03 | [Learning Cyclotron (LeCycl) (Funded by JST Trilateral AI Research Program)](https://opu-imp.github.io/lecycl/) |
 
+## Student Supervision
+
+All supervision at Osaka Prefecture University (OPU) and Osaka Metropolitan University (OMU) was done jointly with Prof. Koichi Kise.
+
+|     |     |     |     |
+| --- | --- | --- | --- |
+| 2026.10 | - | Present | Project (Master), RPTU |
+| 2026.10 | - | Present | Seminar (Master), RPTU |
+| 2026.10 | - | Present | Seminar (Bachelor), RPTU |
+| 2026.04 | - | 2026.09 | Seminar (Master), RPTU |
+| 2026.04 | - | 2026.09 | Seminar (Bachelor), RPTU |
+| 2025.04 | - | 2026.03 | Bachelor's Thesis, OMU |
+| 2024.09 | - | 2025.01 | Project (Bachelor), OMU |
+| 2024.04 | - | 2026.03 | Master's Thesis, OMU |
+| 2023.09 | - | 2024.01 | Project (Bachelor), OPU |
+| 2023.04 | - | 2024.03 | Bachelor's Thesis, OPU |
+| 2022.09 | - | 2023.01 | Project (Bachelor), OPU |
+
+## Academic Service
+
+### Organizing
+
+- Co-organizer, [ACCV 2026 MM4SciReal Workshop](https://mm4scireal.github.io)
+
+### Reviewing
+
+- [ACCV 2026 MM4SciReal Workshop](https://mm4scireal.github.io) (2 papers)
+- [ICML 2026 SD4H Workshop](https://structureddata4health.github.io) (3 papers)
+- [NeurIPS 2025 TS4H Workshop](https://timeseries4health.github.io) (2 papers)
+- [CHI 2025](https://chi2025.acm.org) Late-Breaking Work Track (1 paper)
+- [CUI 2025](https://cui.acm.org/2025) Short Papers & Works-in-Progress Track (1 paper)
+- [Briefings in Bioinformatics](https://academic.oup.com/bib) (1 paper)
+
 ## External Links
 
 - [Zenn.dev](https://zenn.dev/rmt_drums)
@@ -56,8 +92,7 @@ I am involved in the following funded research projects as a research member.
 
 ## Contact
 
-`[firstname].[lastname]@dfki.de`
+If you are interested in working together, including thesis/project/seminar supervision at RPTU, feel free to email me.
 
-`[firstname].[lastname]@cs.rptu.de`
-
-`[firstname].[lastname]@omu.ac.jp`
+- Official: <a data-email-user="yuichiro.iwashita" data-email-domain="dfki.de"></a>
+- Private: <a data-email-user="contact" data-email-domain="yiwashita.com"></a>
