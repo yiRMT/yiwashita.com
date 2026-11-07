@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { parse } from '@retorquere/bibtex-parser'
+import { parse } from '@retorquere/bibtex-parser/js'
 import {
   Publication,
   PublicationAuthor,
@@ -85,7 +85,9 @@ const readCategory = (category: PublicationCategory): Publication[] => {
 
   const publications: Publication[] = fileNames.map((fileName) => {
     const raw = fs.readFileSync(path.join(dir, fileName), 'utf8')
-    const entry = parse(raw, { sentenceCase: false }).entries[0]
+    // Disables sentence-casing: in v13, `sentenceCase: false` sets `english: []`,
+    // which gets merged back into the default langid list and has no effect.
+    const entry = parse(raw, { english: ['__none__'] }).entries[0]
     const fields = entry.fields as unknown as Record<string, string>
     const creators = (entry.fields.author || []) as Creator[]
 
