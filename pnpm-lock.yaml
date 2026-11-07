@@ -174,8 +174,8 @@ importers:
         specifier: ^16.4.5
         version: 16.4.5(next@16.4.5(@babel/core@7.29.7)(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sass@1.105.2))(react@19.3.1)
       '@retorquere/bibtex-parser':
-        specifier: ^12.1.13
-        version: 12.1.13
+        specifier: ^13.0.15
+        version: 13.0.15
       '@vscode/markdown-it-katex':
         specifier: ^1.1.2
         version: 1.1.2
@@ -747,8 +747,8 @@ packages:
   '@pomgui/deep@3.0.4':
     resolution: {integrity: sha512-XCAbJPSP+Y6SZiuhRAxjX29mlMMB9j1BQ9lCuXUMsJpgjj8odN7VIiWqOcQdmDu6iYFgcylHv6F9ZbACmyIFyQ==}
 
-  '@retorquere/bibtex-parser@12.1.13':
-    resolution: {integrity: sha512-BBZY4oKsgi0zXHEoD9VYGFYijz5nURwEjCqlCfmqyD0zRv9M2gVZUpsAHj7auTz1LG6NuQMiaaxqlnEeUkaV2g==}
+  '@retorquere/bibtex-parser@13.0.15':
+    resolution: {integrity: sha512-MriwzL6O6NDBMZy6H5Et4Q2tZC0hFbgD+iMewxnGlBmuHQY4tmEeACe9vjLdjk7UeLzsoTZpsp5loz2N/KnQ8w==}
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -2414,8 +2414,8 @@ packages:
   undici-types@8.9.0:
     resolution: {integrity: sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==}
 
-  unicode2latex@7.0.37:
-    resolution: {integrity: sha512-UehOCnIAyUJAunsavlzAwmTFqfR6eqm0wbVOX99tEH2g3lThSV9BesLGi7BfrXqLHttwjVIpETCXz4lxAXX+ag==}
+  unicode2latex@7.0.38:
+    resolution: {integrity: sha512-PIpuGOESQul1e7Gk1D9D/N20f0KR7Tt3hsnJE+b4xbNIB73pmu2wpFSetyBD3VkDgrJ/uK40F7fuvaFAIuTpAA==}
 
   unified@10.1.2:
     resolution: {integrity: sha512-pUSWAi/RAnVy1Pif2kAoeWNBa3JVrx0MId2LASj8G+7AiHWoKZNTomq6LG326T68U7/e263X6fTdcXIy7XnF7Q==}
@@ -2930,7 +2930,7 @@ snapshots:
 
   '@pomgui/deep@3.0.4': {}
 
-  '@retorquere/bibtex-parser@12.1.13':
+  '@retorquere/bibtex-parser@13.0.15':
     dependencies:
       '@unified-latex/unified-latex-util-pegjs': 1.8.4
       '@unified-latex/unified-latex-util-print-raw': 1.8.4
@@ -2940,7 +2940,7 @@ snapshots:
       lodash.merge: 4.6.2
       moo: 0.5.3
       nearley: 2.20.1
-      unicode2latex: 7.0.37
+      unicode2latex: 7.0.38
       wink-eng-lite-web-model: 1.8.1
       wink-nlp: 2.4.0
 
@@ -4827,7 +4827,7 @@ snapshots:
 
   undici-types@8.9.0: {}
 
-  unicode2latex@7.0.37:
+  unicode2latex@7.0.38:
     dependencies:
       '@pomgui/deep': 3.0.4
       just-permutations: 2.2.1
