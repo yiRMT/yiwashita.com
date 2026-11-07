@@ -5,6 +5,7 @@ export default {
   projects: 'Software',
   publications: 'Publications',
   'privacy-policy': 'Privacy Policy',
+  'legal-notice': 'Legal Notice',
   // Site-level default description (used in src/app/[locale]/layout.tsx).
   introduction:
     'Yuichiro Iwashita is a PhD researcher at the German Research Center for Artificial Intelligence (DFKI GmbH) and the RPTU University Kaiserslautern-Landau. He has been working on research related to medical AI, particularly single-cell data analysis, multimodal data analysis, and time series analysis. Before involved in medical AI, he worked on augmenting human intelligence within HCI field.',

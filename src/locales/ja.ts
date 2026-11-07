@@ -4,7 +4,8 @@ export default {
   blog: 'ブログ',
   projects: 'ソフトウェア',
   publications: '論文',
-  'privacy-policy': 'プライバシーポリシー',
+  'privacy-policy': 'Privacy Policy',
+  'legal-notice': 'Legal Notice',
   // Site-level default description (used in src/app/[locale]/layout.tsx).
   introduction:
     'ドイツ人工知能研究センター (DFKI) にて医療AIの研究をする博士学生です。2025年3月に大阪公立大学 大学院情報学研究科にて修士（情報学）、2023年3月に大阪府立大学 工学域にて学士 (工学) を取得しました。医療AI、特にシングルセルデータ解析、マルチモーダルデータ解析、時系列解析に関する研究に取り組んでいます。また、バイオメディカルAI研究に携わるまではHCIの領域で人間の知能を増強する研究を行っていました。',

@@ -33,11 +33,11 @@ Schloss Dagstuhlにて開催された[Research Meeting #26223 – Klausurtagung 
 
 Dagstuhlでは合宿形式で利用されることが多いため、宿泊が可能である。
 
-![](https://i.gyazo.com/5856ddef4b7c122f7f8095a0507619c5.png)
+![](/posts/dagstuhl-phd-colloquium/photo-1.png)
 
 また、期間中は3食に加えてコーヒーブレイクも提供される。今回は、1日目の夕食が白アスパラガス (Spargel) 、2日目の朝食がハムやチーズなどのビュッフェ形式、2日目の昼食がトルテリーニとサラダだった。
 
-![](https://i.gyazo.com/ee2c476c3f2827dc4255c11821ff754c.png)
+![](/posts/dagstuhl-phd-colloquium/photo-2.png)
 
 ## まとめ
 
